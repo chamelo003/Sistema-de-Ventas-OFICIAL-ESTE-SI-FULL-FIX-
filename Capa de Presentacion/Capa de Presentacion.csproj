@@ -265,6 +265,9 @@
     <None Include="bin\Resorces\1button_hover.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\restore.png" />
+    <None Include="Resources\close.png" />
     <None Include="Resources\editar.png" />
     <None Include="Resources\eliminar.png" />
     <None Include="Resources\nuevo.png" />

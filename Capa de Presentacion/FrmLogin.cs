@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using DevComponents.DotNetBar;
 using CapaLogicaNegocio;
 
@@ -16,7 +15,7 @@ namespace Capa_de_Presentacion
     public partial class FrmLogin : DevComponents.DotNetBar.Metro.MetroForm
     {
         clsUsuarios U = new clsUsuarios();
-
+        public String u;
         public FrmLogin()
         {
             InitializeComponent();
