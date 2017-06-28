@@ -29,41 +29,44 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarEmpleados));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbnFemenino = new System.Windows.Forms.RadioButton();
+            this.rbnMasculino = new System.Windows.Forms.RadioButton();
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.cboDepto = new System.Windows.Forms.ComboBox();
             this.mktCelular = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.mktCodEmpleado = new System.Windows.Forms.MaskedTextBox();
             this.mktTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnNuevaCategoria = new System.Windows.Forms.Button();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.rbnFemenino = new System.Windows.Forms.RadioButton();
-            this.rbnMasculino = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.txtDatos = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,13 +79,14 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.mktCelula = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.mktTel = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnCnacel = new System.Windows.Forms.Button();
-            this.btnGuarda = new System.Windows.Forms.Button();
             this.txtDire = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtNombreRef = new System.Windows.Forms.TextBox();
@@ -90,54 +94,54 @@
             this.txtApellidoRef = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2.SuspendLayout();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
             // 
-            //this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(299, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(258, 21);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "FORMULARIO DE EMPLEADOS ";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.OliveDrab;
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(-2, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(890, 70);
-            this.panel2.TabIndex = 14;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // tabControl1
             // 
@@ -145,94 +149,214 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(-2, 75);
+            this.tabControl1.Location = new System.Drawing.Point(34, 61);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(880, 405);
+            this.tabControl1.Size = new System.Drawing.Size(817, 432);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox7);
+            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(872, 379);
+            this.tabPage1.Size = new System.Drawing.Size(809, 406);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos del Empleado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
+            this.pictureBox7.Location = new System.Drawing.Point(484, 337);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 42;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
+            this.pictureBox5.Location = new System.Drawing.Point(383, 337);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 40;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Capa_de_Presentacion.Properties.Resources.nuevo;
+            this.pictureBox6.Location = new System.Drawing.Point(279, 337);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.cboCargo);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cboDepto);
             this.groupBox1.Controls.Add(this.mktCelular);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.mktCodEmpleado);
             this.groupBox1.Controls.Add(this.mktTelefono);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.btnGrabar);
-            this.groupBox1.Controls.Add(this.btnNuevaCategoria);
             this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.rbnFemenino);
-            this.groupBox1.Controls.Add(this.rbnMasculino);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtApellidos);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 6);
+            this.groupBox1.Location = new System.Drawing.Point(93, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 355);
+            this.groupBox1.Size = new System.Drawing.Size(618, 329);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkCyan;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(473, 143);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 60);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Agregar Referencia";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label20.Location = new System.Drawing.Point(273, 282);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(33, 33);
+            this.label20.TabIndex = 55;
+            this.label20.Text = "+";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label17.Location = new System.Drawing.Point(273, 249);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(33, 33);
+            this.label17.TabIndex = 54;
+            this.label17.Text = "+";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label16.Location = new System.Drawing.Point(274, 216);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(33, 33);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "+";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(114, 253);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(159, 23);
+            this.comboBox1.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(45, 256);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Municipio";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rbnFemenino);
+            this.groupBox3.Controls.Add(this.rbnMasculino);
+            this.groupBox3.Location = new System.Drawing.Point(473, 44);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(113, 87);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Sexo :";
+            // 
+            // rbnFemenino
+            // 
+            this.rbnFemenino.AutoSize = true;
+            this.rbnFemenino.Location = new System.Drawing.Point(15, 26);
+            this.rbnFemenino.Name = "rbnFemenino";
+            this.rbnFemenino.Size = new System.Drawing.Size(86, 20);
+            this.rbnFemenino.TabIndex = 13;
+            this.rbnFemenino.Text = "Femenino";
+            this.rbnFemenino.UseVisualStyleBackColor = true;
+            // 
+            // rbnMasculino
+            // 
+            this.rbnMasculino.AutoSize = true;
+            this.rbnMasculino.Checked = true;
+            this.rbnMasculino.Location = new System.Drawing.Point(15, 50);
+            this.rbnMasculino.Name = "rbnMasculino";
+            this.rbnMasculino.Size = new System.Drawing.Size(87, 20);
+            this.rbnMasculino.TabIndex = 12;
+            this.rbnMasculino.TabStop = true;
+            this.rbnMasculino.Text = "Masculino";
+            this.rbnMasculino.UseVisualStyleBackColor = true;
             // 
             // cboCargo
             // 
             this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(112, 257);
+            this.cboCargo.Location = new System.Drawing.Point(113, 286);
             this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(171, 23);
+            this.cboCargo.Size = new System.Drawing.Size(159, 23);
             this.cboCargo.TabIndex = 28;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 260);
+            this.label2.Location = new System.Drawing.Point(62, 289);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 27;
             this.label2.Text = "Cargo";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(277, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 40);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Nuevo Departamento";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // cboDepto
             // 
             this.cboDepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepto.FormattingEnabled = true;
-            this.cboDepto.Location = new System.Drawing.Point(112, 194);
+            this.cboDepto.Location = new System.Drawing.Point(114, 220);
             this.cboDepto.Name = "cboDepto";
             this.cboDepto.Size = new System.Drawing.Size(159, 23);
             this.cboDepto.TabIndex = 25;
             // 
             // mktCelular
             // 
-            this.mktCelular.Location = new System.Drawing.Point(115, 131);
+            this.mktCelular.Location = new System.Drawing.Point(315, 101);
             this.mktCelular.Mask = "0000-0000";
             this.mktCelular.Name = "mktCelular";
             this.mktCelular.Size = new System.Drawing.Size(68, 21);
@@ -241,7 +365,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(42, 131);
+            this.label10.Location = new System.Drawing.Point(242, 101);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 16);
             this.label10.TabIndex = 23;
@@ -257,7 +381,7 @@
             // 
             // mktTelefono
             // 
-            this.mktTelefono.Location = new System.Drawing.Point(115, 101);
+            this.mktTelefono.Location = new System.Drawing.Point(115, 106);
             this.mktTelefono.Mask = "0000-0000";
             this.mktTelefono.Name = "mktTelefono";
             this.mktTelefono.Size = new System.Drawing.Size(68, 21);
@@ -266,50 +390,24 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 101);
+            this.label9.Location = new System.Drawing.Point(42, 106);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 16);
             this.label9.TabIndex = 20;
             this.label9.Text = "Teléfono";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(258, 313);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 29);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "&Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btnGrabar
-            // 
-            this.btnGrabar.Location = new System.Drawing.Point(168, 313);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 29);
-            this.btnGrabar.TabIndex = 18;
-            this.btnGrabar.Text = "Guardar";
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevaCategoria
-            // 
-            this.btnNuevaCategoria.Location = new System.Drawing.Point(289, 247);
-            this.btnNuevaCategoria.Name = "btnNuevaCategoria";
-            this.btnNuevaCategoria.Size = new System.Drawing.Size(75, 40);
-            this.btnNuevaCategoria.TabIndex = 17;
-            this.btnNuevaCategoria.Text = "Nuevo Cargo";
-            this.btnNuevaCategoria.UseVisualStyleBackColor = true;
-            // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(114, 157);
+            this.txtDireccion.Location = new System.Drawing.Point(114, 139);
+            this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(270, 21);
+            this.txtDireccion.Size = new System.Drawing.Size(340, 72);
             this.txtDireccion.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 161);
+            this.label8.Location = new System.Drawing.Point(42, 143);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 16);
             this.label8.TabIndex = 15;
@@ -318,48 +416,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 203);
+            this.label6.Location = new System.Drawing.Point(17, 224);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 16);
+            this.label6.Size = new System.Drawing.Size(94, 16);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Municipio";
-            // 
-            // rbnFemenino
-            // 
-            this.rbnFemenino.AutoSize = true;
-            this.rbnFemenino.Location = new System.Drawing.Point(197, 231);
-            this.rbnFemenino.Name = "rbnFemenino";
-            this.rbnFemenino.Size = new System.Drawing.Size(86, 20);
-            this.rbnFemenino.TabIndex = 10;
-            this.rbnFemenino.Text = "Femenino";
-            this.rbnFemenino.UseVisualStyleBackColor = true;
-            // 
-            // rbnMasculino
-            // 
-            this.rbnMasculino.AutoSize = true;
-            this.rbnMasculino.Checked = true;
-            this.rbnMasculino.Location = new System.Drawing.Point(115, 231);
-            this.rbnMasculino.Name = "rbnMasculino";
-            this.rbnMasculino.Size = new System.Drawing.Size(87, 20);
-            this.rbnMasculino.TabIndex = 9;
-            this.rbnMasculino.TabStop = true;
-            this.rbnMasculino.Text = "Masculino";
-            this.rbnMasculino.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Sexo:";
+            this.label6.Text = "Departamento";
             // 
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(113, 44);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(270, 21);
+            this.txtNombres.Size = new System.Drawing.Size(341, 21);
             this.txtNombres.TabIndex = 7;
             // 
             // label4
@@ -373,15 +440,15 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(113, 71);
+            this.txtApellidos.Location = new System.Drawing.Point(113, 76);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(270, 21);
+            this.txtApellidos.Size = new System.Drawing.Size(341, 21);
             this.txtApellidos.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 73);
+            this.label3.Location = new System.Drawing.Point(44, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 4;
@@ -398,24 +465,43 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Controls.Add(this.pictureBox9);
             this.tabPage2.Controls.Add(this.txtDatos);
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.btnCancelar);
-            this.tabPage2.Controls.Add(this.btnActualizar);
-            this.tabPage2.Controls.Add(this.btnNuevo);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(872, 379);
+            this.tabPage2.Size = new System.Drawing.Size(809, 406);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Listas de Empleados ";
+            this.tabPage2.Text = "Lista de Empleados ";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Capa_de_Presentacion.Properties.Resources._19433418_472718866407930_1597699217_n;
+            this.pictureBox1.Location = new System.Drawing.Point(413, 337);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Capa_de_Presentacion.Properties.Resources.editar;
+            this.pictureBox9.Location = new System.Drawing.Point(314, 337);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 43;
+            this.pictureBox9.TabStop = false;
             // 
             // txtDatos
             // 
             this.txtDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDatos.Location = new System.Drawing.Point(215, 4);
+            this.txtDatos.Location = new System.Drawing.Point(77, 6);
             this.txtDatos.Name = "txtDatos";
             this.txtDatos.Size = new System.Drawing.Size(488, 21);
             this.txtDatos.TabIndex = 17;
@@ -424,50 +510,19 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 5);
+            this.label7.Location = new System.Drawing.Point(21, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(205, 16);
+            this.label7.Size = new System.Drawing.Size(50, 16);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Buscar por Apellidos y Nombres:";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(795, 264);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "&Salir";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(690, 264);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 14;
-            this.btnActualizar.Text = "&Editar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(581, 264);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 13;
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.label7.Text = "Buscar";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.dgvEmpleados);
-            this.panel1.Location = new System.Drawing.Point(10, 45);
+            this.panel1.Location = new System.Drawing.Point(7, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(860, 213);
+            this.panel1.Size = new System.Drawing.Size(793, 286);
             this.panel1.TabIndex = 12;
             // 
             // dgvEmpleados
@@ -486,9 +541,9 @@
             this.Teléfono,
             this.Column5,
             this.Column1});
-            this.dgvEmpleados.Location = new System.Drawing.Point(-1, -1);
+            this.dgvEmpleados.Location = new System.Drawing.Point(-3, 2);
             this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.Size = new System.Drawing.Size(793, 164);
+            this.dgvEmpleados.Size = new System.Drawing.Size(791, 279);
             this.dgvEmpleados.TabIndex = 0;
             // 
             // DNI
@@ -553,13 +608,46 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.pictureBox8);
+            this.tabPage3.Controls.Add(this.pictureBox11);
+            this.tabPage3.Controls.Add(this.pictureBox12);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(872, 379);
+            this.tabPage3.Size = new System.Drawing.Size(809, 406);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Referencia Empleado";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
+            this.pictureBox8.Location = new System.Drawing.Point(486, 323);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 45;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
+            this.pictureBox11.Location = new System.Drawing.Point(385, 323);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 43;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Capa_de_Presentacion.Properties.Resources.nuevo;
+            this.pictureBox12.Location = new System.Drawing.Point(281, 323);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 44;
+            this.pictureBox12.TabStop = false;
             // 
             // groupBox2
             // 
@@ -567,8 +655,6 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.mktTel);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.btnCnacel);
-            this.groupBox2.Controls.Add(this.btnGuarda);
             this.groupBox2.Controls.Add(this.txtDire);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txtNombreRef);
@@ -576,15 +662,15 @@
             this.groupBox2.Controls.Add(this.txtApellidoRef);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 13);
+            this.groupBox2.Location = new System.Drawing.Point(78, 14);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(472, 318);
+            this.groupBox2.Size = new System.Drawing.Size(635, 289);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // mktCelula
             // 
-            this.mktCelula.Location = new System.Drawing.Point(138, 131);
+            this.mktCelula.Location = new System.Drawing.Point(156, 139);
             this.mktCelula.Mask = "0000-0000";
             this.mktCelula.Name = "mktCelula";
             this.mktCelula.Size = new System.Drawing.Size(68, 21);
@@ -593,7 +679,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(42, 131);
+            this.label13.Location = new System.Drawing.Point(100, 142);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 16);
             this.label13.TabIndex = 23;
@@ -601,7 +687,7 @@
             // 
             // mktTel
             // 
-            this.mktTel.Location = new System.Drawing.Point(138, 96);
+            this.mktTel.Location = new System.Drawing.Point(156, 104);
             this.mktTel.Mask = "0000-0000";
             this.mktTel.Name = "mktTel";
             this.mktTel.Size = new System.Drawing.Size(68, 21);
@@ -610,41 +696,24 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(42, 101);
+            this.label14.Location = new System.Drawing.Point(88, 104);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 16);
             this.label14.TabIndex = 20;
             this.label14.Text = "Teléfono";
             // 
-            // btnCnacel
-            // 
-            this.btnCnacel.Location = new System.Drawing.Point(291, 247);
-            this.btnCnacel.Name = "btnCnacel";
-            this.btnCnacel.Size = new System.Drawing.Size(75, 29);
-            this.btnCnacel.TabIndex = 19;
-            this.btnCnacel.Text = "&Cancelar";
-            this.btnCnacel.UseVisualStyleBackColor = true;
-            // 
-            // btnGuarda
-            // 
-            this.btnGuarda.Location = new System.Drawing.Point(201, 247);
-            this.btnGuarda.Name = "btnGuarda";
-            this.btnGuarda.Size = new System.Drawing.Size(75, 29);
-            this.btnGuarda.TabIndex = 18;
-            this.btnGuarda.Text = "Guardar";
-            this.btnGuarda.UseVisualStyleBackColor = true;
-            // 
             // txtDire
             // 
-            this.txtDire.Location = new System.Drawing.Point(138, 161);
+            this.txtDire.Location = new System.Drawing.Point(156, 176);
+            this.txtDire.Multiline = true;
             this.txtDire.Name = "txtDire";
-            this.txtDire.Size = new System.Drawing.Size(270, 21);
+            this.txtDire.Size = new System.Drawing.Size(432, 80);
             this.txtDire.TabIndex = 16;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(42, 161);
+            this.label15.Location = new System.Drawing.Point(85, 179);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 16);
             this.label15.TabIndex = 15;
@@ -652,15 +721,15 @@
             // 
             // txtNombreRef
             // 
-            this.txtNombreRef.Location = new System.Drawing.Point(138, 44);
+            this.txtNombreRef.Location = new System.Drawing.Point(156, 32);
             this.txtNombreRef.Name = "txtNombreRef";
-            this.txtNombreRef.Size = new System.Drawing.Size(270, 21);
+            this.txtNombreRef.Size = new System.Drawing.Size(432, 21);
             this.txtNombreRef.TabIndex = 7;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 47);
+            this.label18.Location = new System.Drawing.Point(24, 35);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(126, 16);
             this.label18.TabIndex = 6;
@@ -668,15 +737,15 @@
             // 
             // txtApellidoRef
             // 
-            this.txtApellidoRef.Location = new System.Drawing.Point(138, 71);
+            this.txtApellidoRef.Location = new System.Drawing.Point(156, 69);
             this.txtApellidoRef.Name = "txtApellidoRef";
-            this.txtApellidoRef.Size = new System.Drawing.Size(270, 21);
+            this.txtApellidoRef.Size = new System.Drawing.Size(432, 21);
             this.txtApellidoRef.TabIndex = 5;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 71);
+            this.label19.Location = new System.Drawing.Point(24, 69);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(127, 16);
             this.label19.TabIndex = 4;
@@ -684,36 +753,46 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.pictureBox16);
+            this.tabPage4.Controls.Add(this.pictureBox17);
+            this.tabPage4.Controls.Add(this.groupBox4);
             this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.dataGridView1);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.button5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(872, 379);
+            this.tabPage4.Size = new System.Drawing.Size(809, 406);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Listas de Referencia";
+            this.tabPage4.Text = "Lista de Referencia";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // pictureBox16
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(211, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(488, 21);
-            this.textBox1.TabIndex = 23;
+            this.pictureBox16.Image = global::Capa_de_Presentacion.Properties.Resources._19433418_472718866407930_1597699217_n;
+            this.pictureBox16.Location = new System.Drawing.Point(419, 330);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 48;
+            this.pictureBox16.TabStop = false;
             // 
-            // label12
+            // pictureBox17
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(205, 16);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Buscar por Apellidos y Nombres:";
+            this.pictureBox17.Image = global::Capa_de_Presentacion.Properties.Resources.editar;
+            this.pictureBox17.Location = new System.Drawing.Point(320, 330);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 47;
+            this.pictureBox17.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Location = new System.Drawing.Point(21, 62);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(765, 253);
+            this.groupBox4.TabIndex = 46;
+            this.groupBox4.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -728,41 +807,10 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 43);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 14);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(793, 164);
-            this.dataGridView1.TabIndex = 18;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(736, 275);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "&Salir";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(631, 275);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "&Editar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(522, 275);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "&Nuevo";
-            this.button5.UseVisualStyleBackColor = true;
+            this.dataGridView1.Size = new System.Drawing.Size(681, 223);
+            this.dataGridView1.TabIndex = 19;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -805,66 +853,149 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 150;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(77, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(488, 21);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(18, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 16);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Buscar ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Rockwell", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Teal;
+            this.label11.Location = new System.Drawing.Point(315, 1);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(242, 50);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Empleados";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Capa_de_Presentacion.Properties.Resources.iconRestaurar1;
+            this.pictureBox4.Location = new System.Drawing.Point(830, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
+            this.pictureBox2.Location = new System.Drawing.Point(857, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Capa_de_Presentacion.Properties.Resources.iconMini11;
+            this.pictureBox3.Location = new System.Drawing.Point(803, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Capa_de_Presentacion.Properties.Resources._1497960351_Cart;
+            this.pictureBox10.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 26;
+            this.pictureBox10.TabStop = false;
+            // 
             // FrmRegistrarEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 492);
+            this.BackgroundImage = global::Capa_de_Presentacion.Properties.Resources.pantalla2;
+            this.ClientSize = new System.Drawing.Size(883, 524);
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmRegistrarEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmRegistrarEmpleados";
-//            this.Activated += new System.EventHandler(this.FrmRegistrarEmpleados_Activated);
+            this.Activated += new System.EventHandler(this.FrmRegistrarEmpleados_Activated);
             this.Load += new System.EventHandler(this.FrmRegistrarEmpleados_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox cboCargo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ComboBox cboDepto;
         private System.Windows.Forms.MaskedTextBox mktCelular;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox mktCodEmpleado;
         private System.Windows.Forms.MaskedTextBox mktTelefono;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnGrabar;
-        private System.Windows.Forms.Button btnNuevaCategoria;
         public System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.RadioButton rbnFemenino;
-        public System.Windows.Forms.RadioButton rbnMasculino;
-        private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtApellidos;
@@ -873,9 +1004,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtDatos;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
@@ -893,8 +1021,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox mktTel;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnCnacel;
-        private System.Windows.Forms.Button btnGuarda;
         public System.Windows.Forms.TextBox txtDire;
         private System.Windows.Forms.Label label15;
         public System.Windows.Forms.TextBox txtNombreRef;
@@ -904,6 +1030,22 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.RadioButton rbnFemenino;
+        public System.Windows.Forms.RadioButton rbnMasculino;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -911,8 +1053,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

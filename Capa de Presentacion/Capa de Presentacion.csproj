@@ -265,15 +265,20 @@
     <None Include="bin\Resorces\1button_hover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minimize.png" />
-    <None Include="Resources\restore.png" />
-    <None Include="Resources\close.png" />
+    <None Include="Resources\pantallaMDI.png" />
+    <None Include="Resources\iconoFormularios.png" />
+    <None Include="Resources\iconCierre1.png" />
+    <None Include="Resources\iconRestaurar1.png" />
+    <None Include="Resources\iconMini11.png" />
+    <None Include="Resources\pantalla2.png" />
     <None Include="Resources\editar.png" />
     <None Include="Resources\eliminar.png" />
     <None Include="Resources\nuevo.png" />
     <None Include="Resources\1498103751_icon-111-search.png" />
     <None Include="Resources\19239827_471449833201500_175946913_n.png" />
     <None Include="Resources\19433418_472718866407930_1597699217_n.png" />
+    <None Include="Resources\19397980_471461579866992_1399789415_n.png" />
+    <None Include="Resources\1497960351_Cart.png" />
     <Content Include="Resources\1button.png" />
     <Content Include="Resources\1button_click.png" />
     <Content Include="Resources\1button_hover.png" />

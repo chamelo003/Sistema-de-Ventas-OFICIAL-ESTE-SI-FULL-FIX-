@@ -32,7 +32,7 @@ namespace Capa_de_Presentacion
          public static int IdEmpleado;
 
         //Variables de Sesion
-        public static String IdEmpleadoLogueado;
+        public static int IdEmpleadoLogueado;
         public static String NombreEmpleadoLogueado;
  
         [STAThread]

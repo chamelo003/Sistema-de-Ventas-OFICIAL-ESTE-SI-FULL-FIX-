@@ -68,5 +68,15 @@ namespace Capa_de_Presentacion
         {
 
         }
+
+        private void txtBuscarCargo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
