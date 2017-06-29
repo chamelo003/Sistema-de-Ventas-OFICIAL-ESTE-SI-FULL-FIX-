@@ -23,7 +23,14 @@ namespace Capa_de_Presentacion
 
         private void Maximize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            if(this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void Minimize_Click(object sender, EventArgs e)
@@ -33,7 +40,7 @@ namespace Capa_de_Presentacion
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox1.Cursor = Cursors.Hand;
+            ventas.Cursor = Cursors.Hand;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,6 +48,13 @@ namespace Capa_de_Presentacion
             FrmRegistroVentas v = new FrmRegistroVentas();
             v.MdiParent = this;
             v.Show();
+        }
+
+        private void productos_Click(object sender, EventArgs e)
+        {
+            FrmRegistroProductos P = new FrmRegistroProductos();
+            P.MdiParent = this;
+            P.Show();
         }
     }
 }

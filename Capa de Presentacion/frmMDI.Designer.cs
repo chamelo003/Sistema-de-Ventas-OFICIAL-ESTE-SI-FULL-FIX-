@@ -30,19 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDI));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Maximize = new System.Windows.Forms.PictureBox();
-            this.Minimize = new System.Windows.Forms.PictureBox();
-            this.Close = new System.Windows.Forms.PictureBox();
             this.lblLoggedUser = new System.Windows.Forms.Label();
+            this.Minimize = new System.Windows.Forms.PictureBox();
+            this.Maximize = new System.Windows.Forms.PictureBox();
+            this.Close = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ventas = new System.Windows.Forms.PictureBox();
+            this.productos = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,30 +62,15 @@
             this.panel1.Size = new System.Drawing.Size(960, 31);
             this.panel1.TabIndex = 2;
             // 
-            // label1
+            // lblLoggedUser
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(275, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "POSIX";
-            // 
-            // Maximize
-            // 
-            this.Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Maximize.BackColor = System.Drawing.Color.Transparent;
-            this.Maximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Maximize.Image = global::Capa_de_Presentacion.Properties.Resources.restore;
-            this.Maximize.Location = new System.Drawing.Point(899, 3);
-            this.Maximize.Name = "Maximize";
-            this.Maximize.Size = new System.Drawing.Size(22, 21);
-            this.Maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Maximize.TabIndex = 6;
-            this.Maximize.TabStop = false;
-            this.Maximize.Click += new System.EventHandler(this.Maximize_Click);
+            this.lblLoggedUser.AutoSize = true;
+            this.lblLoggedUser.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoggedUser.Location = new System.Drawing.Point(11, 4);
+            this.lblLoggedUser.Name = "lblLoggedUser";
+            this.lblLoggedUser.Size = new System.Drawing.Size(16, 20);
+            this.lblLoggedUser.TabIndex = 8;
+            this.lblLoggedUser.Text = "-";
             // 
             // Minimize
             // 
@@ -99,6 +86,20 @@
             this.Minimize.TabStop = false;
             this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
             // 
+            // Maximize
+            // 
+            this.Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Maximize.BackColor = System.Drawing.Color.Transparent;
+            this.Maximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Maximize.Image = global::Capa_de_Presentacion.Properties.Resources.restore;
+            this.Maximize.Location = new System.Drawing.Point(899, 3);
+            this.Maximize.Name = "Maximize";
+            this.Maximize.Size = new System.Drawing.Size(22, 21);
+            this.Maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Maximize.TabIndex = 6;
+            this.Maximize.TabStop = false;
+            this.Maximize.Click += new System.EventHandler(this.Maximize_Click);
+            // 
             // Close
             // 
             this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -113,37 +114,50 @@
             this.Close.TabStop = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // lblLoggedUser
+            // label1
             // 
-            this.lblLoggedUser.AutoSize = true;
-            this.lblLoggedUser.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoggedUser.Location = new System.Drawing.Point(11, 4);
-            this.lblLoggedUser.Name = "lblLoggedUser";
-            this.lblLoggedUser.Size = new System.Drawing.Size(16, 20);
-            this.lblLoggedUser.TabIndex = 8;
-            this.lblLoggedUser.Text = "-";
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(275, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "POSIX";
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.productos);
+            this.panel2.Controls.Add(this.ventas);
             this.panel2.Location = new System.Drawing.Point(3, 31);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(158, 504);
             this.panel2.TabIndex = 4;
             // 
-            // pictureBox1
+            // ventas
             // 
-            this.pictureBox1.Image = global::Capa_de_Presentacion.Properties.Resources.iconVentas;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.ventas.Image = global::Capa_de_Presentacion.Properties.Resources.iconVentas;
+            this.ventas.Location = new System.Drawing.Point(15, 34);
+            this.ventas.Name = "ventas";
+            this.ventas.Size = new System.Drawing.Size(123, 54);
+            this.ventas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ventas.TabIndex = 0;
+            this.ventas.TabStop = false;
+            this.ventas.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.ventas.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            // 
+            // productos
+            // 
+            this.productos.Image = global::Capa_de_Presentacion.Properties.Resources.iconProduc;
+            this.productos.Location = new System.Drawing.Point(13, 94);
+            this.productos.Name = "productos";
+            this.productos.Size = new System.Drawing.Size(123, 54);
+            this.productos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productos.TabIndex = 1;
+            this.productos.TabStop = false;
+            this.productos.Click += new System.EventHandler(this.productos_Click);
             // 
             // frmMDI
             // 
@@ -168,11 +182,12 @@
             this.Load += new System.EventHandler(this.frmMDI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,6 +200,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLoggedUser;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ventas;
+        private System.Windows.Forms.PictureBox productos;
     }
 }

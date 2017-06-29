@@ -13,7 +13,7 @@ namespace Capa_de_Presentacion
         /// </summary>
          public static int Evento;
 
-        //Datos del Cliente
+        /*Datos del Cliente
          public static int IdCliente;
          public static String DocumentoIdentidad;
          public static String NombreCliente;
@@ -28,11 +28,10 @@ namespace Capa_de_Presentacion
 
         //Datos del Empleado
          public static int IdCargo;
-         public static String EstadoCivil="";
          public static int IdEmpleado;
-
+         */
         //Variables de Sesion
-        public static int IdEmpleadoLogueado;
+        public static String IdEmpleadoLogueado;
         public static String NombreEmpleadoLogueado;
  
         [STAThread]

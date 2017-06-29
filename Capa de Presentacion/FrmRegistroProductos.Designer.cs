@@ -193,8 +193,7 @@
             this.panel1.Location = new System.Drawing.Point(28, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(809, 331);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 0;            
             // 
             // label17
             // 
@@ -216,8 +215,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(33, 33);
             this.label16.TabIndex = 39;
-            this.label16.Text = "+";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            this.label16.Text = "+";            
             // 
             // groupBox1
             // 
@@ -720,7 +718,6 @@
             this.MinimizeBox = false;
             this.Name = "FrmRegistroProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.FrmRegistroProductos_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

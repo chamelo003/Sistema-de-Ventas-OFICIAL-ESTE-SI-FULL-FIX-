@@ -422,7 +422,6 @@
             this.MinimizeBox = false;
             this.Name = "FrmRegistrarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.FrmRegistrarUsuarios_Load);
             this.tabControl1.ResumeLayout(false);
             this.Usuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

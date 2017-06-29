@@ -154,7 +154,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(462, 94);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtBuscarCargo
             // 
@@ -163,7 +162,6 @@
             this.txtBuscarCargo.Name = "txtBuscarCargo";
             this.txtBuscarCargo.Size = new System.Drawing.Size(350, 21);
             this.txtBuscarCargo.TabIndex = 13;
-            this.txtBuscarCargo.TextChanged += new System.EventHandler(this.txtBuscarCargo_TextChanged);
             // 
             // label2
             // 

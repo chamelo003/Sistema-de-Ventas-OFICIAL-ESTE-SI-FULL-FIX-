@@ -630,8 +630,6 @@
             this.MinimizeBox = false;
             this.Name = "FrmRegistroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Activated += new System.EventHandler(this.FrmRegistroCliente_Activated);
-            this.Load += new System.EventHandler(this.FrmRegistroCliente_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
