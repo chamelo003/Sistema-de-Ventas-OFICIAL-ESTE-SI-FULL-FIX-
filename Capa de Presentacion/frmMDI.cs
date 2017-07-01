@@ -56,5 +56,10 @@ namespace Capa_de_Presentacion
             P.MdiParent = this;
             P.Show();
         }
+
+        private void productos_MouseEnter(object sender, EventArgs e)
+        {
+            productos.Cursor = Cursors.Hand;
+        }
     }
 }
