@@ -39,14 +39,14 @@ namespace Capa_de_Presentacion
                     U.m_Usuario = txtUser.Text;
                     U.m_Contrasenha = txtPassword.Text;
                     Mensaje = U.IniciarSesion();
-                    if (Mensaje == "Su Contraseña es Incorrecta.")
+                    if (Mensaje == "Su Contraseña es incorrecta.")
                     {
                         DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "Sistema de Ventas.", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                         txtPassword.Clear();
                         txtPassword.Focus();
                     }
                     else
-                        if (Mensaje == "El Nombre de Usuario no Existe.")
+                        if (Mensaje == "El Nombre de usuario no existe.")
                         {
                             DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "Sistema de Ventas.", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                             txtUser.Clear();
@@ -62,11 +62,11 @@ namespace Capa_de_Presentacion
                             this.Hide();
                         }
                 }else {
-                    DevComponents.DotNetBar.MessageBoxEx.Show("Por Favor Ingrese su Contraseña.","Sistema de Ventas.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    DevComponents.DotNetBar.MessageBoxEx.Show("Por favor ingrese su contraseña.","Sistema de Ventas.",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     txtPassword.Focus();
                 }
             }else{
-                DevComponents.DotNetBar.MessageBoxEx.Show("Por Favor Ingrese Nombre de Usuario.", "Sistema de Ventas.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DevComponents.DotNetBar.MessageBoxEx.Show("Por favor ingrese nombre de usuario.", "Sistema de Ventas.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUser.Focus();
                 }
         }
