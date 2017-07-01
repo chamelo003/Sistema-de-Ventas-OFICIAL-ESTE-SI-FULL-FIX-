@@ -21,11 +21,6 @@ namespace Capa_de_Presentacion
             InitializeComponent();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             if (DevComponents.DotNetBar.MessageBoxEx.Show("¿Está Seguro que Desea Salir.?", "Sistema de Ventas.", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes) {
@@ -75,7 +70,6 @@ namespace Capa_de_Presentacion
                 txtUser.Focus();
                 }
         }
-        //comentario culero para poder hacer un commit xD
         private void RecuperarDatosSesion()
         {
             DataRow row;
