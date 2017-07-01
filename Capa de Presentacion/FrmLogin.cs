@@ -75,7 +75,7 @@ namespace Capa_de_Presentacion
                 txtUser.Focus();
                 }
         }
-
+        //comentario culero para poder hacer un commit xD
         private void RecuperarDatosSesion()
         {
             DataRow row;
