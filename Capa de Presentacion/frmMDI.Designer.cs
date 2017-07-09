@@ -38,6 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.productos = new System.Windows.Forms.PictureBox();
             this.ventas = new System.Windows.Forms.PictureBox();
+            this.Clientes = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximize)).BeginInit();
@@ -45,6 +46,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Clientes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,6 +131,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.Controls.Add(this.Clientes);
             this.panel2.Controls.Add(this.productos);
             this.panel2.Controls.Add(this.ventas);
             this.panel2.Location = new System.Drawing.Point(3, 31);
@@ -160,6 +163,18 @@
             this.ventas.Click += new System.EventHandler(this.pictureBox1_Click);
             this.ventas.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
+            // Clientes
+            // 
+            this.Clientes.Image = global::Capa_de_Presentacion.Properties.Resources.iconClientes;
+            this.Clientes.Location = new System.Drawing.Point(15, 154);
+            this.Clientes.Name = "Clientes";
+            this.Clientes.Size = new System.Drawing.Size(123, 54);
+            this.Clientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Clientes.TabIndex = 2;
+            this.Clientes.TabStop = false;
+            this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
+            this.Clientes.MouseEnter += new System.EventHandler(this.Clientes_MouseEnter);
+            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +204,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Clientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,5 +219,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox ventas;
         private System.Windows.Forms.PictureBox productos;
+        private System.Windows.Forms.PictureBox Clientes;
     }
 }

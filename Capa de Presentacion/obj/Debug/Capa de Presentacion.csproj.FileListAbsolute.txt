@@ -216,14 +216,3 @@ C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FUL
 C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.Proveedores.resources
 C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmSAR.resources
 C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\obj\Debug\Capa de Presentacion.csproj.GenerateResource.Cache
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\Capa de Presentacion.exe.config
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\Capa de Presentacion.exe
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\Capa de Presentacion.pdb
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\CapaLogicaNegocio.dll
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\DevComponents.DotNetBar2.dll
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\DevComponents.Instrumentation.dll
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\CapaEnlaceDatos.dll
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\CapaLogicaNegocio.pdb
-C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\Capa de Presentacion\bin\Debug\CapaEnlaceDatos.pdb

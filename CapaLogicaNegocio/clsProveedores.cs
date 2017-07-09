@@ -101,7 +101,7 @@ namespace CapaLogicaNegocio
             return dt = M.Listado("SP_Buscar_Proveedor", lst);
         }
 
-        public String RegistrarProveedor()
+        public int RegistrarProveedor()
         {
             List<clsParametro> lst = new List<clsParametro>();
             String Mensaje = "";
@@ -124,7 +124,15 @@ namespace CapaLogicaNegocio
             {
                 throw ex;
             }
-            return Mensaje;
+            if(Mensaje == "Proveedor agregado exitosamente")
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
+            
         }
 
         public String ActualizarProveedor()

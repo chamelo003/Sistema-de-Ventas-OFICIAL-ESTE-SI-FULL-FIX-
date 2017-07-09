@@ -16,7 +16,7 @@ namespace CapaLogicaNegocio
         private clsManejador M = new clsManejador();
 
         private Int32 m_IdProducto;
-        private Int32 m_Cod_Barra;
+        private String m_Cod_Barra;
         private String m_Nombre_Producto;
         private Int32 m_Unidad_Existencia;
         private Int32 m_Existencia_Min;
@@ -38,7 +38,7 @@ namespace CapaLogicaNegocio
             set{m_IdProducto=value;}
         }
 
-        public Int32 Cod_Barra{
+        public String Cod_Barra{
             get { return m_Cod_Barra; }
             set { m_Cod_Barra = value; }
         }
@@ -154,25 +154,24 @@ namespace CapaLogicaNegocio
 
             try
             {
-
                 lst.Add(new clsParametro("@Cod_Barra", m_Cod_Barra));
-                lst.Add(new clsParametro("@Nombre", m_Nombre_Producto));
-                lst.Add(new clsParametro("@UnidadExistencia", m_Unidad_Existencia));
-                lst.Add(new clsParametro("@ExistenciaMin", m_Existencia_Min));
-                lst.Add(new clsParametro("@PrecioCosto", m_Precio_Costo));
-                lst.Add(new clsParametro("@PrecioVenta1", m_Precio_Venta1));
-                lst.Add(new clsParametro("@PrecioVenta2", m_Precio_Venta2));
-                lst.Add(new clsParametro("@PrecioVenta3", m_Precio_Venta3));
-                lst.Add(new clsParametro("@PrecioVenta4", m_Precio_Venta4));
+                lst.Add(new clsParametro("@Nombre_Producto", m_Nombre_Producto));
+                lst.Add(new clsParametro("@Unidad_Existencia", m_Unidad_Existencia));
+                lst.Add(new clsParametro("@Existencia_Min", m_Existencia_Min));
+                lst.Add(new clsParametro("@Precio_Costo", m_Precio_Costo));
+                lst.Add(new clsParametro("@Precio_Venta1", m_Precio_Venta1));
+                lst.Add(new clsParametro("@Precio_Venta2", m_Precio_Venta2));
+                lst.Add(new clsParametro("@Precio_Venta3", m_Precio_Venta3));
+                lst.Add(new clsParametro("@Precio_Venta4", m_Precio_Venta4));
                 lst.Add(new clsParametro("@ISV", m_ISV));
-                lst.Add(new clsParametro("@FechaIngreso", m_Fecha_Ingreso));
-                lst.Add(new clsParametro("@FechaCaduc", m_Fecha_Caduc));
+                lst.Add(new clsParametro("@Fecha_Ingreso", m_Fecha_Ingreso));
+                lst.Add(new clsParametro("@Fecha_Caduc", m_Fecha_Caduc));
                 lst.Add(new clsParametro("@Imagen", m_Imagen));
                 lst.Add(new clsParametro("@IdProveedor", m_IdProveedor));
                 lst.Add(new clsParametro("@IdCategoria", m_IdCategoria));
                 lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
                 M.EjecutarSP("SP_Agregar_Producto", ref lst);
-                Mensaje = lst[14].Valor.ToString();
+                Mensaje = lst[15].Valor.ToString();
             }
             catch (Exception ex)
             {
@@ -190,17 +189,17 @@ namespace CapaLogicaNegocio
             {
                 lst.Add(new clsParametro("@IdProducto", m_IdProducto));
                 lst.Add(new clsParametro("@Cod_Barra", m_Cod_Barra));
-                lst.Add(new clsParametro("@Nombre", m_Nombre_Producto));
-                lst.Add(new clsParametro("@UnidadExistencia", m_Unidad_Existencia));
-                lst.Add(new clsParametro("@ExistenciaMin", m_Existencia_Min));
-                lst.Add(new clsParametro("@PrecioCosto", m_Precio_Costo));
-                lst.Add(new clsParametro("@PrecioVenta1", m_Precio_Venta1));
-                lst.Add(new clsParametro("@PrecioVenta2", m_Precio_Venta2));
-                lst.Add(new clsParametro("@PrecioVenta3", m_Precio_Venta3));
-                lst.Add(new clsParametro("@PrecioVenta4", m_Precio_Venta4));
+                lst.Add(new clsParametro("@Nombre_Producto", m_Nombre_Producto));
+                lst.Add(new clsParametro("@Unidad_Existencia", m_Unidad_Existencia));
+                lst.Add(new clsParametro("@Existencia_Min", m_Existencia_Min));
+                lst.Add(new clsParametro("@Precio_Costo", m_Precio_Costo));
+                lst.Add(new clsParametro("@Precio_Venta1", m_Precio_Venta1));
+                lst.Add(new clsParametro("@Precio_Venta2", m_Precio_Venta2));
+                lst.Add(new clsParametro("@Precio_Venta3", m_Precio_Venta3));
+                lst.Add(new clsParametro("@Precio_Venta4", m_Precio_Venta4));
                 lst.Add(new clsParametro("@ISV", m_ISV));
-                lst.Add(new clsParametro("@FechaIngreso", m_Fecha_Ingreso));
-                lst.Add(new clsParametro("@FechaCaduc", m_Fecha_Caduc));
+                lst.Add(new clsParametro("@Fecha_Ingreso", m_Fecha_Ingreso));
+                lst.Add(new clsParametro("@Fecha_Caduc", m_Fecha_Caduc));
                 lst.Add(new clsParametro("@Imagen", m_Imagen));
                 lst.Add(new clsParametro("@IdProveedor", m_IdProveedor));
                 lst.Add(new clsParametro("@IdCategoria", m_IdCategoria));

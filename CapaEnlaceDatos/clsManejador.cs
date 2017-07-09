@@ -55,7 +55,8 @@ namespace CapaEnlaceDatos
                 Conectar();
                 cmd = new SqlCommand(NombreSP,conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
-                if(lst!=null){
+                if(lst!=null)
+                {
                     for (int i = 0; i < lst.Count; i++)
                     {
                         if (lst[i].Direccion == ParameterDirection.Input)

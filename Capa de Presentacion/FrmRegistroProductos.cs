@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using DevComponents.DotNetBar;
 using CapaLogicaNegocio;
 using System.Data.SqlClient;
@@ -47,41 +46,41 @@ namespace Capa_de_Presentacion
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void nuevo_Click(object sender, EventArgs e)
-        {
-            this.panel1.Enabled = true;
-        }
-
-        private void validarcamposvacios()
-        {
-            
-        }
-
         private void guardar_Click(object sender, EventArgs e)
         {
-            P.Cod_Barra = Convert.ToInt32(txtCodigoBarra.Text);
+            //validarcamposvacios();
+            String Mensaje = "";
+            P.Cod_Barra = txtCodigoBarra.Text;
             P.NombreProducto = txtProducto.Text;
             P.Unidad_Exis = Convert.ToInt32(cant_existencia.Value);
             P.Existencia_Min = Convert.ToInt32(cant_existencia_min.Value);
-            P.IdCategoria = Convert.ToInt32(cboCategoria.ValueMember);
-            P.IdProveedor = Convert.ToInt32(cboProveedor.ValueMember);
-            P.Fecha_Ingreso = dtpFechaingreso.Value;
-            P.Fecha_Caduc = dtpFechaVencimiento.Value;
             P.Precio_Costo = Convert.ToDecimal(txtPrecioCosto.Text);
             P.Precio_Venta1 = Convert.ToDecimal(txtPrecioVenta1.Text);
             P.Precio_Venta2 = Convert.ToDecimal(txtPrecioVenta2.Text);
             P.Precio_Venta3 = Convert.ToDecimal(txtPrecioVenta3.Text);
             P.Precio_Venta4 = Convert.ToDecimal(txtPrecioVenta4.Text);
-
-            try
+            if (chkISV.Checked == true)
             {
-                validarcamposvacios();
-
+                P.ISV = true;
             }
-            catch (SqlException ex)
+            else
             {
+                P.ISV = false;
+            }
+            P.Fecha_Ingreso = dtpFechaingreso.Value;
+            P.Fecha_Caduc = dtpFechaVencimiento.Value;
+            P.Imagen = "NULL";
+            P.IdCategoria = Convert.ToInt32(cboCategoria.SelectedValue);
+            P.IdProveedor = Convert.ToInt32(cboProveedor.SelectedValue);
+            Mensaje = P.RegistrarProductos();
 
-                throw ex;
+            if (Mensaje == "Este producto ya existe")
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -129,6 +128,46 @@ namespace Capa_de_Presentacion
         {
             cargarComboCat();
             cargarComboProveedor();
+            //llenarDTGVProductosxD();
+        }
+
+        private void txtProducto_Validating(object sender, CancelEventArgs e)
+        {
+            if(txtProducto.Text == "")
+            {
+                errorProvider1.SetError(txtProducto, "Este campo no puede quedar vacio");
+            }
+            else
+            {
+                errorProvider1.SetError(txtProducto, "");
+            }
+        }
+
+        void llenarDTGVProductosxD()
+        {
+            DataTable dt = new DataTable();
+            dt = P.MostrarProductos();
+            try
+            {
+                dgvProductos.Rows.Clear();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    dgvProductos.Rows.Add(dt.Rows[i][0]);
+                    dgvProductos.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString();
+                    dgvProductos.Rows[i].Cells[1].Value = dt.Rows[i][1].ToString();
+                    dgvProductos.Rows[i].Cells[2].Value = dt.Rows[i][2].ToString();
+                    dgvProductos.Rows[i].Cells[3].Value = dt.Rows[i][3].ToString();
+                    dgvProductos.Rows[i].Cells[4].Value = dt.Rows[i][4].ToString();
+                    dgvProductos.Rows[i].Cells[5].Value = dt.Rows[i][5].ToString();
+                    dgvProductos.Rows[i].Cells[6].Value = dt.Rows[i][6].ToString();
+                    //dgvProductos.Rows[i].Cells[7].Value = Convert.ToDateTime(dt.Rows[i][7].ToString()).ToShortDateString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            dgvProductos.ClearSelection();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Capa_de_Presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (DevComponents.DotNetBar.MessageBoxEx.Show("¿Está Seguro que Desea Salir.?", "Sistema de Ventas.", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes) {
+            if (DevComponents.DotNetBar.MessageBoxEx.Show("¿Está seguro que desea salir.?", "POSIX", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes) {
                 Application.Exit();
             }
                
@@ -39,23 +39,23 @@ namespace Capa_de_Presentacion
                     U.m_Usuario = txtUser.Text;
                     U.m_Contrasenha = txtPassword.Text;
                     Mensaje = U.IniciarSesion();
-                    if (Mensaje == "Su Contraseña es incorrecta.")
+                    if (Mensaje == "Su contraseña es incorrecta.")
                     {
-                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "Sistema de Ventas.", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                         txtPassword.Clear();
                         txtPassword.Focus();
                     }
                     else
-                        if (Mensaje == "El Nombre de usuario no existe.")
+                        if (Mensaje == "El nombre de usuario no existe.")
                         {
-                            DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "Sistema de Ventas.", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                            DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                             txtUser.Clear();
                             txtPassword.Clear();
                             txtUser.Focus();
                         }
                         else
                         {
-                            DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "Sistema de Ventas.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                            DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                             frmMDI MP = new frmMDI();
                             RecuperarDatosSesion();
                             MP.Show();

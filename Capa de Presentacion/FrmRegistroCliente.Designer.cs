@@ -31,18 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroCliente));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Cancelar = new System.Windows.Forms.PictureBox();
+            this.Nuevo = new System.Windows.Forms.PictureBox();
+            this.Guardar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboMunicipio = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboDepto = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.mktCelular = new System.Windows.Forms.MaskedTextBox();
@@ -50,12 +47,12 @@
             this.mktRTN = new System.Windows.Forms.MaskedTextBox();
             this.mktTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -80,13 +77,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nuevo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -110,9 +108,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.pictureBox7);
-            this.tabPage1.Controls.Add(this.pictureBox6);
-            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.Cancelar);
+            this.tabPage1.Controls.Add(this.Nuevo);
+            this.tabPage1.Controls.Add(this.Guardar);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -122,44 +120,47 @@
             this.tabPage1.Text = "Gestión de Cliente";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // Cancelar
             // 
-            this.pictureBox7.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
-            this.pictureBox7.Location = new System.Drawing.Point(448, 332);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 36;
-            this.pictureBox7.TabStop = false;
+            this.Cancelar.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
+            this.Cancelar.Location = new System.Drawing.Point(448, 332);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(63, 63);
+            this.Cancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Cancelar.TabIndex = 36;
+            this.Cancelar.TabStop = false;
             // 
-            // pictureBox6
+            // Nuevo
             // 
-            this.pictureBox6.Image = global::Capa_de_Presentacion.Properties.Resources.nuevo;
-            this.pictureBox6.Location = new System.Drawing.Point(258, 332);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 35;
-            this.pictureBox6.TabStop = false;
+            this.Nuevo.Image = global::Capa_de_Presentacion.Properties.Resources.nuevo;
+            this.Nuevo.Location = new System.Drawing.Point(258, 332);
+            this.Nuevo.Name = "Nuevo";
+            this.Nuevo.Size = new System.Drawing.Size(63, 63);
+            this.Nuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Nuevo.TabIndex = 35;
+            this.Nuevo.TabStop = false;
+            
             // 
-            // pictureBox5
+            // Guardar
             // 
-            this.pictureBox5.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
-            this.pictureBox5.Location = new System.Drawing.Point(356, 332);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 34;
-            this.pictureBox5.TabStop = false;
+            this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
+            this.Guardar.Location = new System.Drawing.Point(356, 332);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(63, 63);
+            this.Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Guardar.TabIndex = 34;
+            this.Guardar.TabStop = false;
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.cboSexo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cboMunicipio);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cboDepto);
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.mktCelular);
@@ -167,55 +168,21 @@
             this.groupBox1.Controls.Add(this.mktRTN);
             this.groupBox1.Controls.Add(this.mktTelefono);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtApellidos);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(24, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(703, 317);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Location = new System.Drawing.Point(523, 107);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(134, 86);
-            this.groupBox3.TabIndex = 40;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sexo:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(19, 53);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 22);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Masculino";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(19, 24);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 22);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.Text = "Femenino";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -239,14 +206,14 @@
             this.label5.TabIndex = 38;
             this.label5.Text = "+";
             // 
-            // comboBox2
+            // cboMunicipio
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(114, 207);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(213, 26);
-            this.comboBox2.TabIndex = 37;
+            this.cboMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMunicipio.FormattingEnabled = true;
+            this.cboMunicipio.Location = new System.Drawing.Point(114, 207);
+            this.cboMunicipio.Name = "cboMunicipio";
+            this.cboMunicipio.Size = new System.Drawing.Size(213, 26);
+            this.cboMunicipio.TabIndex = 37;
             // 
             // label4
             // 
@@ -258,21 +225,21 @@
             this.label4.TabIndex = 35;
             this.label4.Text = "Municipio";
             // 
-            // comboBox1
+            // cboDepto
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(115, 173);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(213, 26);
-            this.comboBox1.TabIndex = 34;
+            this.cboDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDepto.FormattingEnabled = true;
+            this.cboDepto.Location = new System.Drawing.Point(115, 173);
+            this.cboDepto.Name = "cboDepto";
+            this.cboDepto.Size = new System.Drawing.Size(213, 26);
+            this.cboDepto.TabIndex = 34;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(113, 141);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(375, 24);
+            this.txtCorreo.Size = new System.Drawing.Size(267, 24);
             this.txtCorreo.TabIndex = 28;
             // 
             // label1
@@ -332,14 +299,14 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Teléfono";
             // 
-            // textBox1
+            // txtDireccion
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(113, 245);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(544, 55);
-            this.textBox1.TabIndex = 16;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(113, 245);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(544, 55);
+            this.txtDireccion.TabIndex = 16;
             // 
             // label8
             // 
@@ -361,13 +328,13 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Departamento";
             // 
-            // textBox2
+            // txtNombres
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(113, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(544, 24);
-            this.textBox2.TabIndex = 7;
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.Location = new System.Drawing.Point(113, 44);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(267, 24);
+            this.txtNombres.TabIndex = 7;
             // 
             // label13
             // 
@@ -379,13 +346,13 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Nombres";
             // 
-            // textBox3
+            // txtApellidos
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(113, 75);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(544, 24);
-            this.textBox3.TabIndex = 5;
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(113, 75);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(267, 24);
+            this.txtApellidos.TabIndex = 5;
             // 
             // label14
             // 
@@ -608,6 +575,24 @@
             this.pictureBox8.TabIndex = 20;
             this.pictureBox8.TabStop = false;
             // 
+            // cboSexo
+            // 
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Location = new System.Drawing.Point(483, 143);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(121, 23);
+            this.cboSexo.TabIndex = 40;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(435, 145);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 18);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Sexo";
+            // 
             // FrmRegistroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -632,13 +617,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nuevo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -664,9 +647,9 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboMunicipio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboDepto;
         public System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox mktCelular;
@@ -674,23 +657,20 @@
         private System.Windows.Forms.MaskedTextBox mktRTN;
         private System.Windows.Forms.MaskedTextBox mktTelefono;
         private System.Windows.Forms.Label label9;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.RadioButton radioButton1;
-        public System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox Cancelar;
+        private System.Windows.Forms.PictureBox Nuevo;
+        private System.Windows.Forms.PictureBox Guardar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -706,6 +686,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         public System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cboSexo;
     }
 }
 

@@ -61,5 +61,17 @@ namespace Capa_de_Presentacion
         {
             productos.Cursor = Cursors.Hand;
         }
+
+        private void Clientes_MouseEnter(object sender, EventArgs e)
+        {
+            Clientes.Cursor = Cursors.Hand;
+        }
+
+        private void Clientes_Click(object sender, EventArgs e)
+        {
+            FrmRegistroCliente C = new FrmRegistroCliente();
+            C.MdiParent = this;
+            C.Show();
+        }
     }
 }
