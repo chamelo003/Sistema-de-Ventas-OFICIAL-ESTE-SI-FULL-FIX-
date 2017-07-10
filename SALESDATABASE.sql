@@ -1,8 +1,8 @@
-CREATE DATABASE POSIX
+--CREATE DATABASE POSIX2
 
-use POSIX
+use POSIX2
 
-CREATE SCHEMA POSIX
+--CREATE SCHEMA POSIX2
 
 CREATE TABLE DEPARTAMENTO(
 	IdDepto int primary key identity,
@@ -153,6 +153,22 @@ CREATE TABLE CLIENTES_HAS_PREFFS(
 	CONSTRAINT [FK_CLIENTES_HAS_PREFFS_PREFERENCIAS] FOREIGN KEY(IdCategoria) REFERENCES CATEGORIAS_PRODUCTOS (IdCategoria)
 )
 
+CREATE TABLE DATOS_EMPRESA(
+	RTN char(14) primary key,
+	Nombre_Empresa varchar(80) not null,
+	Correo varchar(50) not null,
+	Direccion varchar(50) not null,
+	RazonSocial varchar(50) not null,
+)
+
+CREATE TABLE SUCURSAL(
+	IdSucursal int identity primary key,
+	Direccion varchar(300) not null,
+	Telefono char(9) not null,
+	CasaMatriz char(14) not null,
+	CONSTRAINT [FK_SUCURSAL_EMPRESA] FOREIGN KEY(CasaMatriz) REFERENCES DATOS_EMPRESA(RTN)
+)
+
 CREATE TABLE SAR(
 	IdSAR int identity primary key,
 	CAI char(37) not null,
@@ -161,29 +177,9 @@ CREATE TABLE SAR(
 	Fecha_Aut date not null,
 	Fecha_Limite date not null,
 	Rango_Aut_Inicial char(8) not null,
-	Rango_Aut_Final char(8) not null
-)
-
-CREATE TABLE DATOS_EMPRESA(
-	RTN char(14) primary key,
-	Nombre_Empresa varchar(80) not null,
-	Correo varchar(50) not null,
-)
-
-CREATE TABLE SUCURSAL(
-	IdSucursal int identity primary key,
-	Direccion varchar(300) not null,
-	Telefono char(9) not null,
-	RTN char(14) not null,
-	CONSTRAINT [FK_SUCURSAL_EMPRESA] FOREIGN KEY(RTN) REFERENCES DATOS_EMPRESA(RTN)
-)
-
-CREATE TABLE SAR_SUCURSALES(
-	IdSar int not null,
+	Rango_Aut_Final char(8) not null,
 	IdSucursal int not null,
-	CONSTRAINT [PK_SAR_SUCURSALES] PRIMARY KEY(IdSar,IdSucursal),
-	CONSTRAINT [FK_SAR] FOREIGN KEY(IdSar) REFERENCES SAR(IdSar),
-	CONSTRAINT [FK_SUCURSAL] FOREIGN KEY(IdSucursal) REFERENCES SUCURSAL(IdSucursal)
+	CONSTRAINT [FK_SAR_SUCURSAL] FOREIGN KEY(IdSucursal) REFERENCES SUCURSAL(IdSucursal)
 )
 
 CREATE TABLE TIPO_VENTA(
@@ -196,10 +192,10 @@ CREATE TABLE VENTAS(
 	IdEmpleado char(15) not null,
 	IdCliente int not null,
 	IdTipoVenta int not null,
-	Num_Factura char(19) not null,
+	Correlativo int not null,
 	FechaVenta date not null,
-	Descuento decimal(7,2) not null,
 	Subtotal decimal(7,2) not null,
+	Descuento decimal(7,2) not null,	
 	Impuesto decimal(7,2) not null,
 	Total decimal(7,2) not null,
 	IdSucursal int not null

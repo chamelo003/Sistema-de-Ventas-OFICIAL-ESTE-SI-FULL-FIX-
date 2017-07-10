@@ -126,9 +126,19 @@ namespace Capa_de_Presentacion
             groupBox1.Enabled = true;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Nuevo_Click_1(object sender, EventArgs e)
         {
-            
+            groupBox1.Enabled = true;
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void FrmRegistroCliente_Load(object sender, EventArgs e)
+        {
+            cargarComboDepto();
         }
     }
 }

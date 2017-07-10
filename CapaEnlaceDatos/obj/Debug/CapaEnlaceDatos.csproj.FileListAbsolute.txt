@@ -31,3 +31,8 @@ C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FUL
 C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.pdb
 C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.dll
 C:\Users\chame\Desktop\PROYECTO OFIZIAL ;v\Sistema de Ventas OFICIAL ESTE SI FULL+FIX´+\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.pdb
+C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.dll
+C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.pdb
+C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.csprojResolveAssemblyReference.cache
+C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.dll
+C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.pdb

@@ -35,6 +35,8 @@
             this.Nuevo = new System.Windows.Forms.PictureBox();
             this.Guardar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cboMunicipio = new System.Windows.Forms.ComboBox();
@@ -77,8 +79,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.cboSexo = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
@@ -139,7 +139,7 @@
             this.Nuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Nuevo.TabIndex = 35;
             this.Nuevo.TabStop = false;
-            
+            this.Nuevo.Click += new System.EventHandler(this.Nuevo_Click_1);
             // 
             // Guardar
             // 
@@ -183,6 +183,24 @@
             this.groupBox1.Size = new System.Drawing.Size(703, 317);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(435, 145);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 18);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Sexo";
+            // 
+            // cboSexo
+            // 
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Location = new System.Drawing.Point(483, 143);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(121, 23);
+            this.cboSexo.TabIndex = 40;
             // 
             // label6
             // 
@@ -554,6 +572,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox4
             // 
@@ -574,24 +593,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 20;
             this.pictureBox8.TabStop = false;
-            // 
-            // cboSexo
-            // 
-            this.cboSexo.FormattingEnabled = true;
-            this.cboSexo.Location = new System.Drawing.Point(483, 143);
-            this.cboSexo.Name = "cboSexo";
-            this.cboSexo.Size = new System.Drawing.Size(121, 23);
-            this.cboSexo.TabIndex = 40;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(435, 145);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 18);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "Sexo";
             // 
             // FrmRegistroCliente
             // 
@@ -615,6 +616,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmRegistroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmRegistroCliente_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).EndInit();
