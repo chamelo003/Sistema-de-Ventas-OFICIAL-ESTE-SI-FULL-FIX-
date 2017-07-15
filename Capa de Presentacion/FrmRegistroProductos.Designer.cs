@@ -39,7 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkISV = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.nuevacat = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPrecioVenta4 = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta3 = new System.Windows.Forms.TextBox();
@@ -72,15 +72,6 @@
             this.editar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.restore = new System.Windows.Forms.PictureBox();
-            this.close = new System.Windows.Forms.PictureBox();
-            this.minimize = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +84,15 @@
             this.Imagen = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.restore = new System.Windows.Forms.PictureBox();
+            this.close = new System.Windows.Forms.PictureBox();
+            this.minimize = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cancelar)).BeginInit();
@@ -174,13 +174,15 @@
             this.nuevo.TabIndex = 38;
             this.nuevo.TabStop = false;
             this.toolTip1.SetToolTip(this.nuevo, "Nuevo");
+            this.nuevo.Click += new System.EventHandler(this.nuevo_Click);
+            this.nuevo.MouseEnter += new System.EventHandler(this.nuevo_MouseEnter);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.chkISV);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.nuevacat);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.cant_existencia_min);
             this.panel1.Controls.Add(this.cant_existencia);
@@ -227,16 +229,17 @@
             this.label17.TabIndex = 52;
             this.label17.Text = "+";
             // 
-            // label16
+            // nuevacat
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label16.Location = new System.Drawing.Point(343, 153);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(33, 33);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "+";
+            this.nuevacat.AutoSize = true;
+            this.nuevacat.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuevacat.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.nuevacat.Location = new System.Drawing.Point(343, 153);
+            this.nuevacat.Name = "nuevacat";
+            this.nuevacat.Size = new System.Drawing.Size(33, 33);
+            this.nuevacat.TabIndex = 39;
+            this.nuevacat.Text = "+";
+            this.nuevacat.Click += new System.EventHandler(this.nuevacat_Click);
             // 
             // groupBox1
             // 
@@ -559,83 +562,6 @@
             this.dgvProductos.Size = new System.Drawing.Size(839, 277);
             this.dgvProductos.TabIndex = 0;
             // 
-            // txtBuscarProducto
-            // 
-            this.txtBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarProducto.Location = new System.Drawing.Point(83, 16);
-            this.txtBuscarProducto.Name = "txtBuscarProducto";
-            this.txtBuscarProducto.Size = new System.Drawing.Size(524, 21);
-            this.txtBuscarProducto.TabIndex = 11;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 19);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 16);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Buscar";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Teal;
-            this.label11.Location = new System.Drawing.Point(347, 2);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(263, 59);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Productos";
-            // 
-            // restore
-            // 
-            this.restore.Image = global::Capa_de_Presentacion.Properties.Resources.iconRestaurar1;
-            this.restore.Location = new System.Drawing.Point(875, 3);
-            this.restore.Name = "restore";
-            this.restore.Size = new System.Drawing.Size(21, 21);
-            this.restore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.restore.TabIndex = 24;
-            this.restore.TabStop = false;
-            this.restore.Click += new System.EventHandler(this.restore_Click);
-            // 
-            // close
-            // 
-            this.close.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
-            this.close.Location = new System.Drawing.Point(902, 3);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(21, 21);
-            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.close.TabIndex = 23;
-            this.close.TabStop = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // minimize
-            // 
-            this.minimize.Image = global::Capa_de_Presentacion.Properties.Resources.iconMini11;
-            this.minimize.Location = new System.Drawing.Point(848, 3);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(21, 21);
-            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimize.TabIndex = 22;
-            this.minimize.TabStop = false;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Capa_de_Presentacion.Properties.Resources._1497960351_Cart;
-            this.pictureBox10.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(28, 29);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 25;
-            this.pictureBox10.TabStop = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // IdProducto
             // 
             this.IdProducto.HeaderText = "IdProducto";
@@ -716,6 +642,83 @@
             this.Categoria.HeaderText = "Categoría ";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
+            // 
+            // txtBuscarProducto
+            // 
+            this.txtBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarProducto.Location = new System.Drawing.Point(83, 16);
+            this.txtBuscarProducto.Name = "txtBuscarProducto";
+            this.txtBuscarProducto.Size = new System.Drawing.Size(524, 21);
+            this.txtBuscarProducto.TabIndex = 11;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(16, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 16);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Buscar";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Teal;
+            this.label11.Location = new System.Drawing.Point(347, 2);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(263, 59);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Productos";
+            // 
+            // restore
+            // 
+            this.restore.Image = global::Capa_de_Presentacion.Properties.Resources.iconRestaurar1;
+            this.restore.Location = new System.Drawing.Point(875, 3);
+            this.restore.Name = "restore";
+            this.restore.Size = new System.Drawing.Size(21, 21);
+            this.restore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restore.TabIndex = 24;
+            this.restore.TabStop = false;
+            this.restore.Click += new System.EventHandler(this.restore_Click);
+            // 
+            // close
+            // 
+            this.close.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
+            this.close.Location = new System.Drawing.Point(902, 3);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(21, 21);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close.TabIndex = 23;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // minimize
+            // 
+            this.minimize.Image = global::Capa_de_Presentacion.Properties.Resources.iconMini11;
+            this.minimize.Location = new System.Drawing.Point(848, 3);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(21, 21);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimize.TabIndex = 22;
+            this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Capa_de_Presentacion.Properties.Resources._1497960351_Cart;
+            this.pictureBox10.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 25;
+            this.pictureBox10.TabStop = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmRegistroProductos
             // 
@@ -802,7 +805,7 @@
         private System.Windows.Forms.NumericUpDown cant_existencia_min;
         private System.Windows.Forms.NumericUpDown cant_existencia;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label nuevacat;
         private System.Windows.Forms.PictureBox cancelar;
         private System.Windows.Forms.PictureBox guardar;
         private System.Windows.Forms.PictureBox nuevo;

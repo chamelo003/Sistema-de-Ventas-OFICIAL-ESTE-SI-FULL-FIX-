@@ -169,5 +169,21 @@ namespace Capa_de_Presentacion
             }
             dgvProductos.ClearSelection();
         }
+
+        private void nuevacat_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarCategoria c = new FrmRegistrarCategoria();
+            c.Show();   
+        }
+
+        private void nuevo_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
+        }
+
+        private void nuevo_MouseEnter(object sender, EventArgs e)
+        {
+            nuevo.Cursor = Cursors.Hand;
+        }
     }
 }
