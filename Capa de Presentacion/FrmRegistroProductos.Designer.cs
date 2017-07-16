@@ -87,9 +87,7 @@
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.restore = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
-            this.minimize = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -107,9 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.editar)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -673,17 +669,6 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "Productos";
             // 
-            // restore
-            // 
-            this.restore.Image = global::Capa_de_Presentacion.Properties.Resources.iconRestaurar1;
-            this.restore.Location = new System.Drawing.Point(875, 3);
-            this.restore.Name = "restore";
-            this.restore.Size = new System.Drawing.Size(21, 21);
-            this.restore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.restore.TabIndex = 24;
-            this.restore.TabStop = false;
-            this.restore.Click += new System.EventHandler(this.restore_Click);
-            // 
             // close
             // 
             this.close.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
@@ -694,17 +679,6 @@
             this.close.TabIndex = 23;
             this.close.TabStop = false;
             this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // minimize
-            // 
-            this.minimize.Image = global::Capa_de_Presentacion.Properties.Resources.iconMini11;
-            this.minimize.Location = new System.Drawing.Point(848, 3);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(21, 21);
-            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimize.TabIndex = 22;
-            this.minimize.TabStop = false;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // pictureBox10
             // 
@@ -729,9 +703,7 @@
             this.ClientSize = new System.Drawing.Size(928, 496);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.restore);
             this.Controls.Add(this.close);
-            this.Controls.Add(this.minimize);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
@@ -760,9 +732,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.editar)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -814,9 +784,7 @@
         private System.Windows.Forms.TextBox txtPrecioVenta2;
         private System.Windows.Forms.TextBox txtPrecioVenta1;
         private System.Windows.Forms.TextBox txtPrecioCosto;
-        private System.Windows.Forms.PictureBox restore;
         private System.Windows.Forms.PictureBox close;
-        private System.Windows.Forms.PictureBox minimize;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider errorProvider1;

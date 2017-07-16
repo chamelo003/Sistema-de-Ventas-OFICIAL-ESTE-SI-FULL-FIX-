@@ -102,7 +102,6 @@ namespace CapaLogicaNegocio
             String Mensaje = "";
             try
             {
-                lst.Add(new clsParametro("@IdCliente",m_IdCliente));
                 lst.Add(new clsParametro("@RTN",m_RTN));
                 lst.Add(new clsParametro("@Nombres",m_Nombres));
                 lst.Add(new clsParametro("@Apellidos", m_Apellidos));

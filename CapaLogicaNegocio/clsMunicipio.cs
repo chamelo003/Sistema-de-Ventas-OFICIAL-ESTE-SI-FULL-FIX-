@@ -8,7 +8,7 @@ using CapaEnlaceDatos;
 
 namespace CapaLogicaNegocio
 {
-    class clsMunicipio
+    public class clsMunicipio
     {
         clsManejador M = new clsManejador();
 

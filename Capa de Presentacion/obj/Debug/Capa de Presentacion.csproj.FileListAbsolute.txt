@@ -239,8 +239,8 @@ C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Present
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistroProductos.resources
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistroVentas.resources
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.Properties.Resources.resources
-C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.Proveedores.resources
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmSAR.resources
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa de Presentacion.csproj.GenerateResource.Cache
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb
+C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmProveedores.resources

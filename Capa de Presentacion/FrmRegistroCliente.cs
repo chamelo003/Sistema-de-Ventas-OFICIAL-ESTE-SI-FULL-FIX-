@@ -139,6 +139,7 @@ namespace Capa_de_Presentacion
         private void FrmRegistroCliente_Load(object sender, EventArgs e)
         {
             cargarComboDepto();
+            cargarComboSexo();
         }
     }
 }

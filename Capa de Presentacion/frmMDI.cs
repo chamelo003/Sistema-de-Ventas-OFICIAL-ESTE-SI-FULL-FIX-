@@ -73,5 +73,29 @@ namespace Capa_de_Presentacion
             C.MdiParent = this;
             C.Show();
         }
+
+        private void enlaceproveedor_MouseEnter(object sender, EventArgs e)
+        {
+            enlaceproveedor.Cursor = Cursors.Hand;
+        }
+
+        private void enlaceproveedor_Click(object sender, EventArgs e)
+        {
+            FrmProveedores P = new FrmProveedores();
+            P.MdiParent = this;
+            P.Show();
+        }
+
+        private void Empleados_MouseEnter(object sender, EventArgs e)
+        {
+            Empleados.Cursor = Cursors.Hand;
+        }
+
+        private void Empleados_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarEmpleados E = new FrmRegistrarEmpleados();
+            E.MdiParent = this;
+            E.Show();
+        }
     }
 }

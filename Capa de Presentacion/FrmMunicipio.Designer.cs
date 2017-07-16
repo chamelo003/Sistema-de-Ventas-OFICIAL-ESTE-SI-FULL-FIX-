@@ -30,41 +30,41 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Guardar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.aggDepto = new System.Windows.Forms.Label();
+            this.cboDepto = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMunicipio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.txtBuscarDepto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDeparatamento = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdDepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdDepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeparatamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -80,20 +80,42 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.pictureBox7);
-            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.Guardar);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(509, 268);
+            this.tabPage1.Size = new System.Drawing.Size(509, 276);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Gestión de Municipio";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
+            this.pictureBox7.Location = new System.Drawing.Point(274, 196);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 40;
+            this.pictureBox7.TabStop = false;
+            // 
+            // Guardar
+            // 
+            this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
+            this.Guardar.Location = new System.Drawing.Point(182, 196);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(63, 63);
+            this.Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Guardar.TabIndex = 39;
+            this.Guardar.TabStop = false;
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
+            this.Guardar.MouseEnter += new System.EventHandler(this.Guardar_MouseEnter);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.cboCategoria);
+            this.groupBox1.Controls.Add(this.aggDepto);
+            this.groupBox1.Controls.Add(this.cboDepto);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtMunicipio);
             this.groupBox1.Controls.Add(this.label1);
@@ -103,6 +125,27 @@
             this.groupBox1.Size = new System.Drawing.Size(484, 173);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            // 
+            // aggDepto
+            // 
+            this.aggDepto.AutoSize = true;
+            this.aggDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aggDepto.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.aggDepto.Location = new System.Drawing.Point(431, 94);
+            this.aggDepto.Name = "aggDepto";
+            this.aggDepto.Size = new System.Drawing.Size(33, 33);
+            this.aggDepto.TabIndex = 42;
+            this.aggDepto.Text = "+";
+            // 
+            // cboDepto
+            // 
+            this.cboDepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDepto.FormattingEnabled = true;
+            this.cboDepto.Location = new System.Drawing.Point(118, 97);
+            this.cboDepto.Name = "cboDepto";
+            this.cboDepto.Size = new System.Drawing.Size(307, 26);
+            this.cboDepto.TabIndex = 41;
             // 
             // label3
             // 
@@ -147,6 +190,26 @@
             this.tabPage2.Text = "Lista de Municipios";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Capa_de_Presentacion.Properties.Resources._19433418_472718866407930_1597699217_n;
+            this.pictureBox1.Location = new System.Drawing.Point(272, 209);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Capa_de_Presentacion.Properties.Resources.editar;
+            this.pictureBox9.Location = new System.Drawing.Point(182, 209);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 41;
+            this.pictureBox9.TabStop = false;
+            // 
             // txtBuscarDepto
             // 
             this.txtBuscarDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,6 +239,24 @@
             this.dgvDeparatamento.Name = "dgvDeparatamento";
             this.dgvDeparatamento.Size = new System.Drawing.Size(495, 150);
             this.dgvDeparatamento.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "IdMinicipio";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 75;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Municipio";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // IdDepto
+            // 
+            this.IdDepto.HeaderText = "Deparatamento ";
+            this.IdDepto.Name = "IdDepto";
+            this.IdDepto.Width = 300;
             // 
             // label7
             // 
@@ -230,85 +311,6 @@
             this.pictureBox8.TabIndex = 31;
             this.pictureBox8.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label4.Location = new System.Drawing.Point(431, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 33);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "+";
-            // 
-            // cboCategoria
-            // 
-            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(118, 97);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(307, 26);
-            this.cboCategoria.TabIndex = 41;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
-            this.pictureBox7.Location = new System.Drawing.Point(274, 196);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 40;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
-            this.pictureBox5.Location = new System.Drawing.Point(182, 196);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 39;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Capa_de_Presentacion.Properties.Resources._19433418_472718866407930_1597699217_n;
-            this.pictureBox1.Location = new System.Drawing.Point(272, 209);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Capa_de_Presentacion.Properties.Resources.editar;
-            this.pictureBox9.Location = new System.Drawing.Point(182, 209);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 41;
-            this.pictureBox9.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "IdMinicipio";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Municipio";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // IdDepto
-            // 
-            this.IdDepto.HeaderText = "Deparatamento ";
-            this.IdDepto.Name = "IdDepto";
-            this.IdDepto.Width = 300;
-            // 
             // FrmMunicipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,21 +328,22 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMunicipio";
+            this.Load += new System.EventHandler(this.FrmMunicipio_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeparatamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,10 +365,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.Label aggDepto;
+        public System.Windows.Forms.ComboBox cboDepto;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox Guardar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

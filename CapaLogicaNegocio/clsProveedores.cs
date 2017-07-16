@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-
 using CapaEnlaceDatos;
 
 namespace CapaLogicaNegocio
 {
-    class clsProveedores
+    public class clsProveedores
     {
 
         private clsManejador M = new clsManejador();
@@ -18,7 +17,6 @@ namespace CapaLogicaNegocio
         private Int32 m_IdProveedor;
         private String m_Nombre;
         private String m_Direccion;
-        private String m_Telefono;
         private String m_Correo;
         private String m_RTN;
         private Int32 m_IdMunicipio;
@@ -35,20 +33,13 @@ namespace CapaLogicaNegocio
         public String Nombre
         {
             get { return m_Nombre; }
-            set { m_RTN = value; }
+            set { m_Nombre = value; }
         }
         public String Direccion
         {
             get { return m_Direccion; }
             set { m_Direccion = value; }
         }
-
-        public String Telefono
-        {
-            get { return m_Telefono; }
-            set { m_Telefono = value; }
-        }
-
 
         public String Correo
         {
@@ -101,7 +92,7 @@ namespace CapaLogicaNegocio
             return dt = M.Listado("SP_Buscar_Proveedor", lst);
         }
 
-        public int RegistrarProveedor()
+        public String RegistrarProveedor()
         {
             List<clsParametro> lst = new List<clsParametro>();
             String Mensaje = "";
@@ -109,16 +100,15 @@ namespace CapaLogicaNegocio
             {
                 lst.Add(new clsParametro("@Nombre", m_Nombre));
                 lst.Add(new clsParametro("@Direccion", m_Direccion));
-                lst.Add(new clsParametro("@Telefono", m_Telefono));
                 lst.Add(new clsParametro("@Correo", m_Correo));
                 lst.Add(new clsParametro("@RTN", m_RTN));
-                lst.Add(new clsParametro("@IdMunicipio", m_Telefono));
+                lst.Add(new clsParametro("@IdMunicipio", m_IdMunicipio));
                 lst.Add(new clsParametro("@IdTipoProveedor", m_IdTipoProveedor));
                 lst.Add(new clsParametro("@Contacto", m_Contacto));
                 lst.Add(new clsParametro("@TelefContacto", m_TelefContacto));
                 lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
                 M.EjecutarSP("SP_Agregar_Proveedor", ref lst);
-                Mensaje = lst[9].Valor.ToString();
+                Mensaje = lst[8].Valor.ToString();
             }
             catch (Exception ex)
             {
@@ -126,11 +116,11 @@ namespace CapaLogicaNegocio
             }
             if(Mensaje == "Proveedor agregado exitosamente")
             {
-                return 1;
+                return Mensaje;
             }
             else
             {
-                return 2;
+                return Mensaje;
             }
             
         }
@@ -144,16 +134,15 @@ namespace CapaLogicaNegocio
                 lst.Add(new clsParametro("@IdProveedor", m_IdProveedor));
                 lst.Add(new clsParametro("@Nombre", m_Nombre));
                 lst.Add(new clsParametro("@Direccion", m_Direccion));
-                lst.Add(new clsParametro("@Telefono", m_Telefono));
                 lst.Add(new clsParametro("@Correo", m_Correo));
                 lst.Add(new clsParametro("@RTN", m_RTN));
-                lst.Add(new clsParametro("@IdMunicipio", m_Telefono));
+                lst.Add(new clsParametro("@IdMunicipio", m_IdMunicipio));
                 lst.Add(new clsParametro("@IdTipoProveedor", m_IdTipoProveedor));
                 lst.Add(new clsParametro("@Contacto", m_Contacto));
                 lst.Add(new clsParametro("@TelefContacto", m_TelefContacto));
                 lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
                 M.EjecutarSP("SP_Editar_Prveedor", ref lst);
-                Mensaje = lst[9].Valor.ToString();
+                Mensaje = lst[8].Valor.ToString();
             }
             catch (Exception ex)
             {
