@@ -66,7 +66,7 @@ namespace CapaLogicaNegocio
                 lst.Add(new clsParametro("@Municipio", m_Municipio));
                 lst.Add(new clsParametro("@IdDepto", m_IdDepto));
                 lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
-                M.EjecutarSP("SP_Agregar_Municipio", ref lst);
+                M.EjecutarSP("SP_Editar_Municipio", ref lst);
                 return Mensaje = lst[2].Valor.ToString();
             }
             catch (Exception ex)

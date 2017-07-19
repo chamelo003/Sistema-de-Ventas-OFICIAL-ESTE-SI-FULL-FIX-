@@ -244,3 +244,6 @@ C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Present
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb
 C:\Users\chame\Desktop\sistemasinteligentesproyectoofizialestesi\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmProveedores.resources
+C:\Users\Cinthia de Perez\Desktop\proiecto sist+ intlignts\Capa de Presentacion\bin\Debug\Capa de Presentacion.exe.config
+C:\Users\Cinthia de Perez\Desktop\proiecto sist+ intlignts\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
+C:\Users\Cinthia de Perez\Desktop\proiecto sist+ intlignts\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb

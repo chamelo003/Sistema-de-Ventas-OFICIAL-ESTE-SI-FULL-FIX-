@@ -31,9 +31,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Guardar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtDepto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,7 +76,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.pictureBox7);
-            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.Guardar);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -96,19 +96,20 @@
             this.pictureBox7.TabIndex = 38;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox5
+            // Guardar
             // 
-            this.pictureBox5.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
-            this.pictureBox5.Location = new System.Drawing.Point(171, 223);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 37;
-            this.pictureBox5.TabStop = false;
+            this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
+            this.Guardar.Location = new System.Drawing.Point(171, 223);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(63, 63);
+            this.Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Guardar.TabIndex = 37;
+            this.Guardar.TabStop = false;
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click_1);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtCargo);
+            this.groupBox1.Controls.Add(this.txtDepto);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 23);
             this.groupBox1.Name = "groupBox1";
@@ -116,13 +117,13 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
-            // txtCargo
+            // txtDepto
             // 
-            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.Location = new System.Drawing.Point(106, 53);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(315, 24);
-            this.txtCargo.TabIndex = 9;
+            this.txtDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepto.Location = new System.Drawing.Point(114, 54);
+            this.txtDepto.Name = "txtDepto";
+            this.txtDepto.Size = new System.Drawing.Size(315, 24);
+            this.txtDepto.TabIndex = 9;
             // 
             // label1
             // 
@@ -282,7 +283,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -304,14 +305,14 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox txtCargo;
+        public System.Windows.Forms.TextBox txtDepto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscarDepto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvDeparatamento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox Guardar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
