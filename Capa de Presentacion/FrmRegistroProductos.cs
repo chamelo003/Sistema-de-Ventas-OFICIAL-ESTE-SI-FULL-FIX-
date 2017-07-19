@@ -17,7 +17,8 @@ namespace Capa_de_Presentacion
     {
         private clsCategoria C = new clsCategoria();
         private clsProducto P = new clsProducto();
-        
+        int x, y;
+        bool arrastre;
 
         public FrmRegistroProductos()
         {
@@ -179,6 +180,26 @@ namespace Capa_de_Presentacion
         private void nuevo_Click(object sender, EventArgs e)
         {
             panel1.Enabled = true;
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            y = e.Y;
+            x = e.X;
+            arrastre = true;
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            arrastre = false;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (arrastre)
+            {
+               // this.Location = this.PointToScreen(new Point(this.MousePosition.X - this.Location.X - x, this.MousePosition.Y - this.Location.Y - y))
+            } 
         }
 
         private void nuevo_MouseEnter(object sender, EventArgs e)

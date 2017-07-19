@@ -15,5 +15,11 @@ namespace Capa_de_Presentacion
         {
             InitializeComponent();
         }
+
+        private void aggCat_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarCategoria C = new FrmRegistrarCategoria();
+            C.ShowDialog();
+        }
     }
 }

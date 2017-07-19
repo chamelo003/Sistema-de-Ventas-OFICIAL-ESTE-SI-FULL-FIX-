@@ -57,12 +57,12 @@ namespace Capa_de_Presentacion
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection("Server=.;DataBase=POSIX;Integrated Security=SSPI"))
             {
-                if(conn.State == ConnectionState.Closed)
+                if (conn.State == ConnectionState.Closed)
                 {
                     conn.Open();
                 }
                 String query = "SELECT * FROM TIPO_PROVEEDOR";
-                SqlCommand cmd = new SqlCommand(query,conn);
+                SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 cbotipoProveedor.DisplayMember = "TipoProveedor";
@@ -71,7 +71,7 @@ namespace Capa_de_Presentacion
             }
 
         }
-
+        int idDepto = 0;
         private void cargarComboDepto()
         {
             DataTable dt = new DataTable();
@@ -91,7 +91,7 @@ namespace Capa_de_Presentacion
 
                 if (cboDepto.Items.Count != 0)
                 {
-                    int idDepto = Convert.ToInt32(cboDepto.SelectedValue);
+                    idDepto = Convert.ToInt32(cboDepto.SelectedValue);
                     cargarComboMunicipio(idDepto);
                 }
                 else
@@ -129,6 +129,33 @@ namespace Capa_de_Presentacion
         private void Nuevo_MouseEnter(object sender, EventArgs e)
         {
             Nuevo.Cursor = Cursors.Hand;
+        }
+
+        private void aggDepto_Click(object sender, EventArgs e)
+        {
+            FrmDepartamento D = new FrmDepartamento();
+            D.ShowDialog();
+            if(D.IsDisposed == true)
+            {
+                cargarComboDepto();
+                cargarComboMunicipio(idDepto);
+            }
+        }
+
+        private void AggMuni_Click(object sender, EventArgs e)
+        {
+            FrmMunicipio M = new FrmMunicipio();
+            M.ShowDialog();
+            if(M.IsDisposed == true)
+            {
+                cargarComboMunicipio(idDepto);
+            }
+        }
+
+        private void cboDepto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            idDepto = Convert.ToInt32(cboDepto.SelectedValue);
+            cargarComboMunicipio(idDepto);
         }
     }
 }

@@ -167,5 +167,11 @@ namespace Capa_de_Presentacion
             FrmMunicipio M = new FrmMunicipio();
             M.ShowDialog();
         }
+
+        private void agregarDepto_Click(object sender, EventArgs e)
+        {
+            FrmDepartamento D = new FrmDepartamento();
+            D.ShowDialog();
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Cancelar = new System.Windows.Forms.PictureBox();
             this.Guardar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.aggDepto = new System.Windows.Forms.Label();
@@ -43,27 +43,23 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.txtBuscarDepto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvDeparatamento = new System.Windows.Forms.DataGridView();
+            this.dgvMunicipio = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Cerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guardar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeparatamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMunicipio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +75,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.pictureBox7);
+            this.tabPage1.Controls.Add(this.Cancelar);
             this.tabPage1.Controls.Add(this.Guardar);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -90,16 +86,15 @@
             this.tabPage1.Text = "Gestión de Municipio";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // Cancelar
             // 
-            this.pictureBox7.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
-            this.pictureBox7.Location = new System.Drawing.Point(274, 196);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 40;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.Cancelar.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
+            this.Cancelar.Location = new System.Drawing.Point(274, 196);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(63, 63);
+            this.Cancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Cancelar.TabIndex = 40;
+            this.Cancelar.TabStop = false;
             // 
             // Guardar
             // 
@@ -182,7 +177,7 @@
             this.tabPage2.Controls.Add(this.pictureBox9);
             this.tabPage2.Controls.Add(this.txtBuscarDepto);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.dgvDeparatamento);
+            this.tabPage2.Controls.Add(this.dgvMunicipio);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -229,17 +224,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Buscar ";
             // 
-            // dgvDeparatamento
+            // dgvMunicipio
             // 
-            this.dgvDeparatamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeparatamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMunicipio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMunicipio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.IdDepto});
-            this.dgvDeparatamento.Location = new System.Drawing.Point(7, 50);
-            this.dgvDeparatamento.Name = "dgvDeparatamento";
-            this.dgvDeparatamento.Size = new System.Drawing.Size(495, 150);
-            this.dgvDeparatamento.TabIndex = 0;
+            this.dgvMunicipio.Location = new System.Drawing.Point(7, 50);
+            this.dgvMunicipio.Name = "dgvMunicipio";
+            this.dgvMunicipio.Size = new System.Drawing.Size(495, 150);
+            this.dgvMunicipio.TabIndex = 0;
             // 
             // Column1
             // 
@@ -271,35 +266,16 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Municipio";
             // 
-            // pictureBox4
+            // Cerrar
             // 
-            this.pictureBox4.Image = global::Capa_de_Presentacion.Properties.Resources.iconRestaurar1;
-            this.pictureBox4.Location = new System.Drawing.Point(555, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 30;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
-            this.pictureBox2.Location = new System.Drawing.Point(582, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Capa_de_Presentacion.Properties.Resources.iconMini11;
-            this.pictureBox3.Location = new System.Drawing.Point(528, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 28;
-            this.pictureBox3.TabStop = false;
+            this.Cerrar.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
+            this.Cerrar.Location = new System.Drawing.Point(582, 6);
+            this.Cerrar.Name = "Cerrar";
+            this.Cerrar.Size = new System.Drawing.Size(21, 21);
+            this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Cerrar.TabIndex = 29;
+            this.Cerrar.TabStop = false;
+            this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
             // pictureBox8
             // 
@@ -321,9 +297,7 @@
             this.ClientSize = new System.Drawing.Size(608, 406);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Cerrar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
@@ -332,7 +306,7 @@
             this.Load += new System.EventHandler(this.FrmMunicipio_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guardar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -340,10 +314,8 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeparatamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMunicipio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -360,15 +332,13 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtBuscarDepto;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvDeparatamento;
+        private System.Windows.Forms.DataGridView dgvMunicipio;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox Cerrar;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label aggDepto;
         public System.Windows.Forms.ComboBox cboDepto;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox Cancelar;
         private System.Windows.Forms.PictureBox Guardar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox9;

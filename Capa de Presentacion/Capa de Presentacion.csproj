@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsVenta.cs" />
     <Compile Include="FrmDatosEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>

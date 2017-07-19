@@ -13,7 +13,7 @@ namespace Capa_de_Presentacion
 {
     public partial class FrmDepartamento : Form
     {
-        private ClsDepto M = new ClsDepto();
+        private ClsDepto D = new ClsDepto();
         public FrmDepartamento()
         {
             InitializeComponent();
@@ -22,13 +22,14 @@ namespace Capa_de_Presentacion
         {
             Guardar.Cursor = Cursors.Hand;
         }
+
         private void Guardar_Click(object sender, EventArgs e)
         {
             if (txtDepto.Text.Trim() != "")
             {
                 String Mensaje = "";
-                M.Depto = txtDepto.Text;
-                Mensaje = M.RegistrarDepartamento();
+                D.Depto = txtDepto.Text;
+                Mensaje = D.RegistrarDepto();
                 if (Mensaje == "Departamento agregado exitosamente.")
                 {
                     DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -38,24 +39,39 @@ namespace Capa_de_Presentacion
                     DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+            llenarDgvDepto();
+            txtDepto.Clear();
         }
 
-        private void Guardar_Click_1(object sender, EventArgs e)
+        private void Cerrar_Click(object sender, EventArgs e)
         {
-            if (txtDepto.Text.Trim() != "")
+            this.Dispose();
+        }
+
+        private void FrmDepartamento_Load(object sender, EventArgs e)
+        {
+            llenarDgvDepto();
+        }
+
+        private void llenarDgvDepto()
+        {
+            DataTable dt = new DataTable();
+            dt = D.MostrarDeptos();
+            try
             {
-                String Mensaje = "";
-                M.Depto = txtDepto.Text;
-                Mensaje = M.RegistrarDepto();
-                if (Mensaje == "Departamento agregado exitosamente.")
+                dgvDepartamento.Rows.Clear();
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dgvDepartamento.Rows.Add(dt.Rows[i][0]);
+                    dgvDepartamento.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString();
+                    dgvDepartamento.Rows[i].Cells[1].Value = dt.Rows[i][1].ToString();
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            dgvDepartamento.ClearSelection();
         }
     }
 }

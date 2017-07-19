@@ -14,6 +14,7 @@ namespace Capa_de_Presentacion
     public partial class FrmMunicipio : Form
     {
         private clsMunicipio M = new clsMunicipio();
+        private ClsDepto D = new ClsDepto();
         public FrmMunicipio()
         {
             InitializeComponent();
@@ -41,6 +42,8 @@ namespace Capa_de_Presentacion
                     DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+            llenarDgvMuni();
+            txtMunicipio.Clear();
         }
         private void cargarComboDepto()
         {
@@ -61,14 +64,38 @@ namespace Capa_de_Presentacion
             }
         }
 
-        private void FrmMunicipio_Load(object sender, EventArgs e)
+        private void llenarDgvMuni()
         {
 
+            DataTable dt = new DataTable();
+            dt = D.MostrarDeptos();
+            try
+            {
+                dgvMunicipio.Rows.Clear();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    dgvMunicipio.Rows.Add(dt.Rows[i][0]);
+                    dgvMunicipio.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString();
+                    dgvMunicipio.Rows[i].Cells[1].Value = dt.Rows[i][1].ToString();
+                    dgvMunicipio.Rows[i].Cells[2].Value = dt.Rows[i][1].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            dgvMunicipio.ClearSelection();
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void FrmMunicipio_Load(object sender, EventArgs e)
         {
+            cargarComboDepto();
+            llenarDgvMuni();
+        }
 
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

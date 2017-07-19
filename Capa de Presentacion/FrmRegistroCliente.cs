@@ -53,10 +53,10 @@ namespace Capa_de_Presentacion
             }
 
         }
-
+        int IdDepto;
         private void cargarComboDepto()
         {
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable();            
             using (SqlConnection conn = new SqlConnection("Server=.;DataBase=POSIX;Integrated Security=SSPI"))
             {
                 if (conn.State == ConnectionState.Closed)
@@ -73,8 +73,8 @@ namespace Capa_de_Presentacion
 
                 if(cboDepto.Items.Count != 0)
                 {
-                    int idDepto = Convert.ToInt32(cboDepto.SelectedValue);
-                    cargarComboMunicipio(idDepto);
+                    IdDepto = Convert.ToInt32(cboDepto.SelectedValue);
+                    cargarComboMunicipio(IdDepto);
                 }
                 else
                 {
@@ -140,6 +140,33 @@ namespace Capa_de_Presentacion
         {
             cargarComboDepto();
             cargarComboSexo();
+        }
+
+        private void cboDepto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            IdDepto = Convert.ToInt32(cboDepto.SelectedValue);
+            cargarComboMunicipio(IdDepto);
+        }
+
+        private void aggDepto_Click(object sender, EventArgs e)
+        {
+            FrmDepartamento D = new FrmDepartamento();
+            D.ShowDialog();
+            if(D.IsDisposed == true)
+            {
+                cargarComboDepto();                
+            }
+        }
+
+        private void aggMuni_Click(object sender, EventArgs e)
+        {
+            FrmMunicipio M = new FrmMunicipio();
+            M.ShowDialog();
+            if(M.IsDisposed == true)
+            {
+                IdDepto = Convert.ToInt32(cboDepto.SelectedValue);
+                cargarComboMunicipio(IdDepto);
+            }
         }
     }
 }

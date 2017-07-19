@@ -37,6 +37,9 @@
             this.Guardar = new System.Windows.Forms.PictureBox();
             this.Nuevo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnVerRef = new System.Windows.Forms.Button();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.btnAggRef = new System.Windows.Forms.Button();
             this.agregarCargo = new System.Windows.Forms.Label();
             this.agregarMunicipio = new System.Windows.Forms.Label();
@@ -106,9 +109,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.cboSexo = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.btnVerRef = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
@@ -229,6 +229,36 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // btnVerRef
+            // 
+            this.btnVerRef.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnVerRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerRef.ForeColor = System.Drawing.Color.White;
+            this.btnVerRef.Location = new System.Drawing.Point(460, 139);
+            this.btnVerRef.Name = "btnVerRef";
+            this.btnVerRef.Size = new System.Drawing.Size(113, 60);
+            this.btnVerRef.TabIndex = 59;
+            this.btnVerRef.Text = "Ver Referencias";
+            this.btnVerRef.UseVisualStyleBackColor = false;
+            // 
+            // cboSexo
+            // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Location = new System.Drawing.Point(414, 220);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(159, 23);
+            this.cboSexo.TabIndex = 58;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(369, 223);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(39, 16);
+            this.label21.TabIndex = 57;
+            this.label21.Text = "Sexo";
+            // 
             // btnAggRef
             // 
             this.btnAggRef.BackColor = System.Drawing.Color.DarkCyan;
@@ -274,6 +304,7 @@
             this.agregarDepto.Size = new System.Drawing.Size(33, 33);
             this.agregarDepto.TabIndex = 53;
             this.agregarDepto.Text = "+";
+            this.agregarDepto.Click += new System.EventHandler(this.agregarDepto_Click);
             // 
             // cboMunicipio
             // 
@@ -869,36 +900,6 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 26;
             this.pictureBox10.TabStop = false;
-            // 
-            // cboSexo
-            // 
-            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSexo.FormattingEnabled = true;
-            this.cboSexo.Location = new System.Drawing.Point(414, 220);
-            this.cboSexo.Name = "cboSexo";
-            this.cboSexo.Size = new System.Drawing.Size(159, 23);
-            this.cboSexo.TabIndex = 58;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(369, 223);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(39, 16);
-            this.label21.TabIndex = 57;
-            this.label21.Text = "Sexo";
-            // 
-            // btnVerRef
-            // 
-            this.btnVerRef.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnVerRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerRef.ForeColor = System.Drawing.Color.White;
-            this.btnVerRef.Location = new System.Drawing.Point(460, 139);
-            this.btnVerRef.Name = "btnVerRef";
-            this.btnVerRef.Size = new System.Drawing.Size(113, 60);
-            this.btnVerRef.TabIndex = 59;
-            this.btnVerRef.Text = "Ver Referencias";
-            this.btnVerRef.UseVisualStyleBackColor = false;
             // 
             // FrmRegistrarEmpleados
             // 

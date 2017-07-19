@@ -37,8 +37,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cboSexo = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.aggMuni = new System.Windows.Forms.Label();
+            this.aggDepto = new System.Windows.Forms.Label();
             this.cboMunicipio = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboDepto = new System.Windows.Forms.ComboBox();
@@ -58,8 +58,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Imprimir = new System.Windows.Forms.PictureBox();
+            this.Editar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,9 +75,7 @@
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -86,13 +84,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Guardar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imprimir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Editar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,8 +152,8 @@
             // 
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.cboSexo);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.aggMuni);
+            this.groupBox1.Controls.Add(this.aggDepto);
             this.groupBox1.Controls.Add(this.cboMunicipio);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cboDepto);
@@ -202,30 +198,33 @@
             this.cboSexo.Size = new System.Drawing.Size(121, 23);
             this.cboSexo.TabIndex = 40;
             // 
-            // label6
+            // aggMuni
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label6.Location = new System.Drawing.Point(337, 205);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 33);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "+";
+            this.aggMuni.AutoSize = true;
+            this.aggMuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aggMuni.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.aggMuni.Location = new System.Drawing.Point(337, 205);
+            this.aggMuni.Name = "aggMuni";
+            this.aggMuni.Size = new System.Drawing.Size(33, 33);
+            this.aggMuni.TabIndex = 39;
+            this.aggMuni.Text = "+";
+            this.aggMuni.Click += new System.EventHandler(this.aggMuni_Click);
             // 
-            // label5
+            // aggDepto
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label5.Location = new System.Drawing.Point(338, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 33);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "+";
+            this.aggDepto.AutoSize = true;
+            this.aggDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aggDepto.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.aggDepto.Location = new System.Drawing.Point(338, 170);
+            this.aggDepto.Name = "aggDepto";
+            this.aggDepto.Size = new System.Drawing.Size(33, 33);
+            this.aggDepto.TabIndex = 38;
+            this.aggDepto.Text = "+";
+            this.aggDepto.Click += new System.EventHandler(this.aggDepto_Click);
             // 
             // cboMunicipio
             // 
+            this.cboMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMunicipio.FormattingEnabled = true;
             this.cboMunicipio.Location = new System.Drawing.Point(114, 207);
@@ -245,12 +244,14 @@
             // 
             // cboDepto
             // 
+            this.cboDepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepto.FormattingEnabled = true;
             this.cboDepto.Location = new System.Drawing.Point(115, 173);
             this.cboDepto.Name = "cboDepto";
             this.cboDepto.Size = new System.Drawing.Size(213, 26);
             this.cboDepto.TabIndex = 34;
+            this.cboDepto.SelectedValueChanged += new System.EventHandler(this.cboDepto_SelectedValueChanged);
             // 
             // txtCorreo
             // 
@@ -394,8 +395,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Controls.Add(this.pictureBox9);
+            this.tabPage2.Controls.Add(this.Imprimir);
+            this.tabPage2.Controls.Add(this.Editar);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.txtBuscarCliente);
             this.tabPage2.Controls.Add(this.label2);
@@ -404,28 +405,28 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(752, 405);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Lista de  CLientes";
+            this.tabPage2.Text = "Lista de  Clientes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // Imprimir
             // 
-            this.pictureBox1.Image = global::Capa_de_Presentacion.Properties.Resources._19433418_472718866407930_1597699217_n;
-            this.pictureBox1.Location = new System.Drawing.Point(396, 333);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
+            this.Imprimir.Image = global::Capa_de_Presentacion.Properties.Resources._19433418_472718866407930_1597699217_n;
+            this.Imprimir.Location = new System.Drawing.Point(396, 333);
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(63, 63);
+            this.Imprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imprimir.TabIndex = 38;
+            this.Imprimir.TabStop = false;
             // 
-            // pictureBox9
+            // Editar
             // 
-            this.pictureBox9.Image = global::Capa_de_Presentacion.Properties.Resources.editar;
-            this.pictureBox9.Location = new System.Drawing.Point(306, 333);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 37;
-            this.pictureBox9.TabStop = false;
+            this.Editar.Image = global::Capa_de_Presentacion.Properties.Resources.editar;
+            this.Editar.Location = new System.Drawing.Point(306, 333);
+            this.Editar.Name = "Editar";
+            this.Editar.Size = new System.Drawing.Size(63, 63);
+            this.Editar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Editar.TabIndex = 37;
+            this.Editar.TabStop = false;
             // 
             // panel1
             // 
@@ -553,16 +554,6 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Clientes";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Capa_de_Presentacion.Properties.Resources.iconMini11;
-            this.pictureBox3.Location = new System.Drawing.Point(759, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
@@ -573,16 +564,6 @@
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Capa_de_Presentacion.Properties.Resources.iconRestaurar1;
-            this.pictureBox4.Location = new System.Drawing.Point(786, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -603,9 +584,7 @@
             this.ClientSize = new System.Drawing.Size(841, 532);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
@@ -626,13 +605,11 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imprimir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Editar)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -646,7 +623,7 @@
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox Editar;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cboMunicipio;
@@ -667,15 +644,13 @@
         public System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox Imprimir;
+        private System.Windows.Forms.Label aggMuni;
+        private System.Windows.Forms.Label aggDepto;
         private System.Windows.Forms.PictureBox Cancelar;
         private System.Windows.Forms.PictureBox Nuevo;
         private System.Windows.Forms.PictureBox Guardar;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;

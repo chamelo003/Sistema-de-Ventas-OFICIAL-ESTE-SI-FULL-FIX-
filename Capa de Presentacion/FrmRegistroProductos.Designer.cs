@@ -91,6 +91,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cancelar)).BeginInit();
@@ -694,6 +695,16 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(929, 29);
+            this.panel2.TabIndex = 26;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
             // FrmRegistroProductos
             // 
             this.AccessibleName = "325396";
@@ -706,6 +717,7 @@
             this.Controls.Add(this.close);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -801,5 +813,6 @@
         private System.Windows.Forms.DataGridViewLinkColumn Imagen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.Panel panel2;
     }
 }

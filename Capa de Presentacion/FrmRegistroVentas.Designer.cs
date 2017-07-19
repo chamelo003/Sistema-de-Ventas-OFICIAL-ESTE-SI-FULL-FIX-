@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cboPrecioVenta = new System.Windows.Forms.ComboBox();
@@ -113,6 +113,7 @@
             // 
             // cboPrecioVenta
             // 
+            this.cboPrecioVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPrecioVenta.FormattingEnabled = true;
             this.cboPrecioVenta.Location = new System.Drawing.Point(255, 55);
             this.cboPrecioVenta.Name = "cboPrecioVenta";
@@ -130,7 +131,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(543, 63);
+            this.btnAgregar.Location = new System.Drawing.Point(541, 59);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 25);
             this.btnAgregar.TabIndex = 10;
@@ -253,9 +254,9 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column4.HeaderText = "Producto";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -263,9 +264,9 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column3.HeaderText = "Impuesto";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CapaEnlaceDatos;
+using System.Data;
 
 namespace CapaLogicaNegocio
 {
-    class ClsDepto
+    public class ClsDepto
     {
         clsManejador M = new clsManejador();
 
@@ -24,9 +26,9 @@ namespace CapaLogicaNegocio
             set { m_Depto = value; }
         }
 
-        public DataTable MostrarMunicipio()
+        public DataTable MostrarDeptos()
         {
-            return M.Listado("SP_Mostrar_Municipios", null);
+            return M.Listado("SP_Mostrar_Departamentos", null);
         }
 
         public String RegistrarDepto()
@@ -35,7 +37,7 @@ namespace CapaLogicaNegocio
             String Mensaje = "";
             try
             {
-                lst.Add(new clsParametro("@Depto", m_Municipio));
+                lst.Add(new clsParametro("@Departamento", m_Depto));
                 lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
                 M.EjecutarSP("SP_Agregar_Departamento", ref lst);
                 return Mensaje = lst[1].Valor.ToString();
@@ -52,8 +54,8 @@ namespace CapaLogicaNegocio
             String Mensaje = "";
             try
             {
-                lst.Add(new clsParametro("@IdDepto", m_IdMunicipio));
-                lst.Add(new clsParametro("@Depto", m_Municipio));
+                lst.Add(new clsParametro("@IdDepto", m_IdDepto));
+                lst.Add(new clsParametro("@Departamento", m_Depto));
                 lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
                 M.EjecutarSP("SP_Editar_Departamento", ref lst);
                 return Mensaje = lst[1].Valor.ToString();
@@ -62,6 +64,6 @@ namespace CapaLogicaNegocio
             {
                 throw ex;
             }
-
         }
+    }
 }
