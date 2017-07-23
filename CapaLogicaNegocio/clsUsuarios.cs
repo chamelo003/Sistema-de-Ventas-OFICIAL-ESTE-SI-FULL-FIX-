@@ -16,8 +16,9 @@ namespace CapaLogicaNegocio
        public String m_Usuario { get; set; }
        public String m_Contrasenha { get; set; }
        public Boolean m_Estado { get; set; }
-       public Int32 m_IdEmpleado { get; set; }
+       public String m_IdEmpleado { get; set; }
        public Int32 m_IdTipoUsuario { get; set; }
+       
 
         public Int32 IdUsuario
         {
@@ -42,7 +43,7 @@ namespace CapaLogicaNegocio
             set { m_Estado = value; }
         }
 
-        public Int32 IdEmpleado
+        public String IdEmpleado
         {
             get { return m_IdEmpleado; }
             set { m_IdEmpleado = value; }
@@ -69,7 +70,7 @@ namespace CapaLogicaNegocio
                lst.Add(new clsParametro("@IdEmpleado", m_IdEmpleado));
                lst.Add(new clsParametro("@IdTipoUsuario", m_IdTipoUsuario));
                lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
-               M.EjecutarSP("SP_Agreagar_Usuario",ref lst);
+               M.EjecutarSP("SP_Agregar_Usuario",ref lst);
                return Mensaje = lst[5].Valor.ToString();
            }catch (Exception ex){
                throw ex;
@@ -108,14 +109,14 @@ namespace CapaLogicaNegocio
             try
             {
                 lst.Add(new clsParametro("@IdUsuario", m_IdUsuario));
+                lst.Add(new clsParametro("@IdEmpleado", m_IdEmpleado));
                 lst.Add(new clsParametro("@Usuario", m_Usuario));
                 lst.Add(new clsParametro("@Contrasenha", m_Contrasenha));
-                lst.Add(new clsParametro("@Estado", m_Estado));
-                lst.Add(new clsParametro("@IdEmpleado", m_IdEmpleado));
+                lst.Add(new clsParametro("@Estado", m_Estado));                
                 lst.Add(new clsParametro("@IdTipoUsuario", m_IdTipoUsuario));
                 lst.Add(new clsParametro("@M", "", SqlDbType.VarChar, ParameterDirection.Output, 50));
                 M.EjecutarSP("SP_Editar_Municipio", ref lst);
-                return Mensaje = lst[5].Valor.ToString();
+                return Mensaje = lst[6].Valor.ToString();
             }
             catch (Exception ex)
             {

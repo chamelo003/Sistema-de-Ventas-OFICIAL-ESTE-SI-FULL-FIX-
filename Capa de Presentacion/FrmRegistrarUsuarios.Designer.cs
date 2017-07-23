@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarUsuarios));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Usuarios = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Cancelar = new System.Windows.Forms.PictureBox();
+            this.Nuevo = new System.Windows.Forms.PictureBox();
+            this.groupBoxUsuario = new System.Windows.Forms.GroupBox();
+            this.checkBoxEstado = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.Guardar_Usuario = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -59,23 +59,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Cerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.Usuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nuevo)).BeginInit();
+            this.groupBoxUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar_Usuario)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,10 +87,10 @@
             // 
             // Usuarios
             // 
-            this.Usuarios.Controls.Add(this.pictureBox4);
-            this.Usuarios.Controls.Add(this.pictureBox5);
-            this.Usuarios.Controls.Add(this.groupBox2);
-            this.Usuarios.Controls.Add(this.pictureBox8);
+            this.Usuarios.Controls.Add(this.Cancelar);
+            this.Usuarios.Controls.Add(this.Nuevo);
+            this.Usuarios.Controls.Add(this.groupBoxUsuario);
+            this.Usuarios.Controls.Add(this.Guardar_Usuario);
             this.Usuarios.Location = new System.Drawing.Point(4, 22);
             this.Usuarios.Name = "Usuarios";
             this.Usuarios.Padding = new System.Windows.Forms.Padding(3);
@@ -103,55 +99,58 @@
             this.Usuarios.Text = "Usuario";
             this.Usuarios.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // Cancelar
             // 
-            this.pictureBox4.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
-            this.pictureBox4.Location = new System.Drawing.Point(446, 304);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 47;
-            this.pictureBox4.TabStop = false;
+            this.Cancelar.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
+            this.Cancelar.Location = new System.Drawing.Point(446, 304);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(63, 63);
+            this.Cancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Cancelar.TabIndex = 47;
+            this.Cancelar.TabStop = false;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
-            // pictureBox5
+            // Nuevo
             // 
-            this.pictureBox5.Image = global::Capa_de_Presentacion.Properties.Resources.nuevo;
-            this.pictureBox5.Location = new System.Drawing.Point(256, 304);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 46;
-            this.pictureBox5.TabStop = false;
+            this.Nuevo.Image = global::Capa_de_Presentacion.Properties.Resources.nuevo;
+            this.Nuevo.Location = new System.Drawing.Point(256, 304);
+            this.Nuevo.Name = "Nuevo";
+            this.Nuevo.Size = new System.Drawing.Size(63, 63);
+            this.Nuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Nuevo.TabIndex = 46;
+            this.Nuevo.TabStop = false;
+            this.Nuevo.Click += new System.EventHandler(this.Nuevo_Click);
             // 
-            // groupBox2
+            // groupBoxUsuario
             // 
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtPassword);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtUser);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(60, 22);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(633, 271);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
+            this.groupBoxUsuario.Controls.Add(this.checkBoxEstado);
+            this.groupBoxUsuario.Controls.Add(this.label7);
+            this.groupBoxUsuario.Controls.Add(this.label8);
+            this.groupBoxUsuario.Controls.Add(this.cboTipoUsuario);
+            this.groupBoxUsuario.Controls.Add(this.cboEmpleado);
+            this.groupBoxUsuario.Controls.Add(this.label3);
+            this.groupBoxUsuario.Controls.Add(this.label2);
+            this.groupBoxUsuario.Controls.Add(this.txtPassword);
+            this.groupBoxUsuario.Controls.Add(this.label5);
+            this.groupBoxUsuario.Controls.Add(this.txtUser);
+            this.groupBoxUsuario.Controls.Add(this.label4);
+            this.groupBoxUsuario.Enabled = false;
+            this.groupBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxUsuario.Location = new System.Drawing.Point(60, 22);
+            this.groupBoxUsuario.Name = "groupBoxUsuario";
+            this.groupBoxUsuario.Size = new System.Drawing.Size(633, 271);
+            this.groupBoxUsuario.TabIndex = 2;
+            this.groupBoxUsuario.TabStop = false;
             // 
-            // checkBox1
+            // checkBoxEstado
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(168, 197);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(70, 20);
-            this.checkBox1.TabIndex = 44;
-            this.checkBox1.Text = "Estado";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxEstado.AutoSize = true;
+            this.checkBoxEstado.Location = new System.Drawing.Point(168, 197);
+            this.checkBoxEstado.Name = "checkBoxEstado";
+            this.checkBoxEstado.Size = new System.Drawing.Size(70, 20);
+            this.checkBoxEstado.TabIndex = 44;
+            this.checkBoxEstado.Text = "Estado";
+            this.checkBoxEstado.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -175,23 +174,23 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "+";
             // 
-            // comboBox2
+            // cboTipoUsuario
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(169, 153);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(213, 26);
-            this.comboBox2.TabIndex = 41;
+            this.cboTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoUsuario.FormattingEnabled = true;
+            this.cboTipoUsuario.Location = new System.Drawing.Point(169, 153);
+            this.cboTipoUsuario.Name = "cboTipoUsuario";
+            this.cboTipoUsuario.Size = new System.Drawing.Size(213, 26);
+            this.cboTipoUsuario.TabIndex = 41;
             // 
-            // comboBox1
+            // cboEmpleado
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(168, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(213, 26);
-            this.comboBox1.TabIndex = 40;
+            this.cboEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEmpleado.FormattingEnabled = true;
+            this.cboEmpleado.Location = new System.Drawing.Point(168, 111);
+            this.cboEmpleado.Name = "cboEmpleado";
+            this.cboEmpleado.Size = new System.Drawing.Size(213, 26);
+            this.cboEmpleado.TabIndex = 40;
             // 
             // label3
             // 
@@ -244,15 +243,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Usuario";
             // 
-            // pictureBox8
+            // Guardar_Usuario
             // 
-            this.pictureBox8.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
-            this.pictureBox8.Location = new System.Drawing.Point(354, 304);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 45;
-            this.pictureBox8.TabStop = false;
+            this.Guardar_Usuario.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
+            this.Guardar_Usuario.Location = new System.Drawing.Point(354, 304);
+            this.Guardar_Usuario.Name = "Guardar_Usuario";
+            this.Guardar_Usuario.Size = new System.Drawing.Size(63, 63);
+            this.Guardar_Usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Guardar_Usuario.TabIndex = 45;
+            this.Guardar_Usuario.TabStop = false;
+            this.Guardar_Usuario.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // tabPage2
             // 
@@ -354,43 +354,24 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Teal;
             this.label11.Location = new System.Drawing.Point(306, 6);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(230, 59);
+            this.label11.Size = new System.Drawing.Size(222, 55);
             this.label11.TabIndex = 29;
             this.label11.Text = "Usuarios";
             // 
-            // pictureBox6
+            // Cerrar
             // 
-            this.pictureBox6.Image = global::Capa_de_Presentacion.Properties.Resources.iconRestaurar1;
-            this.pictureBox6.Location = new System.Drawing.Point(789, 6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 32;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
-            this.pictureBox7.Location = new System.Drawing.Point(816, 6);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 31;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Capa_de_Presentacion.Properties.Resources.iconMini11;
-            this.pictureBox10.Location = new System.Drawing.Point(762, 6);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 30;
-            this.pictureBox10.TabStop = false;
+            this.Cerrar.Image = global::Capa_de_Presentacion.Properties.Resources.iconCierre1;
+            this.Cerrar.Location = new System.Drawing.Point(816, 6);
+            this.Cerrar.Name = "Cerrar";
+            this.Cerrar.Size = new System.Drawing.Size(21, 21);
+            this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Cerrar.TabIndex = 31;
+            this.Cerrar.TabStop = false;
+            this.Cerrar.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox1
             // 
@@ -410,9 +391,7 @@
             this.ClientSize = new System.Drawing.Size(845, 532);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.Cerrar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
@@ -422,21 +401,20 @@
             this.MinimizeBox = false;
             this.Name = "FrmRegistrarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmRegistrarUsuarios_Load);
             this.tabControl1.ResumeLayout(false);
             this.Usuarios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nuevo)).EndInit();
+            this.groupBoxUsuario.ResumeLayout(false);
+            this.groupBoxUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Guardar_Usuario)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -446,7 +424,7 @@
         #endregion
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Usuarios;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPassword;
@@ -464,19 +442,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox Cerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cboTipoUsuario;
+        private System.Windows.Forms.ComboBox cboEmpleado;
+        private System.Windows.Forms.CheckBox checkBoxEstado;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox Cancelar;
+        private System.Windows.Forms.PictureBox Nuevo;
+        private System.Windows.Forms.PictureBox Guardar_Usuario;
     }
 }

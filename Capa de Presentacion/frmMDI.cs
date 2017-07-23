@@ -97,5 +97,13 @@ namespace Capa_de_Presentacion
             E.MdiParent = this;
             E.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarUsuarios U = new FrmRegistrarUsuarios();
+            U.MdiParent = this;
+            U.Show();
+
+        }
     }
 }

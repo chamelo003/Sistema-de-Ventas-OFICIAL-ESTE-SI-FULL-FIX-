@@ -168,5 +168,7 @@ namespace Capa_de_Presentacion
                 cargarComboMunicipio(IdDepto);
             }
         }
+
+        
     }
 }

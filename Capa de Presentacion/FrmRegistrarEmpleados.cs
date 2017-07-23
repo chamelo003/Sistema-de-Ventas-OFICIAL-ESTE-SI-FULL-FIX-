@@ -41,7 +41,9 @@ namespace Capa_de_Presentacion
             E.IdMunicipio = Convert.ToInt32(cboMunicipio.SelectedValue);
             E.IdCargo = Convert.ToInt32(cboCargo.SelectedValue);
             E.IdSexo = Convert.ToInt32(cboSexo.SelectedValue);
+
             Mensaje = E.RegistrarEmpleado();
+
             if (Mensaje == "Empleado agregado exitosamente")
             {
                 DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -173,5 +175,6 @@ namespace Capa_de_Presentacion
             FrmDepartamento D = new FrmDepartamento();
             D.ShowDialog();
         }
+
     }
 }

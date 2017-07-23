@@ -332,6 +332,7 @@
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(159, 23);
             this.cboCargo.TabIndex = 28;
+           
             // 
             // label2
             // 
@@ -872,11 +873,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Rockwell", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Teal;
             this.label11.Location = new System.Drawing.Point(315, 1);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(242, 50);
+            this.label11.Size = new System.Drawing.Size(229, 46);
             this.label11.TabIndex = 22;
             this.label11.Text = "Empleados";
             // 
