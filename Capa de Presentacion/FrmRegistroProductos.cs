@@ -20,6 +20,8 @@ namespace Capa_de_Presentacion
         int x, y;
         bool arrastre;
 
+        String Mensaje = "";
+
         public FrmRegistroProductos()
         {
             InitializeComponent();
@@ -49,17 +51,12 @@ namespace Capa_de_Presentacion
 
         private void guardar_Click(object sender, EventArgs e)
         {
-            //validarcamposvacios();
-            String Mensaje = "";
+            String Mensaje;         
             P.Cod_Barra = txtCodigoBarra.Text;
             P.NombreProducto = txtProducto.Text;
             P.Unidad_Exis = Convert.ToInt32(cant_existencia.Value);
             P.Existencia_Min = Convert.ToInt32(cant_existencia_min.Value);
-            P.Precio_Costo = Convert.ToDecimal(txtPrecioCosto.Text);
-            P.Precio_Venta1 = Convert.ToDecimal(txtPrecioVenta1.Text);
-            P.Precio_Venta2 = Convert.ToDecimal(txtPrecioVenta2.Text);
-            P.Precio_Venta3 = Convert.ToDecimal(txtPrecioVenta3.Text);
-            P.Precio_Venta4 = Convert.ToDecimal(txtPrecioVenta4.Text);
+                                                            
             if (chkISV.Checked == true)
             {
                 P.ISV = true;
@@ -73,16 +70,8 @@ namespace Capa_de_Presentacion
             P.Imagen = "NULL";
             P.IdCategoria = Convert.ToInt32(cboCategoria.SelectedValue);
             P.IdProveedor = Convert.ToInt32(cboProveedor.SelectedValue);
-            Mensaje = P.RegistrarProductos();
-
-            if (Mensaje == "Este producto ya existe")
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
+            Validaciones1();           
         }
 
         private void cargarComboCat()
@@ -132,17 +121,6 @@ namespace Capa_de_Presentacion
             //llenarDTGVProductosxD();
         }
 
-        private void txtProducto_Validating(object sender, CancelEventArgs e)
-        {
-            if(txtProducto.Text == "")
-            {
-                errorProvider1.SetError(txtProducto, "Este campo no puede quedar vacio");
-            }
-            else
-            {
-                errorProvider1.SetError(txtProducto, "");
-            }
-        }
 
         void llenarDTGVProductosxD()
         {
@@ -174,7 +152,7 @@ namespace Capa_de_Presentacion
         private void nuevacat_Click(object sender, EventArgs e)
         {
             FrmRegistrarCategoria c = new FrmRegistrarCategoria();
-            c.Show();   
+            c.Show();
         }
 
         private void nuevo_Click(object sender, EventArgs e)
@@ -198,13 +176,253 @@ namespace Capa_de_Presentacion
         {
             if (arrastre)
             {
-               // this.Location = this.PointToScreen(new Point(this.MousePosition.X - this.Location.X - x, this.MousePosition.Y - this.Location.Y - y))
-            } 
+                // this.Location = this.PointToScreen(new Point(this.MousePosition.X - this.Location.X - x, this.MousePosition.Y - this.Location.Y - y))
+            }
         }
 
         private void nuevo_MouseEnter(object sender, EventArgs e)
         {
             nuevo.Cursor = Cursors.Hand;
         }
+      
+        private void Validaciones1()
+        {            
+            if (txtCodigoBarra.Text == "")
+            {
+                errorProviderProductos.SetError(txtCodigoBarra, "No puede dejar este campo vacio");
+                txtCodigoBarra.Focus();
+                return;
+                             
+            }
+            else
+            {              
+                if (txtCodigoBarra.Text.Length < 14)
+                {
+                    errorProviderProductos.SetError(txtCodigoBarra, "Faltan datos");
+                    DevComponents.DotNetBar.MessageBoxEx.Show("Debe ingresar almenos 14 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtCodigoBarra.Focus();
+                    return;
+                }
+                else
+                {
+                    errorProviderProductos.SetError(txtCodigoBarra, "");
+
+                    if (txtProducto.Text == "")
+                    {
+                        errorProviderProductos.SetError(txtProducto, "No puede dejar este campo vacio");
+                        txtProducto.Focus();                                              
+                    }
+                    else
+                    {
+                        errorProviderProductos.SetError(txtProducto, "");                       
+
+                        if (cant_existencia.Value == 0)
+                        {
+                            errorProviderProductos.SetError(cant_existencia, "No puede dejar este campo sin valor");
+                            cant_existencia.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            errorProviderProductos.SetError(cant_existencia, "");
+
+                            if (cant_existencia_min.Value == 0)
+                            {
+                                errorProviderProductos.SetError(cant_existencia_min, "No puede dejar este campo sin valor");
+                                cant_existencia.Focus();
+                                return;
+                            }
+                            else
+                            {                               
+                                errorProviderProductos.SetError(cant_existencia_min, "");
+
+                                if (txtPrecioCosto.Text == "")
+                                {
+                                    errorProviderProductos.SetError(txtPrecioCosto, "No puede dejar este campo vacio");
+                                    txtPrecioCosto.Focus();
+                                    return;
+                                }
+                                else
+                                {
+                                    errorProviderProductos.SetError(txtPrecioCosto, "");
+                                    if (txtPrecioVenta1.Text == "")
+                                    {
+                                        errorProviderProductos.SetError(txtPrecioVenta1, "No puede dejar este campo vacio");
+                                        txtPrecioVenta1.Focus();
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        errorProviderProductos.SetError(txtPrecioVenta1, "");
+
+                                        if (txtPrecioVenta2.Text == "")
+                                        {
+                                            errorProviderProductos.SetError(txtPrecioVenta2, "No puede dejar este campo vacio");
+                                            txtPrecioVenta2.Focus();
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            errorProviderProductos.SetError(txtPrecioVenta2, "");
+
+                                            if (txtPrecioVenta3.Text == "")
+                                            {
+                                                errorProviderProductos.SetError(txtPrecioVenta3, "No puede dejar este campo vacio");
+                                                txtPrecioVenta3.Focus();
+                                                return;
+                                            }
+                                            else
+                                            {
+                                                errorProviderProductos.SetError(txtPrecioVenta3, "");
+
+                                                if (txtPrecioVenta4.Text == "")
+                                                {
+                                                    errorProviderProductos.SetError(txtPrecioVenta4, "No puede dejar este campo vacio");
+                                                    txtPrecioVenta4.Focus();
+                                                    return;
+                                                }
+                                                else
+                                                {
+                                                    errorProviderProductos.SetError(txtPrecioVenta4, "");
+                                                    Mensaje = P.RegistrarProductos();
+
+                                                    if (Mensaje == "Este producto ya existe")
+                                                    {
+                                                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                                        errorProviderProductos.SetError(txtProducto, "Cambie el nombre del producto");
+                                                        txtProducto.Focus();
+                                                        return;
+                                                    }
+                                                    else
+                                                    {
+                                                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                                                                           
+                                                        P.Precio_Costo = Convert.ToDecimal(txtPrecioCosto.Text);
+                                                        P.Precio_Venta1 = Convert.ToDecimal(txtPrecioVenta1.Text);
+                                                        P.Precio_Venta2 = Convert.ToDecimal(txtPrecioVenta2.Text);
+                                                        P.Precio_Venta3 = Convert.ToDecimal(txtPrecioVenta3.Text);
+                                                        P.Precio_Venta4 = Convert.ToDecimal(txtPrecioVenta4.Text);
+
+                                                        txtCodigoBarra.Text = "";
+                                                        txtProducto.Text = "";
+                                                        cant_existencia.Value = 0;
+                                                        cant_existencia_min.Value = 0;
+                                                        txtPrecioCosto.Text = "";
+                                                        txtPrecioVenta1.Text = "";
+                                                        txtPrecioVenta2.Text = "";
+                                                        txtPrecioVenta3.Text = "";
+                                                        txtPrecioVenta4.Text = "";
+                                                    }                                                                                                   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }                                                                                                                                           
+                        }                        
+                    }                    
+                }
+            }         
+        }       
+
+        private void txtPrecioCosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProviderProductos.SetError(txtPrecioCosto, "Solo se permiten numeros");
+                txtPrecioCosto.Focus();
+                return;
+            }
+        }
+
+      
+        private void txtPrecioVenta1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProviderProductos.SetError(txtPrecioVenta1, "Solo se permiten numeros");
+                txtPrecioVenta1.Focus();
+                return;
+            }
+        }
+
+      
+        private void txtPrecioVenta2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+             if (Char.IsDigit(e.KeyChar))
+             {
+                  e.Handled = false;
+             }
+             else if (Char.IsControl(e.KeyChar))
+             {
+                   e.Handled = false;
+             }
+             else
+             {
+                  e.Handled = true;
+                  errorProviderProductos.SetError(txtPrecioVenta2, "Solo se permiten numeros");
+                  txtPrecioVenta2.Focus();
+                  return;
+             }
+        }
+      
+        private void txtPrecioVenta3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProviderProductos.SetError(txtPrecioVenta3, "Solo se permiten numeros");
+                txtPrecioVenta3.Focus();
+                return;
+            }
+        }
+
+        private void txtPrecioVenta4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProviderProductos.SetError(txtPrecioVenta3, "Solo se permiten numeros");
+                txtPrecioVenta3.Focus();
+                return;
+            }
+        }
     }
 }
+
+ 

@@ -25,5 +25,6 @@ namespace Capa_de_Presentacion
             InitializeComponent();
         }
 
+     
     }
 }

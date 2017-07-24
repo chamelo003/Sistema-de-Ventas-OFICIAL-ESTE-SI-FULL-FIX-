@@ -111,7 +111,7 @@ namespace Capa_de_Presentacion
             this.txtUser.Text = "";
             this.txtPassword.Text = "";
             this.cboEmpleado.SelectedValue = -1;
-           
+            
         }
     }
 }

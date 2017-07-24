@@ -45,7 +45,6 @@
             this.txtPrecioVenta3 = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta2 = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta1 = new System.Windows.Forms.TextBox();
-            this.txtPrecioCosto = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -90,8 +89,9 @@
             this.close = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderProductos = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtPrecioCosto = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cancelar)).BeginInit();
@@ -108,7 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -269,6 +269,7 @@
             this.txtPrecioVenta3.Name = "txtPrecioVenta3";
             this.txtPrecioVenta3.Size = new System.Drawing.Size(158, 24);
             this.txtPrecioVenta3.TabIndex = 58;
+            this.txtPrecioVenta3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta3_KeyPress);
             // 
             // txtPrecioVenta2
             // 
@@ -276,6 +277,7 @@
             this.txtPrecioVenta2.Name = "txtPrecioVenta2";
             this.txtPrecioVenta2.Size = new System.Drawing.Size(158, 24);
             this.txtPrecioVenta2.TabIndex = 57;
+            this.txtPrecioVenta2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta2_KeyPress);
             // 
             // txtPrecioVenta1
             // 
@@ -283,13 +285,7 @@
             this.txtPrecioVenta1.Name = "txtPrecioVenta1";
             this.txtPrecioVenta1.Size = new System.Drawing.Size(158, 24);
             this.txtPrecioVenta1.TabIndex = 56;
-            // 
-            // txtPrecioCosto
-            // 
-            this.txtPrecioCosto.Location = new System.Drawing.Point(143, 23);
-            this.txtPrecioCosto.Name = "txtPrecioCosto";
-            this.txtPrecioCosto.Size = new System.Drawing.Size(158, 24);
-            this.txtPrecioCosto.TabIndex = 53;
+            this.txtPrecioVenta1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta1_KeyPress);
             // 
             // label10
             // 
@@ -477,7 +473,6 @@
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(292, 24);
             this.txtProducto.TabIndex = 18;
-            this.txtProducto.Validating += new System.ComponentModel.CancelEventHandler(this.txtProducto_Validating);
             // 
             // label1
             // 
@@ -662,11 +657,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Teal;
             this.label11.Location = new System.Drawing.Point(347, 2);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(263, 59);
+            this.label11.Size = new System.Drawing.Size(250, 55);
             this.label11.TabIndex = 21;
             this.label11.Text = "Productos";
             // 
@@ -691,9 +686,9 @@
             this.pictureBox10.TabIndex = 25;
             this.pictureBox10.TabStop = false;
             // 
-            // errorProvider1
+            // errorProviderProductos
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorProviderProductos.ContainerControl = this;
             // 
             // panel2
             // 
@@ -704,6 +699,14 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // txtPrecioCosto
+            // 
+            this.txtPrecioCosto.Location = new System.Drawing.Point(143, 23);
+            this.txtPrecioCosto.Name = "txtPrecioCosto";
+            this.txtPrecioCosto.Size = new System.Drawing.Size(158, 24);
+            this.txtPrecioCosto.TabIndex = 53;
+            this.txtPrecioCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
             // FrmRegistroProductos
             // 
@@ -746,7 +749,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -795,11 +798,10 @@
         private System.Windows.Forms.TextBox txtPrecioVenta3;
         private System.Windows.Forms.TextBox txtPrecioVenta2;
         private System.Windows.Forms.TextBox txtPrecioVenta1;
-        private System.Windows.Forms.TextBox txtPrecioCosto;
         private System.Windows.Forms.PictureBox close;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProviderProductos;
         private System.Windows.Forms.CheckBox chkISV;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodBarra;
@@ -814,5 +816,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtPrecioCosto;
     }
 }

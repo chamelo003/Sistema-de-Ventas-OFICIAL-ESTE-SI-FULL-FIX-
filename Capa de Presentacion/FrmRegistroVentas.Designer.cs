@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cboPrecioVenta = new System.Windows.Forms.ComboBox();
@@ -72,10 +73,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.errorProviderRegVen = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegVen)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -254,9 +257,9 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column4.HeaderText = "Producto";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -264,9 +267,9 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column3.HeaderText = "Impuesto";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -293,16 +296,17 @@
             this.btnRegistrarVenta.TabIndex = 19;
             this.btnRegistrarVenta.Text = "Registrar Venta";
             this.btnRegistrarVenta.UseVisualStyleBackColor = true;
+         
             // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(226, 20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(205, 21);
+            this.label11.Size = new System.Drawing.Size(236, 24);
             this.label11.TabIndex = 0;
             this.label11.Text = "REGISTROS DE VENTAS ";
             // 
@@ -514,6 +518,10 @@
             this.label20.Text = "Total";
             this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // errorProviderRegVen
+            // 
+            this.errorProviderRegVen.ContainerControl = this;
+            // 
             // FrmRegistroVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,6 +555,7 @@
             this.panel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderRegVen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,5 +604,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ErrorProvider errorProviderRegVen;
     }
 }
