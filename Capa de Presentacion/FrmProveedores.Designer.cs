@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedores));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -74,6 +75,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Cerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.errorProviderProveedores = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
@@ -88,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -518,11 +521,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Teal;
             this.label11.Location = new System.Drawing.Point(291, 3);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(323, 59);
+            this.label11.Size = new System.Drawing.Size(309, 55);
             this.label11.TabIndex = 22;
             this.label11.Text = "Proveedores";
             // 
@@ -547,6 +550,10 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 26;
             this.pictureBox10.TabStop = false;
+            // 
+            // errorProviderProveedores
+            // 
+            this.errorProviderProveedores.ContainerControl = this;
             // 
             // FrmProveedores
             // 
@@ -584,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -635,5 +643,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ErrorProvider errorProviderProveedores;
     }
 }

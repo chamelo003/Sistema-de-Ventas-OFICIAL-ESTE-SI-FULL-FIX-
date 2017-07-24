@@ -14,6 +14,9 @@ namespace Capa_de_Presentacion
     public partial class FrmProveedores : DevComponents.DotNetBar.Metro.MetroForm
     {
         private clsProveedores P = new clsProveedores();
+
+        String Mensaje;
+
         public FrmProveedores()
         {
             InitializeComponent();
@@ -35,16 +38,10 @@ namespace Capa_de_Presentacion
             P.Contacto = txtContacto.Text;
             P.TelefContacto = mktTelefonoContacto.Text;
             P.Correo = txtCorreo.Text;
-            String Mensaje = "";
-            Mensaje = P.RegistrarProveedor();
-            if (Mensaje == "Proveedor agregado exitosamente.")
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
+            ValidacionProveedores();
+
+            
         }
 
         private void Cerrar_Click(object sender, EventArgs e)
@@ -135,7 +132,7 @@ namespace Capa_de_Presentacion
         {
             FrmDepartamento D = new FrmDepartamento();
             D.ShowDialog();
-            if(D.IsDisposed == true)
+            if (D.IsDisposed == true)
             {
                 cargarComboDepto();
                 cargarComboMunicipio(idDepto);
@@ -146,7 +143,7 @@ namespace Capa_de_Presentacion
         {
             FrmMunicipio M = new FrmMunicipio();
             M.ShowDialog();
-            if(M.IsDisposed == true)
+            if (M.IsDisposed == true)
             {
                 cargarComboMunicipio(idDepto);
             }
@@ -157,5 +154,82 @@ namespace Capa_de_Presentacion
             idDepto = Convert.ToInt32(cboDepto.SelectedValue);
             cargarComboMunicipio(idDepto);
         }
+
+        private void ValidacionProveedores()
+        {
+            if (mktRTN.Text == "")
+            {
+                errorProviderProveedores.SetError(mktRTN, "No puede dejar este campo vacio");
+                mktRTN.Focus();
+                return;
+            }
+            else
+            {
+                if (mktRTN.MaskCompleted == false)
+                {
+                    errorProviderProveedores.SetError(mktRTN, "Faltan caracteres");
+                    mktRTN.Focus();
+                    return;
+                }
+                else
+                {
+                    errorProviderProveedores.SetError(mktRTN, "");
+
+                    if (txtNombre.Text == "")
+                    {
+                        errorProviderProveedores.SetError(txtNombre, "No puede dejar vacio este campo");
+                        txtNombre.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        errorProviderProveedores.SetError(txtNombre, "");
+
+                        if (txtDireccion.Text=="")
+                        {
+                            errorProviderProveedores.SetError(txtDireccion, "No puede dejar este campo vacio");
+                            txtDireccion.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            errorProviderProveedores.SetError(txtDireccion, "");
+                            if (txtCorreo.Text=="")
+                            {
+                                errorProviderProveedores.SetError(txtCorreo, "No puede dejar este campo vacio");
+                                txtCorreo.Focus();
+                                return;
+                            }
+                            else
+                            {
+                                errorProviderProveedores.SetError(txtCorreo, "");
+
+                                Mensaje = P.RegistrarProveedor();
+
+                                if (Mensaje == "Este Proveedor ya existe")
+                                {
+                                    DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    errorProviderProveedores.SetError(mktRTN, "error");
+                                    DevComponents.DotNetBar.MessageBoxEx.Show("Verifique el RTN ingresado", "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    mktRTN.Focus();
+                                    return;
+                                }
+                                else
+                                {
+                                    DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    mktRTN.Text = "";
+                                    txtNombre.Text = "";
+                                    txtDireccion.Text = "";
+                                    txtCorreo.Text = "";
+                                    txtContacto.Text = "";
+                                    mktTelefonoContacto.Text="";
+                                }                                
+                            }
+                        }                        
+                    }
+
+                }
+            }
+        }           
     }
 }

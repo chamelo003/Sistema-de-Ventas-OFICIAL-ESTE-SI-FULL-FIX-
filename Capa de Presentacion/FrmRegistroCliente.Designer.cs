@@ -560,6 +560,7 @@
             this.label3.Size = new System.Drawing.Size(205, 55);
             this.label3.TabIndex = 16;
             this.label3.Text = "Clientes";
+      
             // 
             // pictureBox2
             // 

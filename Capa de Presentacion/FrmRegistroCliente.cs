@@ -292,5 +292,7 @@ namespace Capa_de_Presentacion
         {
             this.Dispose();
         }
+
+     
     }
 }
