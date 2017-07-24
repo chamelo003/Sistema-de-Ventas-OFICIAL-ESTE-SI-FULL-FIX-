@@ -17,6 +17,7 @@ namespace Capa_de_Presentacion
     public partial class FrmRegistroCliente : DevComponents.DotNetBar.Metro.MetroForm
     {
         private clsCliente C = new clsCliente();
+        String Mensaje;
 
         public FrmRegistroCliente()
         {
@@ -41,45 +42,42 @@ namespace Capa_de_Presentacion
             C.Direccion = txtDireccion.Text;
             C.IdSexo = Convert.ToInt32(cboSexo.SelectedValue);
 
-            Mensaje = C.RegistrarCliente();
 
-            if (Mensaje == "Este cliente ya existe")
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            ValidacionesClientes();
+
 
         }
         int IdDepto;
         private void cargarComboDepto()
-        {
-            DataTable dt = new DataTable();            
+        {           
+
+            DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection("Server=.;DataBase=POSIX;Integrated Security=SSPI"))
             {
+                
                 if (conn.State == ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
+                {                    
+                    conn.Open();                    
+                }                
+
                 string query = "select * from DEPARTAMENTO";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
+                da.Fill(dt);                
                 cboDepto.DisplayMember = "Departamento";
-                cboDepto.ValueMember = "IdDepto";
-                cboDepto.DataSource = dt;
+                cboDepto.ValueMember = "IdDepto";                
+                cboDepto.DataSource = dt;                
 
-                if(cboDepto.Items.Count != 0)
-                {
+                if (cboDepto.Items.Count != 0)
+                {                 
                     IdDepto = Convert.ToInt32(cboDepto.SelectedValue);
                     cargarComboMunicipio(IdDepto);
                 }
                 else
-                {
+                {                   
                     cboMunicipio.DataSource = null;
                 }
+                
             }
         }
 
@@ -92,7 +90,7 @@ namespace Capa_de_Presentacion
                 {
                     conn.Open();
                 }
-                string query = "select * from MUNICIPIO WHERE IdDepto = "+ idDepto;
+                string query = "select * from MUNICIPIO WHERE IdDepto = " + idDepto;
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -129,6 +127,7 @@ namespace Capa_de_Presentacion
         private void Nuevo_Click_1(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            Guardar.Enabled = true;
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -137,9 +136,9 @@ namespace Capa_de_Presentacion
         }
 
         private void FrmRegistroCliente_Load(object sender, EventArgs e)
-        {
+        {          
             cargarComboDepto();
-            cargarComboSexo();
+            cargarComboSexo();            
         }
 
         private void cboDepto_SelectedValueChanged(object sender, EventArgs e)
@@ -152,9 +151,9 @@ namespace Capa_de_Presentacion
         {
             FrmDepartamento D = new FrmDepartamento();
             D.ShowDialog();
-            if(D.IsDisposed == true)
+            if (D.IsDisposed == true)
             {
-                cargarComboDepto();                
+                cargarComboDepto();
             }
         }
 
@@ -162,13 +161,136 @@ namespace Capa_de_Presentacion
         {
             FrmMunicipio M = new FrmMunicipio();
             M.ShowDialog();
-            if(M.IsDisposed == true)
+            if (M.IsDisposed == true)
             {
                 IdDepto = Convert.ToInt32(cboDepto.SelectedValue);
                 cargarComboMunicipio(IdDepto);
             }
         }
 
-        
+        private void ValidacionesClientes()
+        {
+            if (mktRTN.Text == "")
+            {
+                errorProviderClientes.SetError(mktRTN, "No puede dejar este campo vacio");
+                mktRTN.Focus();
+                return;
+            }
+            else
+            {
+                errorProviderClientes.SetError(mktRTN, "");
+
+                if (mktRTN.MaskCompleted==false)
+                {
+                    errorProviderClientes.SetError(mktRTN, "Faltan caracteres");
+                    mktRTN.Focus();
+                    return;
+                }
+                else
+                {
+                    errorProviderClientes.SetError(mktRTN, "");
+
+                    if (txtNombres.Text == "")
+                    {
+                        errorProviderClientes.SetError(txtNombres, "No puede dejar este campo vacio");
+                        txtNombres.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        errorProviderClientes.SetError(txtNombres, "");
+
+                        if (txtApellidos.Text == "")
+                        {
+                            errorProviderClientes.SetError(txtApellidos, "No puede dejar este campo vacio");
+                            txtApellidos.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            errorProviderClientes.SetError(txtApellidos, "");
+
+                            if (mktCelular.Text == "")
+                            {
+                                errorProviderClientes.SetError(mktCelular, "No puede dejar este campo vacio");
+                                txtApellidos.Focus();
+                                return;
+                            }
+                            else
+                            {
+                                errorProviderClientes.SetError(mktCelular, "");
+
+                                if (mktCelular.MaskCompleted==false)
+                                {
+                                    errorProviderClientes.SetError(mktCelular, "Falta caracteres");
+                                    mktCelular.Focus();
+                                    return;
+                                }
+                                else
+                                {
+                                    errorProviderClientes.SetError(mktCelular, "");
+
+                                    if (txtCorreo.Text == "")
+                                    {
+                                        errorProviderClientes.SetError(txtCorreo, "No puede dejar este campo vacio");
+                                        txtCorreo.Focus();
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        errorProviderClientes.SetError(txtCorreo, "");
+                                        Mensaje = C.RegistrarCliente();
+
+                                        if (Mensaje == "Este cliente ya existe")
+                                        {
+                                            DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                            errorProviderClientes.SetError(mktRTN,"error");
+                                            DevComponents.DotNetBar.MessageBoxEx.Show("Verifique el RTN ingresado", "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            mktRTN.Focus();
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            mktRTN.Text = "";
+                                            txtNombres.Text = "";
+                                            txtApellidos.Text = "";
+                                            mktTelefono.Text = "";
+                                            mktCelular.Text = "";
+                                            txtCorreo.Text = "";
+                                            txtDireccion.Text = "";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void mktRTN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProviderClientes.SetError(mktRTN, "Solo se permiten numeros");
+                mktRTN.Focus();
+                return;
+            }
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

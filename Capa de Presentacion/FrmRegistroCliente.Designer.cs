@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroCliente));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -77,6 +78,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.errorProviderClientes = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
@@ -90,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -125,7 +128,7 @@
             this.Cancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Cancelar.TabIndex = 36;
             this.Cancelar.TabStop = false;
-          
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // Nuevo
             // 
@@ -140,6 +143,7 @@
             // 
             // Guardar
             // 
+            this.Guardar.Enabled = false;
             this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
             this.Guardar.Location = new System.Drawing.Point(356, 332);
             this.Guardar.Name = "Guardar";
@@ -193,6 +197,7 @@
             // 
             // cboSexo
             // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Location = new System.Drawing.Point(483, 143);
             this.cboSexo.Name = "cboSexo";
@@ -299,6 +304,7 @@
             this.mktRTN.Name = "mktRTN";
             this.mktRTN.Size = new System.Drawing.Size(121, 24);
             this.mktRTN.TabIndex = 22;
+            this.mktRTN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktRTN_KeyPress);
             // 
             // mktTelefono
             // 
@@ -576,6 +582,10 @@
             this.pictureBox8.TabIndex = 20;
             this.pictureBox8.TabStop = false;
             // 
+            // errorProviderClientes
+            // 
+            this.errorProviderClientes.ContainerControl = this;
+            // 
             // FrmRegistroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -612,6 +622,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,6 +677,7 @@
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboSexo;
+        private System.Windows.Forms.ErrorProvider errorProviderClientes;
     }
 }
 
