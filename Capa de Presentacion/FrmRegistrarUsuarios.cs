@@ -18,6 +18,8 @@ namespace Capa_de_Presentacion
     {
         clsUsuarios U = new clsUsuarios();
 
+        String Mensaje = "";
+
         public FrmRegistrarUsuarios()
         {
             InitializeComponent();
@@ -25,25 +27,15 @@ namespace Capa_de_Presentacion
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            String Mensaje = "";
+           
             U.Usuario = txtUser.Text;
             U.Contrasenha = txtPassword.Text;
             U.IdEmpleado = Convert.ToString(cboEmpleado.SelectedValue);
             U.IdTipoUsuario = Convert.ToInt32(cboTipoUsuario.SelectedValue);
             U.Estado = checkBoxEstado.Checked;
 
-            Mensaje = U.RegistrarUsuarios();
-
-
-            if (Mensaje == "Este usuario ya existe")
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
+            ValidacionUsuarios();
+            
 
         }
 
@@ -104,6 +96,8 @@ namespace Capa_de_Presentacion
         private void Nuevo_Click(object sender, EventArgs e)
         {
             groupBoxUsuario.Enabled = true;
+            Guardar_Usuario.Enabled = true;
+            txtUser.Focus();
         }
 
         private void Cancelar_Click(object sender, EventArgs e)
@@ -111,7 +105,55 @@ namespace Capa_de_Presentacion
             this.txtUser.Text = "";
             this.txtPassword.Text = "";
             this.cboEmpleado.SelectedValue = -1;
+
+            errorProviderUsuarios.SetError(txtUser, "");
+            errorProviderUsuarios.SetError(txtPassword, "");
+
+
+            this.txtUser.Focus();
             
         }
+
+        private void ValidacionUsuarios()
+        {
+            if (txtUser.Text == "")
+            {
+                errorProviderUsuarios.SetError(txtUser, "No puede dejar este campo vacio");
+                txtUser.Focus();
+                return;
+            }
+            
+            else
+            {
+                errorProviderUsuarios.SetError(txtUser, "");
+                if (txtPassword.Text == "")
+                {
+                    errorProviderUsuarios.SetError(txtPassword, "No puede dejar vacio este campo");
+                    txtPassword.Focus();
+                    return;
+                }
+                else
+                {                   
+                    errorProviderUsuarios.SetError(txtPassword, "");
+                    Mensaje = U.RegistrarUsuarios();
+
+                    if (Mensaje == "Este usuario ya existe")
+                    {
+                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        errorProviderUsuarios.SetError(txtUser, "error");
+                        DevComponents.DotNetBar.MessageBoxEx.Show("Verifique el RTN ingresado", "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUser.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtUser.Text = "";
+                        txtPassword.Text = "";
+                    }
+                }
+            }
+        }
+
     }
 }

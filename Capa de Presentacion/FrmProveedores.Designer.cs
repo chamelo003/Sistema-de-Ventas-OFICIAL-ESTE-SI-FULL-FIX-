@@ -126,9 +126,11 @@
             this.Cancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Cancelar.TabIndex = 42;
             this.Cancelar.TabStop = false;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // Guardar
             // 
+            this.Guardar.Enabled = false;
             this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
             this.Guardar.Location = new System.Drawing.Point(383, 318);
             this.Guardar.Name = "Guardar";

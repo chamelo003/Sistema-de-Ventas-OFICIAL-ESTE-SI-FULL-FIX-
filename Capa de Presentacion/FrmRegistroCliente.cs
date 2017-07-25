@@ -128,6 +128,7 @@ namespace Capa_de_Presentacion
         {
             groupBox1.Enabled = true;
             Guardar.Enabled = true;
+            mktRTN.Focus();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -290,7 +291,25 @@ namespace Capa_de_Presentacion
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            
+            mktRTN.Text = "";
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            mktTelefono.Text = "";
+            mktCelular.Text = "";
+            txtCorreo.Text = "";
+            txtDireccion.Text = "";
+
+            errorProviderClientes.SetError(mktRTN, "");
+            errorProviderClientes.SetError(txtNombres, "");
+            errorProviderClientes.SetError(txtApellidos, "");
+            errorProviderClientes.SetError(mktTelefono, "");
+            errorProviderClientes.SetError(mktCelular, "");
+            errorProviderClientes.SetError(txtCorreo, "");
+            errorProviderClientes.SetError(txtDireccion, "");
+
+            mktRTN.Focus();
+
         }
 
      

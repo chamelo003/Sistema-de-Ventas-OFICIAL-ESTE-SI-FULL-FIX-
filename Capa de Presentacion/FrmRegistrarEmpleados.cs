@@ -18,6 +18,9 @@ namespace Capa_de_Presentacion
     {
         clsCargo C = new clsCargo();
         clsEmpleado E = new clsEmpleado();
+
+        String Mensaje = "";
+
         int Listado = 0;
         public FrmRegistrarEmpleados()
         {
@@ -27,12 +30,13 @@ namespace Capa_de_Presentacion
         private void Nuevo_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            mktCodEmple.Focus();
+            Guardar.Enabled = true;
         }
 
-        private void Guardar_Click(object sender, EventArgs e)
-        {
-            String Mensaje = "";
-            E.IdEmpleado = mktCodEmpleado.Text;
+        private void Guardar_Click_1(object sender, EventArgs e)
+        {            
+            E.IdEmpleado = mktCodEmple.Text;
             E.Nombres = txtNombres.Text;
             E.Apellidos = txtApellidos.Text;
             E.Telefono = mktTelefono.Text;
@@ -42,23 +46,13 @@ namespace Capa_de_Presentacion
             E.IdCargo = Convert.ToInt32(cboCargo.SelectedValue);
             E.IdSexo = Convert.ToInt32(cboSexo.SelectedValue);
 
-            Mensaje = E.RegistrarEmpleado();
-
-            if (Mensaje == "Empleado agregado exitosamente")
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
+            ValidacionesEmpleados();
         }
 
         private void llenarComboCargo()
         {
             DataTable dt = new DataTable();
-            using(SqlConnection conn = new SqlConnection("Server=.;DataBase=POSIX;Integrated Security=SSPI"))
+            using (SqlConnection conn = new SqlConnection("Server=.;DataBase=POSIX;Integrated Security=SSPI"))
             {
                 if (conn.State == ConnectionState.Closed)
                 {
@@ -176,5 +170,111 @@ namespace Capa_de_Presentacion
             D.ShowDialog();
         }
 
+        private void ValidacionesEmpleados()
+        {
+            if (mktCodEmple.MaskCompleted == false)
+            {
+                errorProviderEmpleados.SetError(mktCodEmple, "No puede dejar este campo vacio");
+                mktCodEmple.Focus();
+                return;
+            }
+            else
+            {
+                errorProviderEmpleados.SetError(mktCodEmple, "");
+                if (txtNombres.Text=="")
+                {
+                    errorProviderEmpleados.SetError(txtNombres, "No puede dejar este campo vacio");
+                    txtNombres.Focus();
+                    return;
+                }
+                else
+                {
+                    errorProviderEmpleados.SetError(txtNombres, "");
+                    if (txtApellidos.Text == "")
+                    {
+                        errorProviderEmpleados.SetError(txtApellidos, "No puede dejar este campo vacio");
+                        txtApellidos.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        errorProviderEmpleados.SetError(txtApellidos, "");
+                        if (mktTelefono.MaskCompleted == false)
+                        {
+                            errorProviderEmpleados.SetError(mktTelefono, "No puede dejar este campo vacio");
+                            mktTelefono.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            errorProviderEmpleados.SetError(mktTelefono, "");
+
+                            if (mktCelular.MaskCompleted == false)
+                            {
+                                errorProviderEmpleados.SetError(mktCelular, "No puede dejar este campo vacio");
+                                mktCelular.Focus();
+                                return;
+                            }
+                            else
+                            {
+                                errorProviderEmpleados.SetError(mktCelular, "");
+
+                                if (txtDireccion.Text == "")
+                                {
+                                    errorProviderEmpleados.SetError(txtDireccion, "No puede dejar este campo vacio");
+                                    txtDireccion.Focus();
+                                    return;
+                                }
+                                else
+                                {
+                                    errorProviderEmpleados.SetError(txtDireccion, "");
+                                    Mensaje = E.RegistrarEmpleado();
+
+                                    if (Mensaje == "Este empleado ya existe")
+                                    {
+                                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        errorProviderEmpleados.SetError(mktCodEmple, "error");
+                                        DevComponents.DotNetBar.MessageBoxEx.Show("Verifique el RTN ingresado", "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        mktCodEmple.Focus();
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        DevComponents.DotNetBar.MessageBoxEx.Show(Mensaje, "POSIX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        mktCodEmple.Text = "";
+                                        txtNombres.Text = "";
+                                        txtApellidos.Text = "";
+                                        mktTelefono.Text = "";
+                                        mktCelular.Text = "";
+                                        txtDireccion.Text = "";
+                                    }
+                                }
+                            }
+                        }                      
+                    }
+                }
+            }
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            mktCodEmple.Text = "";
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            mktTelefono.Text = "";
+            mktCelular.Text = "";
+            txtDireccion.Text = "";
+
+            errorProviderEmpleados.SetError(mktCodEmple, "");
+            errorProviderEmpleados.SetError(txtNombres, "");
+            errorProviderEmpleados.SetError(txtApellidos, "");
+            errorProviderEmpleados.SetError(mktCelular, "");
+            errorProviderEmpleados.SetError(txtDireccion, "");
+
+            mktCodEmple.Focus();
+
+        }
     }
 }
+
+

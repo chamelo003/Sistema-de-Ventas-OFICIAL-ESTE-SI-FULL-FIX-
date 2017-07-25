@@ -25,6 +25,7 @@ namespace Capa_de_Presentacion
         private void Nuevo_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            Guardar.Enabled = true;
             mktRTN.Focus();
         }
 
@@ -230,6 +231,26 @@ namespace Capa_de_Presentacion
 
                 }
             }
-        }           
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            mktRTN.Text = "";
+            txtNombre.Text = "";
+            txtDireccion.Text = "";
+            txtCorreo.Text = "";
+            txtContacto.Text = "";
+            mktTelefonoContacto.Text = "";
+
+            errorProviderProveedores.SetError(mktRTN, "");
+            errorProviderProveedores.SetError(txtNombre, "");
+            errorProviderProveedores.SetError(txtDireccion, "");
+            errorProviderProveedores.SetError(txtCorreo, "");
+            errorProviderProveedores.SetError(txtContacto, "");
+            errorProviderProveedores.SetError(mktTelefonoContacto, "");
+
+            mktRTN.Focus();
+
+        }
     }
 }

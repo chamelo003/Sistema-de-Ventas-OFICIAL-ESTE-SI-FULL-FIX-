@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarUsuarios));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Usuarios = new System.Windows.Forms.TabPage();
@@ -61,6 +62,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Cerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProviderUsuarios = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.Usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
@@ -73,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -176,6 +179,7 @@
             // 
             // cboTipoUsuario
             // 
+            this.cboTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoUsuario.FormattingEnabled = true;
             this.cboTipoUsuario.Location = new System.Drawing.Point(169, 153);
@@ -185,6 +189,7 @@
             // 
             // cboEmpleado
             // 
+            this.cboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEmpleado.FormattingEnabled = true;
             this.cboEmpleado.Location = new System.Drawing.Point(168, 111);
@@ -245,6 +250,7 @@
             // 
             // Guardar_Usuario
             // 
+            this.Guardar_Usuario.Enabled = false;
             this.Guardar_Usuario.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
             this.Guardar_Usuario.Location = new System.Drawing.Point(354, 304);
             this.Guardar_Usuario.Name = "Guardar_Usuario";
@@ -383,6 +389,10 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProviderUsuarios
+            // 
+            this.errorProviderUsuarios.ContainerControl = this;
+            // 
             // FrmRegistrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +426,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +465,6 @@
         private System.Windows.Forms.PictureBox Cancelar;
         private System.Windows.Forms.PictureBox Nuevo;
         private System.Windows.Forms.PictureBox Guardar_Usuario;
+        private System.Windows.Forms.ErrorProvider errorProviderUsuarios;
     }
 }

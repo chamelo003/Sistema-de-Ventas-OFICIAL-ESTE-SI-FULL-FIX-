@@ -98,7 +98,7 @@ namespace Capa_de_Presentacion
             E.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Usuarios_Click(object sender, EventArgs e)
         {
             FrmRegistrarUsuarios U = new FrmRegistrarUsuarios();
             U.MdiParent = this;

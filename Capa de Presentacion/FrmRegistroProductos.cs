@@ -158,6 +158,8 @@ namespace Capa_de_Presentacion
         private void nuevo_Click(object sender, EventArgs e)
         {
             panel1.Enabled = true;
+            guardar.Enabled = true;
+            txtCodigoBarra.Focus();
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -402,6 +404,33 @@ namespace Capa_de_Presentacion
                 txtPrecioVenta3.Focus();
                 return;
             }
+        }
+
+        private void cancelar_Click(object sender, EventArgs e)
+        {
+            txtCodigoBarra.Text = "";
+            txtProducto.Text = "";
+            cant_existencia.Value = 0;
+            cant_existencia_min.Value = 0;
+            txtPrecioCosto.Text = "";
+            txtPrecioVenta1.Text = "";
+            txtPrecioVenta2.Text = "";
+            txtPrecioVenta3.Text = "";
+            txtPrecioVenta4.Text = "";
+
+            errorProviderProductos.SetError(txtCodigoBarra, "");
+            errorProviderProductos.SetError(txtProducto, "");
+            errorProviderProductos.SetError(cant_existencia, "");
+            errorProviderProductos.SetError(cant_existencia_min, "");
+            errorProviderProductos.SetError(txtPrecioCosto, "");
+            errorProviderProductos.SetError(txtPrecioVenta1, "");
+            errorProviderProductos.SetError(txtPrecioVenta2, "");
+            errorProviderProductos.SetError(txtPrecioVenta3, "");
+            errorProviderProductos.SetError(txtPrecioVenta4, "");
+
+            txtCodigoBarra.Focus();
+
+
         }
 
         private void txtPrecioVenta4_KeyPress(object sender, KeyPressEventArgs e)

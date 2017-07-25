@@ -45,6 +45,7 @@
             this.txtPrecioVenta3 = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta2 = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta1 = new System.Windows.Forms.TextBox();
+            this.txtPrecioCosto = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -91,7 +92,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProviderProductos = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtPrecioCosto = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cancelar)).BeginInit();
@@ -148,9 +148,11 @@
             this.cancelar.TabIndex = 39;
             this.cancelar.TabStop = false;
             this.toolTip1.SetToolTip(this.cancelar, "Cancelar");
+            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
             // 
             // guardar
             // 
+            this.guardar.Enabled = false;
             this.guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
             this.guardar.Location = new System.Drawing.Point(389, 342);
             this.guardar.Name = "guardar";
@@ -286,6 +288,14 @@
             this.txtPrecioVenta1.Size = new System.Drawing.Size(158, 24);
             this.txtPrecioVenta1.TabIndex = 56;
             this.txtPrecioVenta1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta1_KeyPress);
+            // 
+            // txtPrecioCosto
+            // 
+            this.txtPrecioCosto.Location = new System.Drawing.Point(143, 23);
+            this.txtPrecioCosto.Name = "txtPrecioCosto";
+            this.txtPrecioCosto.Size = new System.Drawing.Size(158, 24);
+            this.txtPrecioCosto.TabIndex = 53;
+            this.txtPrecioCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
             // label10
             // 
@@ -699,14 +709,6 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
-            // 
-            // txtPrecioCosto
-            // 
-            this.txtPrecioCosto.Location = new System.Drawing.Point(143, 23);
-            this.txtPrecioCosto.Name = "txtPrecioCosto";
-            this.txtPrecioCosto.Size = new System.Drawing.Size(158, 24);
-            this.txtPrecioCosto.TabIndex = 53;
-            this.txtPrecioCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
             // FrmRegistroProductos
             // 

@@ -33,8 +33,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Cancelar = new System.Windows.Forms.PictureBox();
             this.Guardar = new System.Windows.Forms.PictureBox();
+            this.Cancelar = new System.Windows.Forms.PictureBox();
             this.Nuevo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnVerRef = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.cboDepto = new System.Windows.Forms.ComboBox();
             this.mktCelular = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.mktCodEmpleado = new System.Windows.Forms.MaskedTextBox();
+            this.mktCodEmple = new System.Windows.Forms.MaskedTextBox();
             this.mktTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -109,10 +109,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.errorProviderEmpleados = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nuevo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -132,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -148,8 +150,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Cancelar);
             this.tabPage1.Controls.Add(this.Guardar);
+            this.tabPage1.Controls.Add(this.Cancelar);
             this.tabPage1.Controls.Add(this.Nuevo);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -160,6 +162,18 @@
             this.tabPage1.Text = "Datos del Empleado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // Guardar
+            // 
+            this.Guardar.Enabled = false;
+            this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
+            this.Guardar.Location = new System.Drawing.Point(373, 337);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(63, 63);
+            this.Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Guardar.TabIndex = 43;
+            this.Guardar.TabStop = false;
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click_1);
+            // 
             // Cancelar
             // 
             this.Cancelar.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
@@ -169,18 +183,7 @@
             this.Cancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Cancelar.TabIndex = 42;
             this.Cancelar.TabStop = false;
-            // 
-            // Guardar
-            // 
-            this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
-            this.Guardar.Location = new System.Drawing.Point(383, 337);
-            this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(63, 63);
-            this.Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Guardar.TabIndex = 40;
-            this.Guardar.TabStop = false;
-            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
-            this.Guardar.MouseEnter += new System.EventHandler(this.Guardar_MouseEnter);
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // Nuevo
             // 
@@ -210,7 +213,7 @@
             this.groupBox1.Controls.Add(this.cboDepto);
             this.groupBox1.Controls.Add(this.mktCelular);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.mktCodEmpleado);
+            this.groupBox1.Controls.Add(this.mktCodEmple);
             this.groupBox1.Controls.Add(this.mktTelefono);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtDireccion);
@@ -332,7 +335,6 @@
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(159, 23);
             this.cboCargo.TabIndex = 28;
-           
             // 
             // label2
             // 
@@ -369,13 +371,13 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Celular";
             // 
-            // mktCodEmpleado
+            // mktCodEmple
             // 
-            this.mktCodEmpleado.Location = new System.Drawing.Point(113, 14);
-            this.mktCodEmpleado.Mask = "0000-0000-00000";
-            this.mktCodEmpleado.Name = "mktCodEmpleado";
-            this.mktCodEmpleado.Size = new System.Drawing.Size(113, 21);
-            this.mktCodEmpleado.TabIndex = 22;
+            this.mktCodEmple.Location = new System.Drawing.Point(113, 14);
+            this.mktCodEmple.Mask = "0000-0000-00000";
+            this.mktCodEmple.Name = "mktCodEmple";
+            this.mktCodEmple.Size = new System.Drawing.Size(113, 21);
+            this.mktCodEmple.TabIndex = 22;
             // 
             // mktTelefono
             // 
@@ -902,6 +904,10 @@
             this.pictureBox10.TabIndex = 26;
             this.pictureBox10.TabStop = false;
             // 
+            // errorProviderEmpleados
+            // 
+            this.errorProviderEmpleados.ContainerControl = this;
+            // 
             // FrmRegistrarEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -922,8 +928,8 @@
             this.Load += new System.EventHandler(this.FrmRegistrarEmpleados_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nuevo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -947,6 +953,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -962,7 +969,7 @@
         public System.Windows.Forms.ComboBox cboDepto;
         private System.Windows.Forms.MaskedTextBox mktCelular;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox mktCodEmpleado;
+        private System.Windows.Forms.MaskedTextBox mktCodEmple;
         private System.Windows.Forms.MaskedTextBox mktTelefono;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txtDireccion;
@@ -1008,7 +1015,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox Cancelar;
-        private System.Windows.Forms.PictureBox Guardar;
         private System.Windows.Forms.PictureBox Nuevo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -1032,5 +1038,7 @@
         public System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnVerRef;
+        private System.Windows.Forms.ErrorProvider errorProviderEmpleados;
+        private System.Windows.Forms.PictureBox Guardar;
     }
 }
