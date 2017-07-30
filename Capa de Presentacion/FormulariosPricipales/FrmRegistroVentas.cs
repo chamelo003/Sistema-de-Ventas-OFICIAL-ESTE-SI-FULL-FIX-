@@ -25,6 +25,9 @@ namespace Capa_de_Presentacion
             InitializeComponent();
         }
 
-     
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -75,3 +75,10 @@ C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX
 C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-2\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-2\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
 C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-2\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaLogicaNegocio\bin\Debug\CapaEnlaceDatos.dll
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaLogicaNegocio\bin\Debug\CapaEnlaceDatos.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb

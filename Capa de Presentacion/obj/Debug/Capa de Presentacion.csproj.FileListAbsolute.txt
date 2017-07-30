@@ -275,3 +275,31 @@ C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX
 C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-2\Capa de Presentacion\obj\Debug\Capa de Presentacion.csproj.GenerateResource.Cache
 C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-2\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
 C:\Users\Marvin Ordoñez\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-2\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\Capa de Presentacion.exe.config
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\Capa de Presentacion.exe
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\Capa de Presentacion.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\CapaEnlaceDatos.dll
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\CapaEnlaceDatos.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmDatosEmpresa.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmDepartamento.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmLogin.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.frmMDI.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmMunicipio.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmPistasdeAuditoria.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmPreferencia.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistrarCargo.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistrarCategoria.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistrarEmpleados.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistrarUsuarios.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistroCliente.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistroProductos.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmRegistroVentas.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.Properties.Resources.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmProveedores.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.FrmSAR.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.csproj.GenerateResource.Cache
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb

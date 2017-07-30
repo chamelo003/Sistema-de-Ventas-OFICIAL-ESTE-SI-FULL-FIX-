@@ -71,149 +71,144 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsVenta.cs" />
-    <Compile Include="FrmDatosEmpresa.cs">
+    <Compile Include="FormulariosSecundarios\FrmDatosEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDatosEmpresa.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmDatosEmpresa.Designer.cs">
       <DependentUpon>FrmDatosEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDepartamento.cs">
+    <Compile Include="FormulariosSecundarios\FrmDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDepartamento.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmDepartamento.Designer.cs">
       <DependentUpon>FrmDepartamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMDI.cs">
+    <Compile Include="FormulariosPricipales\frmMDI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMDI.Designer.cs">
+    <Compile Include="FormulariosPricipales\frmMDI.Designer.cs">
       <DependentUpon>frmMDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMunicipio.cs">
+    <Compile Include="FormulariosSecundarios\FrmMunicipio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMunicipio.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmMunicipio.Designer.cs">
       <DependentUpon>FrmMunicipio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPistasdeAuditoria.cs">
+    <Compile Include="FormulariosPricipales\FrmPistasdeAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPistasdeAuditoria.Designer.cs">
+    <Compile Include="FormulariosPricipales\FrmPistasdeAuditoria.Designer.cs">
       <DependentUpon>FrmPistasdeAuditoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPreferencia.cs">
+    <Compile Include="FormulariosSecundarios\FrmPreferencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPreferencia.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmPreferencia.Designer.cs">
       <DependentUpon>FrmPreferencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="FormulariosPricipales\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="FormulariosPricipales\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistrarCargo.cs">
+    <Compile Include="FormulariosSecundarios\FrmRegistrarCargo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistrarCargo.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmRegistrarCargo.Designer.cs">
       <DependentUpon>FrmRegistrarCargo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistrarCategoria.cs">
+    <Compile Include="FormulariosSecundarios\FrmRegistrarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistrarCategoria.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmRegistrarCategoria.Designer.cs">
       <DependentUpon>FrmRegistrarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistrarEmpleados.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistrarEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistrarEmpleados.Designer.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistrarEmpleados.Designer.cs">
       <DependentUpon>FrmRegistrarEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistrarUsuarios.cs">
+    <Compile Include="FormulariosSecundarios\FrmRegistrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistrarUsuarios.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmRegistrarUsuarios.Designer.cs">
       <DependentUpon>FrmRegistrarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistroCliente.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistroCliente.Designer.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistroCliente.Designer.cs">
       <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistroProductos.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistroProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistroProductos.Designer.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistroProductos.Designer.cs">
       <DependentUpon>FrmRegistroProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistroVentas.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistroVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistroVentas.Designer.cs">
+    <Compile Include="FormulariosPricipales\FrmRegistroVentas.Designer.cs">
       <DependentUpon>FrmRegistroVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="POXIS2DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POXIS2DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FrmProveedores.cs">
+    <Compile Include="FormulariosPricipales\FrmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmProveedores.Designer.cs">
+    <Compile Include="FormulariosPricipales\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSAR.cs">
+    <Compile Include="FormulariosSecundarios\FrmSAR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSAR.Designer.cs">
+    <Compile Include="FormulariosSecundarios\FrmSAR.Designer.cs">
       <DependentUpon>FrmSAR.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmDatosEmpresa.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmDatosEmpresa.resx">
       <DependentUpon>FrmDatosEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDepartamento.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmDepartamento.resx">
       <DependentUpon>FrmDepartamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="FormulariosPricipales\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMDI.resx">
+    <EmbeddedResource Include="FormulariosPricipales\frmMDI.resx">
       <DependentUpon>frmMDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMunicipio.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmMunicipio.resx">
       <DependentUpon>FrmMunicipio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPistasdeAuditoria.resx">
+    <EmbeddedResource Include="FormulariosPricipales\FrmPistasdeAuditoria.resx">
       <DependentUpon>FrmPistasdeAuditoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPreferencia.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmPreferencia.resx">
       <DependentUpon>FrmPreferencia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarCargo.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmRegistrarCargo.resx">
       <DependentUpon>FrmRegistrarCargo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarCategoria.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmRegistrarCategoria.resx">
       <DependentUpon>FrmRegistrarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarEmpleados.resx">
+    <EmbeddedResource Include="FormulariosPricipales\FrmRegistrarEmpleados.resx">
       <DependentUpon>FrmRegistrarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarUsuarios.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmRegistrarUsuarios.resx">
       <DependentUpon>FrmRegistrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistroCliente.resx">
+    <EmbeddedResource Include="FormulariosPricipales\FrmRegistroCliente.resx">
       <DependentUpon>FrmRegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistroProductos.resx">
+    <EmbeddedResource Include="FormulariosPricipales\FrmRegistroProductos.resx">
       <DependentUpon>FrmRegistroProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistroVentas.resx">
+    <EmbeddedResource Include="FormulariosPricipales\FrmRegistroVentas.resx">
       <DependentUpon>FrmRegistroVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -221,23 +216,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmProveedores.resx">
+    <EmbeddedResource Include="FormulariosPricipales\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSAR.resx">
+    <EmbeddedResource Include="FormulariosSecundarios\FrmSAR.resx">
       <DependentUpon>FrmSAR.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="POXIS2DataSet.xsc">
-      <DependentUpon>POXIS2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="POXIS2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>POXIS2DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="POXIS2DataSet.xss">
-      <DependentUpon>POXIS2DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -332,6 +316,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
