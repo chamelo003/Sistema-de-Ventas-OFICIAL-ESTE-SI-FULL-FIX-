@@ -306,3 +306,5 @@ C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de 
 C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\Capa de Presentacion.exe.config
 C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
 C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.DialogForms.ShowClientes.resources
+C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa_de_Presentacion.DialogForms.ShowProductos.resources

@@ -42,9 +42,9 @@ namespace Capa_de_Presentacion
         private void BuscarProducto_Click(object sender, EventArgs e)
         {
             DialogForms.ShowProductos frmrp = new DialogForms.ShowProductos();
-            frmrp.ShowDialog();
-            txtCodigo.Text = Convert.ToString(frmrp.dgvProductos.CurrentRow.Cells[0].Value);
-            txtProducto.Text = Convert.ToString(frmrp.dgvProductos.CurrentRow.Cells[2].Value);
+            frmrp.ShowDialog(); 
+            txtCodigo.Text = Convert.ToString(frmrp.dataGridView1.CurrentRow.Cells[0].Value);
+            txtProducto.Text = Convert.ToString(frmrp.dataGridView1.CurrentRow.Cells[2].Value);
         }
     }
 }

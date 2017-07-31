@@ -28,136 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.close = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExistenciaMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PreciosVenta = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.FechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.close = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvProductos
-            // 
-            this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.AllowUserToDeleteRows = false;
-            this.dgvProductos.BackgroundColor = System.Drawing.Color.White;
-            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdProducto,
-            this.CodBarra,
-            this.NombreProducto,
-            this.Existencia,
-            this.ExistenciaMin,
-            this.PrecioCosto,
-            this.PreciosVenta,
-            this.FechaIngreso,
-            this.FechaVencimiento,
-            this.Imagen,
-            this.Proveedor,
-            this.Categoria});
-            this.dgvProductos.Location = new System.Drawing.Point(42, 136);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(941, 277);
-            this.dgvProductos.TabIndex = 26;
-            // 
-            // IdProducto
-            // 
-            this.IdProducto.HeaderText = "IdProducto";
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.ReadOnly = true;
-            // 
-            // CodBarra
-            // 
-            this.CodBarra.HeaderText = "Código de barra ";
-            this.CodBarra.Name = "CodBarra";
-            this.CodBarra.ReadOnly = true;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 245;
-            // 
-            // Existencia
-            // 
-            this.Existencia.HeaderText = "Existencia";
-            this.Existencia.Name = "Existencia";
-            this.Existencia.ReadOnly = true;
-            // 
-            // ExistenciaMin
-            // 
-            this.ExistenciaMin.HeaderText = "Existencia Mínima";
-            this.ExistenciaMin.Name = "ExistenciaMin";
-            this.ExistenciaMin.ReadOnly = true;
-            // 
-            // PrecioCosto
-            // 
-            this.PrecioCosto.HeaderText = "Precio Costo";
-            this.PrecioCosto.Name = "PrecioCosto";
-            this.PrecioCosto.ReadOnly = true;
-            // 
-            // PreciosVenta
-            // 
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = "L 0.00";
-            this.PreciosVenta.DefaultCellStyle = dataGridViewCellStyle1;
-            this.PreciosVenta.HeaderText = "Precios de venta";
-            this.PreciosVenta.Name = "PreciosVenta";
-            this.PreciosVenta.ReadOnly = true;
-            this.PreciosVenta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PreciosVenta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.PreciosVenta.Width = 150;
-            // 
-            // FechaIngreso
-            // 
-            this.FechaIngreso.HeaderText = "Fecha Ingreso";
-            this.FechaIngreso.Name = "FechaIngreso";
-            this.FechaIngreso.ReadOnly = true;
-            // 
-            // FechaVencimiento
-            // 
-            this.FechaVencimiento.HeaderText = "Fecha Vto";
-            this.FechaVencimiento.Name = "FechaVencimiento";
-            this.FechaVencimiento.ReadOnly = true;
-            // 
-            // Imagen
-            // 
-            this.Imagen.HeaderText = "Imagen";
-            this.Imagen.Name = "Imagen";
-            this.Imagen.ReadOnly = true;
-            this.Imagen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Imagen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoría ";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
             // 
             // txtBuscarProducto
             // 
@@ -209,13 +104,135 @@
             this.pictureBox10.TabIndex = 31;
             this.pictureBox10.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdProducto,
+            this.CodBarra,
+            this.NombreProducto,
+            this.Existencia,
+            this.ExistenciaMin,
+            this.PrecioCosto,
+            this.FechaIngreso,
+            this.PrecioVenta1,
+            this.PrecioVenta2,
+            this.PrecioVenta3,
+            this.PrecioVenta4,
+            this.FechaVencimiento,
+            this.Imagen,
+            this.Proveedor,
+            this.Categoria});
+            this.dataGridView1.Location = new System.Drawing.Point(49, 141);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(953, 277);
+            this.dataGridView1.TabIndex = 32;
+            // 
+            // IdProducto
+            // 
+            this.IdProducto.HeaderText = "IdProducto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
+            // 
+            // CodBarra
+            // 
+            this.CodBarra.HeaderText = "Código de barra ";
+            this.CodBarra.Name = "CodBarra";
+            this.CodBarra.ReadOnly = true;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre Producto";
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            this.NombreProducto.Width = 245;
+            // 
+            // Existencia
+            // 
+            this.Existencia.HeaderText = "Existencia";
+            this.Existencia.Name = "Existencia";
+            this.Existencia.ReadOnly = true;
+            // 
+            // ExistenciaMin
+            // 
+            this.ExistenciaMin.HeaderText = "Existencia Mínima";
+            this.ExistenciaMin.Name = "ExistenciaMin";
+            this.ExistenciaMin.ReadOnly = true;
+            // 
+            // PrecioCosto
+            // 
+            this.PrecioCosto.HeaderText = "Precio Costo";
+            this.PrecioCosto.Name = "PrecioCosto";
+            this.PrecioCosto.ReadOnly = true;
+            // 
+            // FechaIngreso
+            // 
+            this.FechaIngreso.HeaderText = "Fecha Ingreso";
+            this.FechaIngreso.Name = "FechaIngreso";
+            this.FechaIngreso.ReadOnly = true;
+            // 
+            // PrecioVenta1
+            // 
+            this.PrecioVenta1.HeaderText = "PrecioVenta1";
+            this.PrecioVenta1.Name = "PrecioVenta1";
+            this.PrecioVenta1.ReadOnly = true;
+            // 
+            // PrecioVenta2
+            // 
+            this.PrecioVenta2.HeaderText = "PrecioVenta2";
+            this.PrecioVenta2.Name = "PrecioVenta2";
+            this.PrecioVenta2.ReadOnly = true;
+            // 
+            // PrecioVenta3
+            // 
+            this.PrecioVenta3.HeaderText = "PrecioVenta3";
+            this.PrecioVenta3.Name = "PrecioVenta3";
+            this.PrecioVenta3.ReadOnly = true;
+            // 
+            // PrecioVenta4
+            // 
+            this.PrecioVenta4.HeaderText = "PrecioVenta4";
+            this.PrecioVenta4.Name = "PrecioVenta4";
+            this.PrecioVenta4.ReadOnly = true;
+            // 
+            // FechaVencimiento
+            // 
+            this.FechaVencimiento.HeaderText = "Fecha Vto";
+            this.FechaVencimiento.Name = "FechaVencimiento";
+            this.FechaVencimiento.ReadOnly = true;
+            // 
+            // Imagen
+            // 
+            this.Imagen.HeaderText = "Imagen";
+            this.Imagen.Name = "Imagen";
+            this.Imagen.ReadOnly = true;
+            this.Imagen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Imagen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoría ";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
             // ShowProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 440);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.close);
-            this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.txtBuscarProducto);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox10);
@@ -223,9 +240,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShowProductos";
             this.Text = "ShowProductos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            this.Load += new System.EventHandler(this.ShowProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,22 +252,25 @@
         #endregion
 
         private System.Windows.Forms.PictureBox close;
-        public System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.TextBox txtBuscarProducto;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodBarra;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Existencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExistenciaMin;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCosto;
-        private System.Windows.Forms.DataGridViewComboBoxColumn PreciosVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaIngreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta4;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaVencimiento;
         private System.Windows.Forms.DataGridViewLinkColumn Imagen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.TextBox txtBuscarProducto;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label11;
     }
 }

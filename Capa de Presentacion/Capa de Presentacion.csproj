@@ -167,6 +167,11 @@
     <Compile Include="FormulariosPricipales\FrmRegistroVentas.Designer.cs">
       <DependentUpon>FrmRegistroVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="POSIXPrecioProduct.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSIXPrecioProduct.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormulariosPricipales\FrmProveedores.cs">
@@ -240,6 +245,17 @@
     <EmbeddedResource Include="FormulariosSecundarios\FrmSAR.resx">
       <DependentUpon>FrmSAR.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="POSIXPrecioProduct.xsc">
+      <DependentUpon>POSIXPrecioProduct.xsd</DependentUpon>
+    </None>
+    <None Include="POSIXPrecioProduct.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSIXPrecioProduct.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSIXPrecioProduct.xss">
+      <DependentUpon>POSIXPrecioProduct.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

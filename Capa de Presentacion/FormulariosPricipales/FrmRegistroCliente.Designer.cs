@@ -280,17 +280,17 @@
             // mktCelular
             // 
             this.mktCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktCelular.Location = new System.Drawing.Point(312, 105);
+            this.mktCelular.Location = new System.Drawing.Point(300, 105);
             this.mktCelular.Mask = "0000-0000";
             this.mktCelular.Name = "mktCelular";
-            this.mktCelular.Size = new System.Drawing.Size(68, 24);
+            this.mktCelular.Size = new System.Drawing.Size(80, 24);
             this.mktCelular.TabIndex = 24;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(245, 107);
+            this.label10.Location = new System.Drawing.Point(240, 108);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 18);
             this.label10.TabIndex = 23;
@@ -312,14 +312,14 @@
             this.mktTelefono.Location = new System.Drawing.Point(115, 107);
             this.mktTelefono.Mask = "0000-0000";
             this.mktTelefono.Name = "mktTelefono";
-            this.mktTelefono.Size = new System.Drawing.Size(68, 24);
+            this.mktTelefono.Size = new System.Drawing.Size(80, 24);
             this.mktTelefono.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(32, 107);
+            this.label9.Location = new System.Drawing.Point(31, 108);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 20;
@@ -447,6 +447,7 @@
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -463,6 +464,7 @@
             this.Column4});
             this.dgvClientes.Location = new System.Drawing.Point(-1, 3);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.Size = new System.Drawing.Size(739, 269);
             this.dgvClientes.TabIndex = 0;
             // 
@@ -505,30 +507,35 @@
             // 
             this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
             this.Telefono.Width = 80;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Celular";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 80;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Correo";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 80;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Sexo";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 80;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Municipio";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // txtBuscarCliente
             // 

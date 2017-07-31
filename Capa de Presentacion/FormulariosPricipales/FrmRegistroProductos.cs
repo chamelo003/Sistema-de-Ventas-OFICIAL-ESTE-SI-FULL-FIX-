@@ -65,6 +65,11 @@ namespace Capa_de_Presentacion
             {
                 P.ISV = false;
             }
+            P.Precio_Costo = Convert.ToDecimal(txtPrecioCosto.Text);
+            P.Precio_Venta1 = Convert.ToDecimal(txtPrecioVenta1.Text);
+            P.Precio_Venta2 = Convert.ToDecimal(txtPrecioVenta2.Text);
+            P.Precio_Venta3 = Convert.ToDecimal(txtPrecioVenta3.Text);
+            P.Precio_Venta4 = Convert.ToDecimal(txtPrecioVenta4.Text);
             P.Fecha_Ingreso = dtpFechaingreso.Value;
             P.Fecha_Caduc = dtpFechaVencimiento.Value;
             P.Imagen = "NULL";
@@ -116,37 +121,46 @@ namespace Capa_de_Presentacion
 
         private void FrmRegistroProductos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pOSIXPrecioProduct.PRODUCTOS' table. You can move, or remove it, as needed.
             cargarComboCat();
             cargarComboProveedor();
-            //llenarDTGVProductosxD();
+            CargarListado();
         }
 
 
-        void llenarDTGVProductosxD()
+        private void CargarListado()
         {
             DataTable dt = new DataTable();
             dt = P.MostrarProductos();
             try
             {
-                dgvProductos.Rows.Clear();
+                dataGridView1.Rows.Clear();
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    dgvProductos.Rows.Add(dt.Rows[i][0]);
-                    dgvProductos.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString();
-                    dgvProductos.Rows[i].Cells[1].Value = dt.Rows[i][1].ToString();
-                    dgvProductos.Rows[i].Cells[2].Value = dt.Rows[i][2].ToString();
-                    dgvProductos.Rows[i].Cells[3].Value = dt.Rows[i][3].ToString();
-                    dgvProductos.Rows[i].Cells[4].Value = dt.Rows[i][4].ToString();
-                    dgvProductos.Rows[i].Cells[5].Value = dt.Rows[i][5].ToString();
-                    dgvProductos.Rows[i].Cells[6].Value = dt.Rows[i][6].ToString();
-                    //dgvProductos.Rows[i].Cells[7].Value = Convert.ToDateTime(dt.Rows[i][7].ToString()).ToShortDateString();
+                    dataGridView1.Rows.Add(dt.Rows[i][0]);
+                    dataGridView1.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString(); //id
+                    dataGridView1.Rows[i].Cells[1].Value = dt.Rows[i][1].ToString(); //codbarra
+                    dataGridView1.Rows[i].Cells[2].Value = dt.Rows[i][2].ToString(); //nombre
+                    dataGridView1.Rows[i].Cells[3].Value = dt.Rows[i][3].ToString(); //unidad exis
+                    dataGridView1.Rows[i].Cells[4].Value = dt.Rows[i][4].ToString(); // existencia min
+                    dataGridView1.Rows[i].Cells[5].Value = dt.Rows[i][5].ToString(); //precio costo
+                    dataGridView1.Rows[i].Cells[6].Value = dt.Rows[i][6].ToString(); //pventa1
+                    dataGridView1.Rows[i].Cells[7].Value = dt.Rows[i][7].ToString(); //pventa2
+                    dataGridView1.Rows[i].Cells[8].Value = dt.Rows[i][8].ToString(); //pventa3
+                    dataGridView1.Rows[i].Cells[9].Value = dt.Rows[i][9].ToString(); //pventa4
+                    dataGridView1.Rows[i].Cells[10].Value = dt.Rows[i][10].ToString(); //isv
+                    dataGridView1.Rows[i].Cells[11].Value = Convert.ToDateTime(dt.Rows[i][11].ToString()); //fecha ingreso
+                    dataGridView1.Rows[i].Cells[12].Value = Convert.ToDateTime(dt.Rows[i][12].ToString()); // fecha vencimiento
+                    dataGridView1.Rows[i].Cells[13].Value = dt.Rows[i][13].ToString(); //foto
+                    dataGridView1.Rows[i].Cells[14].Value = dt.Rows[i][14].ToString(); //proveedor
+                    dataGridView1.Rows[i].Cells[15].Value = dt.Rows[i][15].ToString(); //categoira
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            dgvProductos.ClearSelection();
+            dataGridView1.ClearSelection();
         }
 
         private void nuevacat_Click(object sender, EventArgs e)
@@ -198,10 +212,10 @@ namespace Capa_de_Presentacion
             }
             else
             {              
-                if (txtCodigoBarra.Text.Length < 14)
+                if (txtCodigoBarra.Text.Length < 13)
                 {
                     errorProviderProductos.SetError(txtCodigoBarra, "Faltan datos");
-                    DevComponents.DotNetBar.MessageBoxEx.Show("Debe ingresar almenos 14 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DevComponents.DotNetBar.MessageBoxEx.Show("Debe ingresar 13 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtCodigoBarra.Focus();
                     return;
                 }
