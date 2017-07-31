@@ -303,3 +303,6 @@ C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de 
 C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.csproj.GenerateResource.Cache
 C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
 C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb
+C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\bin\Debug\Capa de Presentacion.exe.config
+C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.exe
+C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\Capa de Presentacion\obj\Debug\Capa de Presentacion.pdb

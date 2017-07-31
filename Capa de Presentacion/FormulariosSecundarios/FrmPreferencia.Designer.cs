@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.aggCat = new System.Windows.Forms.Label();
             this.Guardar = new System.Windows.Forms.PictureBox();
-            this.Cancelar = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Cerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.listBoxCategoria = new System.Windows.Forms.ListBox();
+            this.listBoxPreferencias = new System.Windows.Forms.ListBox();
+            this.lblIdCliente = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Guardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
@@ -49,12 +49,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.aggCat);
+            this.groupBox1.Controls.Add(this.btnQuitar);
+            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.lblIdCliente);
+            this.groupBox1.Controls.Add(this.listBoxPreferencias);
+            this.groupBox1.Controls.Add(this.listBoxCategoria);
             this.groupBox1.Controls.Add(this.Guardar);
-            this.groupBox1.Controls.Add(this.Cancelar);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cboCategoria);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(65, 72);
             this.groupBox1.Name = "groupBox1";
@@ -62,76 +63,35 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
-            // aggCat
-            // 
-            this.aggCat.AutoSize = true;
-            this.aggCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aggCat.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.aggCat.Location = new System.Drawing.Point(426, 33);
-            this.aggCat.Name = "aggCat";
-            this.aggCat.Size = new System.Drawing.Size(33, 33);
-            this.aggCat.TabIndex = 40;
-            this.aggCat.Text = "+";
-            this.aggCat.Click += new System.EventHandler(this.aggCat_Click);
-            // 
             // Guardar
             // 
             this.Guardar.Image = global::Capa_de_Presentacion.Properties.Resources.guardar;
-            this.Guardar.Location = new System.Drawing.Point(177, 239);
+            this.Guardar.Location = new System.Drawing.Point(216, 249);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(63, 63);
             this.Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Guardar.TabIndex = 37;
             this.Guardar.TabStop = false;
             // 
-            // Cancelar
-            // 
-            this.Cancelar.Image = global::Capa_de_Presentacion.Properties.Resources._19239827_471449833201500_175946913_n;
-            this.Cancelar.Location = new System.Drawing.Point(286, 239);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(63, 63);
-            this.Cancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Cancelar.TabIndex = 38;
-            this.Cancelar.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(125, 94);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 112);
-            this.textBox1.TabIndex = 31;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 100);
+            this.label1.Location = new System.Drawing.Point(318, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 18);
+            this.label1.Size = new System.Drawing.Size(119, 18);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Observación";
-            // 
-            // cboCategoria
-            // 
-            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(125, 36);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(295, 26);
-            this.cboCategoria.TabIndex = 28;
+            this.label1.Text = "Selección cliente";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(46, 40);
+            this.label6.Location = new System.Drawing.Point(64, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 18);
+            this.label6.Size = new System.Drawing.Size(80, 18);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Categoría";
+            this.label6.Text = "Categorías";
             // 
             // label3
             // 
@@ -166,6 +126,53 @@
             this.pictureBox8.TabIndex = 23;
             this.pictureBox8.TabStop = false;
             // 
+            // listBoxCategoria
+            // 
+            this.listBoxCategoria.FormattingEnabled = true;
+            this.listBoxCategoria.Location = new System.Drawing.Point(32, 50);
+            this.listBoxCategoria.Name = "listBoxCategoria";
+            this.listBoxCategoria.Size = new System.Drawing.Size(152, 173);
+            this.listBoxCategoria.TabIndex = 38;
+            // 
+            // listBoxPreferencias
+            // 
+            this.listBoxPreferencias.FormattingEnabled = true;
+            this.listBoxPreferencias.Location = new System.Drawing.Point(301, 50);
+            this.listBoxPreferencias.Name = "listBoxPreferencias";
+            this.listBoxPreferencias.Size = new System.Drawing.Size(152, 173);
+            this.listBoxPreferencias.TabIndex = 39;
+            // 
+            // lblIdCliente
+            // 
+            this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdCliente.Location = new System.Drawing.Point(213, 19);
+            this.lblIdCliente.Name = "lblIdCliente";
+            this.lblIdCliente.Size = new System.Drawing.Size(61, 18);
+            this.lblIdCliente.TabIndex = 40;
+            this.lblIdCliente.Text = "idcliente";
+            this.lblIdCliente.Visible = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(216, 89);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(42, 37);
+            this.btnAgregar.TabIndex = 41;
+            this.btnAgregar.Text = ">";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitar.Location = new System.Drawing.Point(216, 151);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(42, 36);
+            this.btnQuitar.TabIndex = 42;
+            this.btnQuitar.Text = "<";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            // 
             // FrmPreferencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,7 +191,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Guardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Cancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
@@ -194,15 +200,16 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox Guardar;
-        private System.Windows.Forms.PictureBox Cancelar;
-        private System.Windows.Forms.Label aggCat;
         private System.Windows.Forms.PictureBox Cerrar;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label lblIdCliente;
+        private System.Windows.Forms.ListBox listBoxPreferencias;
+        private System.Windows.Forms.ListBox listBoxCategoria;
     }
 }
