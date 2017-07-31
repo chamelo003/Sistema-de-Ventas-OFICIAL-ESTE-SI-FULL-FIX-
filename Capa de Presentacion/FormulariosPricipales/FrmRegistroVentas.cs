@@ -32,16 +32,16 @@ namespace Capa_de_Presentacion
 
         private void BuscarCliente_Click(object sender, EventArgs e)
         {
-            FrmRegistroCliente dfrmcliente = new FrmRegistroCliente();
-            dfrmcliente.ShowDialog();
-            txtRTN.Text = Convert.ToString(dfrmcliente.dgvClientes.CurrentRow.Cells[1].Value);
-            txtnombre.Text = Convert.ToString(dfrmcliente.dgvClientes.CurrentRow.Cells[2].Value) +' '+
-            Convert.ToString(dfrmcliente.dgvClientes.CurrentRow.Cells[3].Value);
+            DialogForms.ShowClientes c = new DialogForms.ShowClientes();
+            c.ShowDialog();
+            txtRTN.Text = Convert.ToString(c.dgvClientes.CurrentRow.Cells[1].Value);
+            txtnombre.Text = Convert.ToString(c.dgvClientes.CurrentRow.Cells[2].Value) +' '+
+            Convert.ToString(c.dgvClientes.CurrentRow.Cells[3].Value);
         }
 
         private void BuscarProducto_Click(object sender, EventArgs e)
         {
-            FrmRegistroProductos frmrp = new FrmRegistroProductos();
+            DialogForms.ShowProductos frmrp = new DialogForms.ShowProductos();
             frmrp.ShowDialog();
             txtCodigo.Text = Convert.ToString(frmrp.dgvProductos.CurrentRow.Cells[0].Value);
             txtProducto.Text = Convert.ToString(frmrp.dgvProductos.CurrentRow.Cells[2].Value);

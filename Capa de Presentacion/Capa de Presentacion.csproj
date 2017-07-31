@@ -71,6 +71,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsVenta.cs" />
+    <Compile Include="DialogForms\ShowClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogForms\ShowClientes.Designer.cs">
+      <DependentUpon>ShowClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogForms\ShowProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogForms\ShowProductos.Designer.cs">
+      <DependentUpon>ShowProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormulariosSecundarios\FrmDatosEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,12 @@
     <Compile Include="FormulariosSecundarios\FrmSAR.Designer.cs">
       <DependentUpon>FrmSAR.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DialogForms\ShowClientes.resx">
+      <DependentUpon>ShowClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogForms\ShowProductos.resx">
+      <DependentUpon>ShowProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormulariosSecundarios\FrmDatosEmpresa.resx">
       <DependentUpon>FrmDatosEmpresa.cs</DependentUpon>
     </EmbeddedResource>
