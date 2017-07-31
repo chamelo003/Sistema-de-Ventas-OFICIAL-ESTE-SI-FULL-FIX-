@@ -62,7 +62,7 @@
             this.Imprimir = new System.Windows.Forms.PictureBox();
             this.Editar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Imprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Editar)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderClientes)).BeginInit();
@@ -438,19 +438,19 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvClientes);
             this.panel1.Location = new System.Drawing.Point(7, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(737, 277);
             this.panel1.TabIndex = 9;
             // 
-            // dataGridView1
+            // dgvClientes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCliente,
             this.Apellidos,
             this.Nombres,
@@ -461,10 +461,10 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(739, 269);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvClientes.Location = new System.Drawing.Point(-1, 3);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.Size = new System.Drawing.Size(739, 269);
+            this.dgvClientes.TabIndex = 0;
             // 
             // IdCliente
             // 
@@ -560,7 +560,6 @@
             this.label3.Size = new System.Drawing.Size(205, 55);
             this.label3.TabIndex = 16;
             this.label3.Text = "Clientes";
-      
             // 
             // pictureBox2
             // 
@@ -620,7 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Imprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Editar)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderClientes)).EndInit();
@@ -632,7 +631,6 @@
         #endregion
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -679,6 +677,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.ErrorProvider errorProviderClientes;
+        public System.Windows.Forms.DataGridView dgvClientes;
     }
 }
 

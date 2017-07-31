@@ -777,7 +777,6 @@
         public System.Windows.Forms.ComboBox cboProveedor;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.TextBox txtBuscarProducto;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label11;
@@ -819,5 +818,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtPrecioCosto;
+        public System.Windows.Forms.DataGridView dgvProductos;
     }
 }
