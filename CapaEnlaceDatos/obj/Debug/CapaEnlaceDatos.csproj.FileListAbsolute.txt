@@ -46,3 +46,7 @@ C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnla
 C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.csprojResolveAssemblyReference.cache
 C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.dll
 C:\Users\chame\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.pdb
+C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.dll
+C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.pdb
+C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.dll
+C:\Users\cas\Source\Repos\Sistema-de-Ventas-OFICIAL-ESTE-SI-FULL-FIX-\CapaEnlaceDatos\obj\Debug\CapaEnlaceDatos.pdb

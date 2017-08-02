@@ -21,5 +21,10 @@ namespace Capa_de_Presentacion
             FrmRegistrarCategoria C = new FrmRegistrarCategoria();
             C.ShowDialog();
         }
+
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

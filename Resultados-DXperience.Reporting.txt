@@ -1,0 +1,15 @@
+﻿Error: System.Reflection.TargetInvocationException: Se produjo una excepción en el destino de la invocación. ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'POSIXDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+   en XtraReportSerialization.RCategoria.InitializeComponent()
+   en XtraReportSerialization.RCategoria..ctor()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   en System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   en DevExpress.XtraReports.Native.ReportCompiler.GetSerializedReport(Assembly assembly)
+   en DevExpress.XtraReports.Native.ReportCompiler.Compile(String streamString, IServiceProvider serviceProvider)
+   en DevExpress.XtraReports.UI.XtraReport.LoadLayoutInternal(Stream stream, XtraReport& source, Boolean forceDataSource)
+   en DevExpress.XtraReports.UI.XtraReport.CloneReport(Boolean useXmlSerialization)
+   en DevExpress.XtraReports.UI.XtraReport.CloneReport()
+   en DevExpress.XtraReports.Design.ReportTabControl.CloneReportCore()
+   en DevExpress.XtraReports.Design.ReportTabControl.CloneReport()
+   en DevExpress.XtraReports.Design.ReportTabControl.BeforeCreateDocument()
+   en DevExpress.XtraReports.Design.ReportTabControl.OnSelectedTabIndexChanged(Object sender, EventArgs e)

@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using CapaLogicaNegocio;
 using System.Data.SqlClient;
-using System.Net.Mail;
 
 namespace Capa_de_Presentacion
 {
@@ -140,8 +139,7 @@ namespace Capa_de_Presentacion
         private void FrmRegistroCliente_Load(object sender, EventArgs e)
         {          
             cargarComboDepto();
-            cargarComboSexo();
-            ListarClientes();
+            cargarComboSexo();            
         }
 
         private void cboDepto_SelectedValueChanged(object sender, EventArgs e)
@@ -312,35 +310,6 @@ namespace Capa_de_Presentacion
 
             mktRTN.Focus();
 
-        }
-
-        private void ListarClientes()
-        {
-            DataTable dt = new DataTable();
-            dt = C.MostrarClientes();
-            try
-            {
-                dgvClientes.Rows.Clear();
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    dgvClientes.Rows.Add(dt.Rows[i][0]);
-                    dgvClientes.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString();
-                    dgvClientes.Rows[i].Cells[1].Value = dt.Rows[i][1].ToString();
-                    dgvClientes.Rows[i].Cells[2].Value = dt.Rows[i][2].ToString();
-                    dgvClientes.Rows[i].Cells[3].Value = dt.Rows[i][3].ToString();
-                    dgvClientes.Rows[i].Cells[4].Value = dt.Rows[i][4].ToString();
-                    dgvClientes.Rows[i].Cells[5].Value = dt.Rows[i][5].ToString();
-                    dgvClientes.Rows[i].Cells[6].Value = dt.Rows[i][6].ToString();
-                    dgvClientes.Rows[i].Cells[7].Value = dt.Rows[i][7].ToString();
-                    dgvClientes.Rows[i].Cells[8].Value = dt.Rows[i][8].ToString();
-                    dgvClientes.Rows[i].Cells[9].Value = dt.Rows[i][9].ToString();
-                }
-                dgvClientes.ClearSelection();
-            }
-            catch (Exception ex)
-            {
-                DevComponents.DotNetBar.MessageBoxEx.Show(ex.Message);
-            }
         }
 
 

@@ -114,6 +114,7 @@
             this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Cerrar.TabIndex = 21;
             this.Cerrar.TabStop = false;
+            this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
             // pictureBox8
             // 

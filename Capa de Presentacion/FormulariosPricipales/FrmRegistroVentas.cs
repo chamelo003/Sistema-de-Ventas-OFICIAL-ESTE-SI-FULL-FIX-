@@ -29,22 +29,5 @@ namespace Capa_de_Presentacion
         {
             this.Dispose();
         }
-
-        private void BuscarCliente_Click(object sender, EventArgs e)
-        {
-            DialogForms.ShowClientes c = new DialogForms.ShowClientes();
-            c.ShowDialog();
-            txtRTN.Text = Convert.ToString(c.dgvClientes.CurrentRow.Cells[1].Value);
-            txtnombre.Text = Convert.ToString(c.dgvClientes.CurrentRow.Cells[2].Value) +' '+
-            Convert.ToString(c.dgvClientes.CurrentRow.Cells[3].Value);
-        }
-
-        private void BuscarProducto_Click(object sender, EventArgs e)
-        {
-            DialogForms.ShowProductos frmrp = new DialogForms.ShowProductos();
-            frmrp.ShowDialog(); 
-            txtCodigo.Text = Convert.ToString(frmrp.dataGridView1.CurrentRow.Cells[0].Value);
-            txtProducto.Text = Convert.ToString(frmrp.dataGridView1.CurrentRow.Cells[2].Value);
-        }
     }
 }

@@ -58,6 +58,25 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DevComponents.Instrumentation.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Mvvm.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Core.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,18 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsVenta.cs" />
-    <Compile Include="DialogForms\ShowClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DialogForms\ShowClientes.Designer.cs">
-      <DependentUpon>ShowClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DialogForms\ShowProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DialogForms\ShowProductos.Designer.cs">
-      <DependentUpon>ShowProductos.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormulariosSecundarios\FrmDatosEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,10 +174,10 @@
     <Compile Include="FormulariosPricipales\FrmRegistroVentas.Designer.cs">
       <DependentUpon>FrmRegistroVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="POSIXPrecioProduct.Designer.cs">
+    <Compile Include="POSIXDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>POSIXPrecioProduct.xsd</DependentUpon>
+      <DependentUpon>POSIXDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -186,12 +193,96 @@
     <Compile Include="FormulariosSecundarios\FrmSAR.Designer.cs">
       <DependentUpon>FrmSAR.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DialogForms\ShowClientes.resx">
-      <DependentUpon>ShowClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DialogForms\ShowProductos.resx">
-      <DependentUpon>ShowProductos.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Reportes\ClientesPorCompra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ClientesPorCompra.Designer.cs">
+      <DependentUpon>ClientesPorCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ClientesporDepartamento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ClientesporDepartamento.Designer.cs">
+      <DependentUpon>ClientesporDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ClientesporPreferencia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ClientesporPreferencia.Designer.cs">
+      <DependentUpon>ClientesporPreferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\EmpleadosporActividadenelSistema.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\EmpleadosporActividadenelSistema.Designer.cs">
+      <DependentUpon>EmpleadosporActividadenelSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PistasdeAuditoria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\PistasdeAuditoria.Designer.cs">
+      <DependentUpon>PistasdeAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ProducctosporCostodeCategoria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ProducctosporCostodeCategoria.Designer.cs">
+      <DependentUpon>ProducctosporCostodeCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ProductosporCategorias.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ProductosporCategorias.Designer.cs">
+      <DependentUpon>ProductosporCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ProductosporExistensiaMinima.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ProductosporExistensiaMinima.Designer.cs">
+      <DependentUpon>ProductosporExistensiaMinima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ProveedoresporDepartamento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ProveedoresporDepartamento.Designer.cs">
+      <DependentUpon>ProveedoresporDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasCategoriasporProducto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\VentasCategoriasporProducto.Designer.cs">
+      <DependentUpon>VentasCategoriasporProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasDiario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\VentasDiario.Designer.cs">
+      <DependentUpon>VentasDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ventasmensuales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ventasmensuales.Designer.cs">
+      <DependentUpon>ventasmensuales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasporCajero.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\VentasporCajero.Designer.cs">
+      <DependentUpon>VentasporCajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasporClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\VentasporClientes.Designer.cs">
+      <DependentUpon>VentasporClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentasDiario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VentasDiario.Designer.cs">
+      <DependentUpon>VentasDiario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormulariosSecundarios\FrmDatosEmpresa.resx">
       <DependentUpon>FrmDatosEmpresa.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +325,7 @@
     <EmbeddedResource Include="FormulariosPricipales\FrmRegistroVentas.resx">
       <DependentUpon>FrmRegistroVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -245,16 +337,61 @@
     <EmbeddedResource Include="FormulariosSecundarios\FrmSAR.resx">
       <DependentUpon>FrmSAR.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="POSIXPrecioProduct.xsc">
-      <DependentUpon>POSIXPrecioProduct.xsd</DependentUpon>
+    <EmbeddedResource Include="Reportes\ClientesPorCompra.resx">
+      <DependentUpon>ClientesPorCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ClientesporDepartamento.resx">
+      <DependentUpon>ClientesporDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ClientesporPreferencia.resx">
+      <DependentUpon>ClientesporPreferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\EmpleadosporActividadenelSistema.resx">
+      <DependentUpon>EmpleadosporActividadenelSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\PistasdeAuditoria.resx">
+      <DependentUpon>PistasdeAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ProducctosporCostodeCategoria.resx">
+      <DependentUpon>ProducctosporCostodeCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ProductosporCategorias.resx">
+      <DependentUpon>ProductosporCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ProductosporExistensiaMinima.resx">
+      <DependentUpon>ProductosporExistensiaMinima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ProveedoresporDepartamento.resx">
+      <DependentUpon>ProveedoresporDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VentasCategoriasporProducto.resx">
+      <DependentUpon>VentasCategoriasporProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VentasDiario.resx">
+      <DependentUpon>VentasDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ventasmensuales.resx">
+      <DependentUpon>ventasmensuales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VentasporCajero.resx">
+      <DependentUpon>VentasporCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VentasporClientes.resx">
+      <DependentUpon>VentasporClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasDiario.resx">
+      <DependentUpon>VentasDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="POSIXDataSet.xsc">
+      <DependentUpon>POSIXDataSet.xsd</DependentUpon>
     </None>
-    <None Include="POSIXPrecioProduct.xsd">
+    <None Include="POSIXDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>POSIXPrecioProduct.Designer.cs</LastGenOutput>
+      <LastGenOutput>POSIXDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="POSIXPrecioProduct.xss">
-      <DependentUpon>POSIXPrecioProduct.xsd</DependentUpon>
+    <None Include="POSIXDataSet.xss">
+      <DependentUpon>POSIXDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

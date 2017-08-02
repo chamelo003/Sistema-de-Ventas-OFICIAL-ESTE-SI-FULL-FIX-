@@ -62,7 +62,7 @@
             this.Imprimir = new System.Windows.Forms.PictureBox();
             this.Editar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Imprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Editar)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderClientes)).BeginInit();
@@ -280,17 +280,17 @@
             // mktCelular
             // 
             this.mktCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktCelular.Location = new System.Drawing.Point(300, 105);
+            this.mktCelular.Location = new System.Drawing.Point(312, 105);
             this.mktCelular.Mask = "0000-0000";
             this.mktCelular.Name = "mktCelular";
-            this.mktCelular.Size = new System.Drawing.Size(80, 24);
+            this.mktCelular.Size = new System.Drawing.Size(68, 24);
             this.mktCelular.TabIndex = 24;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(240, 108);
+            this.label10.Location = new System.Drawing.Point(245, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 18);
             this.label10.TabIndex = 23;
@@ -312,14 +312,14 @@
             this.mktTelefono.Location = new System.Drawing.Point(115, 107);
             this.mktTelefono.Mask = "0000-0000";
             this.mktTelefono.Name = "mktTelefono";
-            this.mktTelefono.Size = new System.Drawing.Size(80, 24);
+            this.mktTelefono.Size = new System.Drawing.Size(68, 24);
             this.mktTelefono.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 108);
+            this.label9.Location = new System.Drawing.Point(32, 107);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 20;
@@ -438,20 +438,19 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dgvClientes);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(7, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(737, 277);
             this.panel1.TabIndex = 9;
             // 
-            // dgvClientes
+            // dataGridView1
             // 
-            this.dgvClientes.AllowUserToAddRows = false;
-            this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCliente,
             this.Apellidos,
             this.Nombres,
@@ -462,11 +461,10 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvClientes.Location = new System.Drawing.Point(-1, 3);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(739, 269);
-            this.dgvClientes.TabIndex = 0;
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(739, 269);
+            this.dataGridView1.TabIndex = 0;
             // 
             // IdCliente
             // 
@@ -507,35 +505,30 @@
             // 
             this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
             this.Telefono.Width = 80;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Celular";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             this.Column1.Width = 80;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Correo";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             this.Column2.Width = 80;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Sexo";
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             this.Column3.Width = 80;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Municipio";
             this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // txtBuscarCliente
             // 
@@ -626,7 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Imprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Editar)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderClientes)).EndInit();
@@ -638,6 +631,7 @@
         #endregion
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -684,7 +678,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.ErrorProvider errorProviderClientes;
-        public System.Windows.Forms.DataGridView dgvClientes;
     }
 }
 
